@@ -1,0 +1,15 @@
+title: Mateus Medeiros - Desenvolvedor Front End
+email: mateus.sousamedeiros@gmail.com
+description: "Blog sobre um Desenvolvedor Front End apaixonado por novas tecnologias, abordando assuntos sobre Desenvolvimento Web, com foco em Front End"
+url: "http://devmateusmedeiros.com.br" 
+twitter_username: mateussousam
+github_username:  mateussmedeiros
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+css_folder:  "/assets/css"
+js_folder:  "/assets/js"
+img_folder:  "/assets/img"
+sass:
+    style: compressed

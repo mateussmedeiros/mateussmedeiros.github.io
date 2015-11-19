@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <p class="welcome"> Olá Galera </p>
+
+  <p> Meu nome é Mateus de Sousa Medeiros, tenho 15 anos e sou <b>Desenvolvedor Front End</b>. </p> 
+  <p> No meu workflow costumo usar HTML, CSS (SASS) e JavaScript (jQuery), além do Gulp como <i>Task Runner</i> e Git para versionar meus projetos. </p>
+  <p> Criei esse blog, primeiro para testar o <b>Jekyll</b> e <b>SASS</b>; e segundo para ter um lugar onde posso compartilhar meu conhecimento. </p>
+  <p> Espero que gostem! </p>
+
+  <h1 class="page-title"> Meu Blog </h1>
+
+  <ul class="post-list">
+    {% for post in site.posts limit:2 %}
+      <li class="post-container">
+        <span class="post-date">{{ post.date | date: "%-d %b, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+
+          <p class="post-description">{{ post.description }}</p>
+
+          <a href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais sobre {{ post.title }}</a>
+
+          {% include tags.html %}
+      </li>
+    {% endfor %}
+  </ul>
+  
+  <a href="blog"> Veja mais no blog... </a>
+  <p class="rss-subscribe">Inscreva-se <a aria-label="Inscreva-se via RSS e receba todos os posts novos" href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a> e receba todos os novos posts </p>
+
+</div>

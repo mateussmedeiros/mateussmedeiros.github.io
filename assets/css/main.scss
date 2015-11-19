@@ -1,0 +1,38 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+////////////////
+// Variáveis //
+///////////////
+
+// Fonte
+$fonte-padrao: Arial, Verdana, sans-serif;
+
+// Cores
+$preto: #252525;
+$branco: #ffffff;
+$cinza: #545454;
+$cinza-claro: #F2F2F2;
+$azul: #00ABD7;
+$azul-escuro: #007491;
+$azul-mais-escuro: #004556;
+
+// Breakpints
+$bp-tablet-large: 800px;
+$bp-mobile-large: 500px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+@import
+        "base",
+        "layout",
+        "syntax-highlighting",
+        "responsive"
+;

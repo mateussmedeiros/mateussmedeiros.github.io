@@ -1,0 +1,39 @@
+<header class="header">
+    <a href="/index.html">
+      <img src="/assets/img/perfil-mateus.jpg" alt="Mateus Medeiros - Desenvolvedor Front End" class="img-perfil">
+      <hgroup class="title">
+        <h1> Mateus Medeiros </h1>  
+        <h2> Desenvolvedor Front End</h2>
+      </hgroup>
+    </a>
+
+  <div class="navigation">
+    <nav class="menu">
+      <a aria-label="Conheça-me um pouco mais" href="/sobre"> Sobre </a>
+      <a aria-label="Meu portfólio" href="/portfolio"> Portfólio </a>
+      <a aria-label="Meu Blog" href="/blog"> Blog </a>
+      <a aria-label="Fale comigo" href="/contato"> Contato </a>
+    </nav>
+
+    {% include svg.html %}
+
+    <div class="social-icons">
+      <a aria-label="Meu Facebook" href="https://facebook.com/mateus.sousamedeiros" target="_blank" title="Siga-me no Facebook"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a>
+  
+      <a aria-label="Meu Twitter" href="https://twitter.com/mateussousam" target="_blank" title="Siga-me no Twitter"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
+  
+      <a aria-label="Meu GitHub" href="https://github.com/mateussmedeiros" target="_blank" title="Conecte-se no meu GitHub"><svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg></a>
+
+      <a aria-label="Enviar E-mail" href="mailto:mateus.sousamedeiros@gmail.com" title="Envie-me um e-mail"><svg class="icon icon-email"><use xlink:href="#icon-email"></use></svg></a>
+
+      <a aria-label="Inscreva-se via RSS e receba todos os posts novos" href="/feed.xml" title="Inscreva-se via RSS e receba todos os posts novos"><svg class="icon icon-rss"><use xlink:href="#icon-rss"></use></svg></a>
+
+      <a aria-label="Pesquisar no Blog" title="Pesquisar no Blog" class="bt-search"><svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg></a>
+    </div>
+  </div>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Pesquisar posts no blog...">
+    <ul id="results-container"></ul>
+  </div>
+</header>
