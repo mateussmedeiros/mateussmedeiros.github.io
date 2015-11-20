@@ -243,11 +243,11 @@
 //////////////////////////////////
 // Página - Tags  e Categorias //
 /////////////////////////////////
-.tags-list, .tag, .categories-list, .category {
+.tags-list, .tag, .category {
   @extend %margins;
 }
 
-.tags-list, .categories-list {
+.tags-list {
   @extend .tags;
 }
 
