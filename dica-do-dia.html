@@ -1,0 +1,40 @@
+---
+layout: page
+title: Dia do Dia
+description: Série de dicas rápidas sobre livros, posts interessantes e tutoriais.
+permalink: /dica-do-dia/
+---
+
+<p> Série de dicas rápidas sobre livros, posts interessantes e tutoriais </p>
+
+<div class="categories-list">
+{% assign categories_list = site.categories %}
+  {% if categories_list.first[0] == null %}
+    {% for category in categories_list %}
+        <a data-scroll href="#{{ category }}">{{ category }}</a>
+    {% endfor %}
+  {% else %}
+    {% for tag in categories_list %}
+        <a data-scroll href="#{{ category[0] }}">{{ category[0] }}</a>
+    {% endfor %}
+  {% endif %}
+{% assign categories_list = nil %}
+</div>
+
+{% for tag in site.categories  %}
+	<div class="category">
+    	<h2 class="category-title" id="{{ category[0] }}">{{ category[0] }}</h2>
+    	<ul class="posts">
+        	{% assign pages_list = category[1] %}
+        	{% for post in pages_list reversed %}
+            	{% if post.title != null %}
+            	{% if group == null or group == post.group %}
+            	<li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%d %b, %Y" }}</time></span></a></li>
+            	{% endif %}
+            	{% endif %}
+        	{% endfor %}
+        	{% assign pages_list = nil %}
+        	{% assign group = nil %}
+    	</ul>
+    </div>
+{% endfor %}

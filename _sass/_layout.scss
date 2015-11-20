@@ -67,7 +67,7 @@
 
   a {
     display: inline-block;
-    width: 100px;
+    width: 80px;
     padding: 5px;
     border: 2px solid $azul-mais-escuro;
     border-radius: 3px;
@@ -240,14 +240,14 @@
   border: 3px solid $azul-mais-escuro;
 }
 
-/////////////////////
-// Página - Tags  //
-////////////////////
-.tags-list, .tag {
+//////////////////////////////////
+// Página - Tags  e Categorias //
+/////////////////////////////////
+.tags-list, .tag, .categories-list, .category {
   @extend %margins;
 }
 
-.tags-list {
+.tags-list, .categories-list {
   @extend .tags;
 }
 
