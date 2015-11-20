@@ -11,7 +11,7 @@ tags:
 categories:
 - Dica do Dia
 permalink: /dica-do-dia-1-livro-guia-frontend/
-image: /assets/img/livro-guia-frontend.jpg/
+image: /assets/img/livro-guia-frontend.png
 ---
 
 ## Introdução
