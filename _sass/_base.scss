@@ -28,6 +28,19 @@ figure > img {
     display: block;
 }
 
+img.center {
+  display: block;
+  margin: 0 auto;
+}
+
+img.right {
+  float: right;
+}
+
+img.left {
+  float: left;
+}
+
 /////////////
 // Listas //
 ////////////
