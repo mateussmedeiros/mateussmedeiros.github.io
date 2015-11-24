@@ -332,7 +332,19 @@
 
   h2, p {
     padding: 0 5px;
+    color: $preto;
   }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      h2,p {
+       color: $azul-mais-escuro; 
+      }     
+    }
+  }
+
 }
 
 .job-img {
