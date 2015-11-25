@@ -7,4 +7,4 @@ Blog sobre um Desenvolvedor Front End apaixonado por novas tecnologias, abordand
 1.1.0
 
 ## Licença
-[Mit License](https://github.com/mateussmedeiros/devmateusmedeiros.github.io/blob/master/LICENSE)
+[Mit License](https://github.com/mateussmedeiros/mateussmedeiros.github.io/blob/master/LICENSE)
