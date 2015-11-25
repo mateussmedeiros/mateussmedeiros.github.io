@@ -6,7 +6,8 @@
   margin: 0;
   padding: 10px;
   display: block;
-  background: $azul-escuro;
+  background: linear-gradient(to bottom, $azul, $azul-escuro);
+  background-color: $azul-escuro;
   color: $branco;
   text-align: center;
 }
