@@ -234,19 +234,11 @@
 /*-----------------------------
 ---- Páginas Tags e Séries ----
 -----------------------------*/
-<<<<<<< HEAD
 .tags-list, .categories-list, .tag, .category {
     @extend %margins;
 }
 
 .tags-list, .categories-list {
-=======
-.tags-list, .tag, .category {
-    @extend %margins;
-}
-
-.tags-list {
->>>>>>> dce50ba94b93ebe2cd13f3a234f38ae4f62db04b
     @extend .tags;
 }
 
