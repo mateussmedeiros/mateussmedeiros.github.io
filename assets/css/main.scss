@@ -1,0 +1,45 @@
+---
+
+---
+
+@charset "utf-8";
+
+////////////////
+// Variáveis //
+///////////////
+
+// Fonte
+$fonte-padrao: Arial, Verdana, sans-serif;
+
+// Cores
+$preto: #181818;
+$branco: #FFFFFF;
+$cinza-claro: darken($branco, 3%);
+$azul: #00aff0;
+
+// Breakpints
+$bp-tablet-large: 800px;
+$bp-mobile-large: 500px;
+
+///////////////////
+// Placeholders //
+//////////////////
+%margins {
+    margin: 1em 0;
+}
+
+/////////////
+// Mixins //
+////////////
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@import
+        "base",
+        "layout",
+        "syntax-highlighting",
+        "responsive"
+;
