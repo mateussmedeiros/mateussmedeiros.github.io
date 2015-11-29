@@ -1,24 +1,99 @@
-////////////
-// Reset //
-///////////
+/*-------------
+---- Reset ----
+-------------*/
 *, *:before, *:after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-////////////////////
-// Estilo Básico //
-///////////////////
-body {
-    font-family: $fonte-padrao;  
-    color: $preto;  
+button {
+    padding: 0;
+    background: none;
+    border: 0;
+    overflow: visible;
 }
 
-//////////////
-// Imagens //
-/////////////
+/*------------
+---- Body ----
+------------*/
+body {
+    font-family: $fonte-padrao;
+    color: $preto; 
+}
 
+/*------------------
+---- Tipografia ----
+------------------*/
+h1 {
+    font-size: 24pt;
+    line-height: 28pt;
+}
+
+h2 {
+    font-size: 20pt;
+    line-height: 24pt;
+}
+
+h3 {
+    font-size: 16pt;
+    line-height: 20pt;
+}
+
+h4 {
+    font-size: 14pt;
+    line-height: 16pt;
+}
+
+h5 {
+    font-size: 12pt;
+    line-height: 14pt;
+}
+
+h6 {
+    font-size: 10pt;
+    line-height: 12pt;
+}
+
+p, a, li {
+    font-size: 14pt;
+    line-height: 18pt;
+}
+
+p {
+    @extend %margins;
+}
+
+h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+/*-------------
+---- Links ----
+-------------*/
+a {
+    color: $azul;
+
+    &:hover {
+        color: darken($azul, 15%);
+    }
+}
+
+/*--------------
+---- Listas ----
+--------------*/
+ul {
+    list-style: disc;
+    padding-left: 20px;
+
+    li {
+        padding: 5px 0;
+    }
+}
+
+/*---------------
+---- Imagens ----
+---------------*/
 img {
     max-width: 100%;
     vertical-align: middle;
@@ -41,84 +116,11 @@ figure > img {
   float: left;
 }
 
-/////////////
-// Listas //
-////////////
-ul, ol {
-    list-style: none;
-}
-
-/////////////////
-// Tipografia //
-////////////////
-h1 {
-    font-size: 24pt;
-    line-height: 28pt;  
-}
-
-h2 {
-    font-size: 20pt;
-    line-height: 24pt;
-}
-
-h3 {
-    font-size: 18pt;
-    line-height: 22pt;
-}
-
-h4 {
-    font-size: 14pt;
-    line-height: 16pt;
-    text-transform: uppercase;
-}
-
-h5 {
-    font-size: 12pt;
-    line-height: 14pt;
-    text-transform: uppercase;
-}
-
-h6 {
-    font-size: 10pt;
-    line-height: 12pt;
-    text-transform: uppercase;
-}
-
-li, p, a {
-    font-size: 14pt;
-    line-height: 18pt;
-}
-
-p {
-    @extend %margins;
-}
-
-%margins {
-    margin: 1em 0;
-}
-
-////////////
-// Links //
-///////////
-a {
-    color: $azul;
-
-    &:visited {
-        color: darken($azul, 15%);
-    }
-
-    &:hover {
-        color: $azul-mais-escuro;
-    }
-}
-
-//////////////////
-// Blockquotes //
-/////////////////
-
+/*-------------------
+---- Blockquotes ----
+-------------------*/
 blockquote {
-    color: $azul-mais-escuro;
-    border-left: 4px solid $azul-escuro;
+    border-left: 4px solid $azul;
     font-size: 16pt;
     letter-spacing: -1px;
     font-style: italic;

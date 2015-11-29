@@ -9,7 +9,7 @@ tags:
 - livro
 - dica
 categories:
-- Dica do Dia
+- dica-do-dia
 permalink: /dica-do-dia-2-livros-casa-do-codigo/
 ---
 
@@ -21,7 +21,7 @@ Fala galera, fiquei um tempo sem postar aqui no blog - *estava sem net* - mas ho
 ## Livros para aprender a programar com ótimo custo-benefício
 No site da [Casa do Código](http://casadocodigo.com.br), você encontra livros sobre diversos assuntos: [Front End](http://www.casadocodigo.com.br/collections/livros-de-front-end), [Web](http://www.casadocodigo.com.br/collections/livros-desenvolvimento-web), [Mobile](http://www.casadocodigo.com.br/collections/livros-de-mobile), [Games](http://www.casadocodigo.com.br/collections/livros-de-games), [Java](http://www.casadocodigo.com.br/collections/livros-de-java), [Agile](http://www.casadocodigo.com.br/collections/livros-de-agile) entre [outros](http://www.casadocodigo.com.br/collections/outros).
 
-Os livros livros são ótimos e baratos, a versão **E-book** custa R$ 29,90, a versão **Impressa** R$ 59,90, enquanto as **duas versões** saem por R$ 69,90. *(Esses são os valores da promoção, acesso em 24/11/2015)*.
+Os livros são ótimos e baratos, a versão **E-book** custa R$ 29,90, a versão **Impressa** R$ 59,90, enquanto as **duas versões** saem por R$ 69,90. *(Esses são os valores da promoção, acesso em 24/11/2015)*.
 
 ##Conclusão
 

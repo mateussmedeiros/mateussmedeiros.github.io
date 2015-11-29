@@ -1,6 +1,30 @@
+// Abrir e Fechar - Menu
+$(".bt-menu").click(function() {
+	$(".menu").toggle();
+
+	if ( $(".menu").is(":visible") ) {
+		$(".bt-menu").attr('aria-expanded', 'true');
+
+	} else {
+		$(".bt-menu").attr('aria-expanded', 'false');
+	};
+});
+
 // Abrir e Fechar - Barra de Pesquisa
 $(".bt-search").click(function() {
-	$("#search-container").toggle();
+	$("#search-container").show();
+
+	if ( $("#search-container").is(":visible") ) {
+		$(".bt-search").attr('aria-expanded', 'true');
+	}
+});
+
+$(".bt-close").click(function() {
+	$("#search-container").hide();
+
+	if ( $("#search-container").is(":hidden") ) {
+		$(".bt-search").attr('aria-expanded', 'false');
+	}
 });
 
 // Simple Jekyll Search
@@ -12,16 +36,9 @@ SimpleJekyllSearch({
   noResultsText: 'Sem resultados'
 })
 
-// Responsivo
-$(".navigation").before("<a class='bt-menu'> ☰ Menu </a>");
-$(".bt-menu").click(function() {
-	$(".navigation").toggle();
-	$("#search-container").toggle();
-});
-
 $(window).resize(function(){
 	if(window.innerWidth > 800) {
-		$(".navigation").removeAttr("style");
+		$(".menu").removeAttr("style");
 		$("#search-container").removeAttr("style");
 	}
 });

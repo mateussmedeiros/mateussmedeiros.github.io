@@ -1,16 +1,16 @@
 ---
 layout: page
-title: Dia do Dia
+title: Dica do Dia
 description: Série de dicas rápidas sobre livros, posts interessantes e tutoriais.
 permalink: /dica-do-dia/
 ---
 
 <h2> Série de dicas rápidas sobre livros, posts interessantes e tutoriais </h2>
 
-{% for category in site.categories  %}
+{% for dica-do-dia in site.categories  %}
 	<div class="category">
     	<ul class="posts">
-        	{% assign pages_list = category[1] %}
+        	{% assign pages_list = dica-do-dia[1] %}
         	{% for post in pages_list reversed %}
             	{% if post.title != null %}
             	{% if group == null or group == post.group %}

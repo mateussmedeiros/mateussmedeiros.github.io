@@ -9,7 +9,7 @@ tags:
 - livro
 - dica
 categories:
-- Dica do Dia
+- dica-do-dia
 permalink: /dica-do-dia-1-livro-guia-frontend/
 image: /assets/img/livro-guia-frontend.png
 ---
