@@ -234,11 +234,11 @@
 /*-----------------------------
 ---- Páginas Tags e Séries ----
 -----------------------------*/
-.tags-list, .tag, .category {
+.tags-list, .categories-list, .tag, .category {
     @extend %margins;
 }
 
-.tags-list {
+.tags-list, .categories-list {
     @extend .tags;
 }
 

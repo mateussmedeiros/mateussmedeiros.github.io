@@ -9,7 +9,7 @@ tags:
 - livro
 - dica
 categories:
-- dica-do-dia
+- Dica do Dia
 permalink: /dica-do-dia-2-livros-casa-do-codigo/
 ---
 
