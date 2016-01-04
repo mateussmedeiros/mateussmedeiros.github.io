@@ -16,7 +16,7 @@ Segue a lista:
 
 - Criar um projeto open source
 - Criar temas para Jekyll
-- Apredender Less e Stylus
+- Aprender Less e Stylus
 - Me aprofundar no JavaScript
 - Aprender Angular e React
 - Contribuir em projetos open source
