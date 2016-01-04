@@ -3,7 +3,7 @@ layout: post
 title:  "Metas para 2016"
 date:   2016-01-04 11:33:00 -0300
 author: Mateus Medeiros
-description: Minhas metas para esse ano de 2016 com o objetivo de crscer mais na área do Front End
+description: Minhas metas para esse ano de 2016 com o objetivo de crescer mais na área do Front End
 tags: 
 - frontend
 - metas
