@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Metas para 2016"
+date:   2016-01-04 11:33:00 -0300
+author: Mateus Medeiros
+description: Minhas metas para esse ano de 2016 com o objetivo de crscer mais na área do Front End
+tags: 
+- frontend
+- metas
+permalink: /metas-2016/
+---
+
+Quero começar esse meu primeiro post de 2016 desejando um feliz ano novo a todos. Nesse post irei lançar algumas metas pessoais para esse ano com o objetivo de crescer mais na área do **Front End**.
+
+Segue a lista:
+
+- Criar um projeto open source
+- Criar temas para Jekyll
+- Apredender Less e Stylus
+- Me aprofundar no JavaScript
+- Aprender Angular e React
+- Contribuir em projetos open source
+- Postar mais *(Esse não podia faltar)*
+
+Essas são minhas principais metas para 2016, possa ser que ao longo do ano, surjam mais algumas.
+
+No fim do ano, irei o resultado das metas, espero que eu consiga cumprir todas,  mas é claro com o foco de crescer mais na área do **Front End**.
+
+E você tem alguma meta para 2016? **Comenta aí!**
