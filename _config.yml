@@ -8,6 +8,8 @@ github_username:  mateussmedeiros
 # Build settings
 markdown: kramdown
 permalink: /:title/
+gems:
+  - jekyll-sitemap
 css_folder:  "/assets/css"
 js_folder:  "/assets/js"
 img_folder:  "/assets/img"
