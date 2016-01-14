@@ -158,6 +158,7 @@ markdown: kramdown
 {% endhighlight %}
 
 Vamos entender o que cada variável faz:
+
 - **title**: é o título do seu blog.
 - **email**: seu email para contato, é opcional.
 - **description**: é a descrição do seu blog, muito importante para **SEO**, uma boa descrição é essencial para seu posicionamento no Google.
