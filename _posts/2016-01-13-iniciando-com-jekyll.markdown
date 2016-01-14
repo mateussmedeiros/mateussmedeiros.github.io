@@ -25,22 +25,27 @@ Para instalar o Jekyll, você precisa ter o **Ruby** instalado em sua máquina, 
 - [Mac](https://www.ruby-lang.org/pt/documentation/installation/#homebrew)
 
 Após ter instalado o Ruby em sua máquina, abra o terminal e digite o seguinte comando:
-```
+
+{% highlight %}
 gem install jekyll
-```
+{% endhighlight %}
+
 Caso você queira conferir se o Jekyll foi instalado, digite o seguinte comando no terminal:
-```
+
+{% highlight %}
 jekyll -v
 
 # Jekyll 3.0.0
-```
+{% endhighlight %}
+
 Pronto, Jekyll instalado, vamos iniciar nosso primeiro projeto.
 
 ##Iniciando um Projeto
 Para inicar um novo projeto, digite no terminal:
-```
+
+{% highlight %}
 jekyll new nome-do-projeto
-```
+{% endhighlight %}
 
 Feito isso, o Jekyll irá criar o diretório de pastas do projeto, como você pode conferir na imagem abaixo.
 
@@ -61,14 +66,17 @@ Como vocês puderam ver, o Jekyll cria várias pastas e arquivos, vamos entender
 
 ##Front-Matter
 O Jekyll utiliza o YAML, para guardar as informações. o Front-Matter deve ser a primeira coisa escrita no seu arquivo. As informações devem ficar entre o par de três traços `---`. A sintaxe dele é a seguinte:
-```
+
+{% highlight %}
 ---
 layout: post
 title: Meu primeiro post com Jekyll
 ---
-```
+{% endhighlight %}
+
 Colocamos a variável seguida de dois pontos e o valor dela ou conjunto de valores, por exemplo:
-```
+
+{% highlight %}
 layout: post
 title: Meu primeiro post com Jekyll
 date:   2016-01-13 18:00:00 -0300
@@ -77,7 +85,7 @@ description: Meu primeiro post com o gerador de páginas estáticas: Jekyll.
 tags: 
 - frontend
 - jekyll
-```
+{% endhighlight %}
 
 ##Variáveis
 No Jekyll, você pode usar variáveis pré-definidas ou criar suas próprias variáveis. Existem três tipos de variáveis: as **variáveis globais**, **variáveis do site** e **variáveis da página**. Vamos aprender algumas:
@@ -108,7 +116,7 @@ Depois de criadas, vamos utilizar as variáveis. A sua sintaxe é igual a de *mu
 
 **Aviso**: Não existe espaço entre as chaves, coloquei pois como uso o jekyll, o exemplo não iria funcionar.
 
-```
+{% highlight %}
 <!-- Variável Global -->
 <title> { { title } } </title>
 
@@ -117,14 +125,14 @@ Depois de criadas, vamos utilizar as variáveis. A sua sintaxe é igual a de *mu
 
 <!-- Variável do Post -->
 <h1> { { post.title } } </h1>
-```
-
+{% endhighlight %}
 
 ##Configurando seu blog
 Como falei antes o arquivo **_config.yml** é o responsável pela configuração do seu blog, agora vamos aprender como configurá-lo. Abra o arquivo **_config.yml** no seu editor preferido e vamos lá.
 
 Abrindo o arquivo, ele estará por padrão assim:
-```
+
+{% highlight %}
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -146,7 +154,7 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-```
+{% endhighlight %}
 
 Vamos entender o que cada variável faz:
 - **title**: é o título do seu blog.
@@ -164,16 +172,20 @@ Esses são as variáveis que já vem inclusas no jekyll. Mais opções você pod
 Vamos aprender agora como gerar um servidor para o seu ambiente de produção.
 
 No terminal, digite o seguinte comando:
-```
+
+{% highlight %}
 jekyll serve
-```
+{% endhighlight %}
+
 Com esse comando, o jekyll irá gerar um servidor - por padrão, na porta **4000** - e ficará assintindo os arquivos. Para acessar seu projeto, entre no endereço: http://localhost:4000/ ou http://127.0.0.1:4000/
 
 ##Gerando os arquivos estáticos
 Terminado o desenvolvimento do projeto, você pode gerar os arquivos estáticos do seu blog com o comando:
-```
+
+{% highlight %}
 jekyll build
-```
+{% endhighlight %}
+
 Com esse comando o jekyll irá gerar a pasta **_site**, que contém os arquivos estáticos do seu blog.
 
 ##Hospedando seu blog no GitHub Pages
@@ -183,7 +195,7 @@ Com o Jekyll, você pode facimente hospedar seu blog no GitHub Pages.
 2. Crie um repositório com o seguinte nome: **seunomedeusuario.github.io**
 3. Suba o seu blog - exceto a pasta **_site** - para o seu repositório usando o **git**, dessa forma:
 
-```
+{% highlight %}
 # Iniciar um repositório na pasta do projeto
 git init
 
@@ -198,7 +210,8 @@ git remote add origin https://github.com/seunomedeusuario/seunomedeusuario.githu
 
 # Subir o seu blog
 git push -u origin master
-```
+{% endhighlight %}
+
 Pronto, você subiu seu blog para o GitHub Pages, e agora é só esperar entre 20 e 30 minutos, e você poderá acessar seu blog através da url: http://seunomedeusuario.github.io
 
 Se você quiser adicionar um domínio próprio no seu blog, siga [esse passo-a-passo do Willian Justen](http://willianjusten.com.br/dominio-proprio-no-github-pages/).
