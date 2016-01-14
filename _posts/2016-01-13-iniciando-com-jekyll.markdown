@@ -10,6 +10,7 @@ tags:
 categories:
 - Jekyll
 permalink: /iniciando-com-jekyll/
+image: https://jekyll.github.io/brand/jekyll-logo-light-solid.png
 ---
 
 ## Introdução
