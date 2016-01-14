@@ -11,7 +11,8 @@ categories:
 - Jekyll
 permalink: /iniciando-com-jekyll/
 ---
-##Introdução
+
+## Introdução
 Fala galera, como prometi que escreveria um post ensinado a usar o Jekyll, decidi não escrever apenas um post, mas uma série sobre Jekyll e esse é o primeiro post da série, nesse post irei ensinar o básico dessa íncrivel ferramenta.
 
 O Jekyll é um gerador de páginas estáticas, você consegue criar páginas utilizando o HTML e CSS, depois disso o Jekyll converte todo o site em arquivos estáticos, pronto para ser colocado no ar. Ele utiliza **Markdown** para a formatação de textos e posts, um padrão de templates chamado **Liquid** e **YAML** para as variáveis.
@@ -26,13 +27,13 @@ Para instalar o Jekyll, você precisa ter o **Ruby** instalado em sua máquina, 
 
 Após ter instalado o Ruby em sua máquina, abra o terminal e digite o seguinte comando:
 
-{% highlight %}
+{% highlight sh %}
 gem install jekyll
 {% endhighlight %}
 
 Caso você queira conferir se o Jekyll foi instalado, digite o seguinte comando no terminal:
 
-{% highlight %}
+{% highlight sh %}
 jekyll -v
 
 # Jekyll 3.0.0
@@ -43,7 +44,7 @@ Pronto, Jekyll instalado, vamos iniciar nosso primeiro projeto.
 ##Iniciando um Projeto
 Para inicar um novo projeto, digite no terminal:
 
-{% highlight %}
+{% highlight sh %}
 jekyll new nome-do-projeto
 {% endhighlight %}
 
@@ -51,7 +52,7 @@ Feito isso, o Jekyll irá criar o diretório de pastas do projeto, como você po
 
 ![Diretório de pastas do Jekyll](/assets/img/diretorio-pastas-jekyll.jpg){: .center }
 
-##Diretório de Pastas
+## Diretório de Pastas
 Como vocês puderam ver, o Jekyll cria várias pastas e arquivos, vamos entender o que cada um faz:
 
 - **_includes**: são os arquivos com os códigos que se repetem ao longo do projeto, como o *header* e o *footer*.
@@ -64,10 +65,10 @@ Como vocês puderam ver, o Jekyll cria várias pastas e arquivos, vamos entender
 - **feed.xml**: arquivo que gera o feed do seu blog, é importante para as pessoas conseguirem facilmente seguir seu blog.
 - **index.html**: a página inicial do seu blog.
 
-##Front-Matter
+## Front-Matter
 O Jekyll utiliza o YAML, para guardar as informações. o Front-Matter deve ser a primeira coisa escrita no seu arquivo. As informações devem ficar entre o par de três traços `---`. A sintaxe dele é a seguinte:
 
-{% highlight %}
+{% highlight yaml %}
 ---
 layout: post
 title: Meu primeiro post com Jekyll
@@ -76,7 +77,7 @@ title: Meu primeiro post com Jekyll
 
 Colocamos a variável seguida de dois pontos e o valor dela ou conjunto de valores, por exemplo:
 
-{% highlight %}
+{% highlight yaml %}
 layout: post
 title: Meu primeiro post com Jekyll
 date:   2016-01-13 18:00:00 -0300
@@ -90,19 +91,19 @@ tags:
 ##Variáveis
 No Jekyll, você pode usar variáveis pré-definidas ou criar suas próprias variáveis. Existem três tipos de variáveis: as **variáveis globais**, **variáveis do site** e **variáveis da página**. Vamos aprender algumas:
 
-###Variáveis Globais
+### Variáveis Globais
 - **layout**: indica qual modelo de layout você irá utilizar na página, por exemplo: **post**.
 - **permalink**: define como será criado o link da página.
 - **category** ou **categories**: define a categoria ou conjunto de categorias para o post.
 - **tags**: define o conjunto de tags utilizadas no post.
 
-###Variáveis do Site
+### Variáveis do Site
 - **site.posts**: lista de todos os posts no site.
 - **site.pages**: lista de todas as páginas no site.
 - **site.tags.TAG**: lista de todos os posts daquela tag.
 - **site.categories.CATEGORIA**: lista de todos os posts daquela categoria.
 
-###Variáveis da Página
+### Variáveis da Página
 - **page.title**: título da página.
 - **page.date**: data da página, com a estrutura **YYYY-MM-DD HH:MM:SS +/-TTTT**.
 - **page.content**: conteúdo da página.
@@ -116,7 +117,7 @@ Depois de criadas, vamos utilizar as variáveis. A sua sintaxe é igual a de *mu
 
 **Aviso**: Não existe espaço entre as chaves, coloquei pois como uso o jekyll, o exemplo não iria funcionar.
 
-{% highlight %}
+{% highlight html %}
 <!-- Variável Global -->
 <title> { { title } } </title>
 
@@ -127,12 +128,12 @@ Depois de criadas, vamos utilizar as variáveis. A sua sintaxe é igual a de *mu
 <h1> { { post.title } } </h1>
 {% endhighlight %}
 
-##Configurando seu blog
+## Configurando seu blog
 Como falei antes o arquivo **_config.yml** é o responsável pela configuração do seu blog, agora vamos aprender como configurá-lo. Abra o arquivo **_config.yml** no seu editor preferido e vamos lá.
 
 Abrindo o arquivo, ele estará por padrão assim:
 
-{% highlight %}
+{% highlight yaml %}
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -168,34 +169,34 @@ Vamos entender o que cada variável faz:
 
 Esses são as variáveis que já vem inclusas no jekyll. Mais opções você pode encontrar na [documentação do jekyll](http://jekyllrb.com/docs/configuration/).
 
-##Gerando um servidor
+## Gerando um servidor
 Vamos aprender agora como gerar um servidor para o seu ambiente de produção.
 
 No terminal, digite o seguinte comando:
 
-{% highlight %}
+{% highlight sh %}
 jekyll serve
 {% endhighlight %}
 
 Com esse comando, o jekyll irá gerar um servidor - por padrão, na porta **4000** - e ficará assintindo os arquivos. Para acessar seu projeto, entre no endereço: http://localhost:4000/ ou http://127.0.0.1:4000/
 
-##Gerando os arquivos estáticos
+## Gerando os arquivos estáticos
 Terminado o desenvolvimento do projeto, você pode gerar os arquivos estáticos do seu blog com o comando:
 
-{% highlight %}
+{% highlight sh %}
 jekyll build
 {% endhighlight %}
 
 Com esse comando o jekyll irá gerar a pasta **_site**, que contém os arquivos estáticos do seu blog.
 
-##Hospedando seu blog no GitHub Pages
+## Hospedando seu blog no GitHub Pages
 Com o Jekyll, você pode facimente hospedar seu blog no GitHub Pages.
 
 1. Entre em sua conta no [GitHub](https://github.com/), caso não tenha, [crie uma](https://github.com/join).
 2. Crie um repositório com o seguinte nome: **seunomedeusuario.github.io**
 3. Suba o seu blog - exceto a pasta **_site** - para o seu repositório usando o **git**, dessa forma:
 
-{% highlight %}
+{% highlight sh %}
 # Iniciar um repositório na pasta do projeto
 git init
 
@@ -216,7 +217,7 @@ Pronto, você subiu seu blog para o GitHub Pages, e agora é só esperar entre 2
 
 Se você quiser adicionar um domínio próprio no seu blog, siga [esse passo-a-passo do Willian Justen](http://willianjusten.com.br/dominio-proprio-no-github-pages/).
 
-##Conclusão
+## Conclusão
 Esse foi o primeiro post da série sobre Jekyll, ensinado apenas o básico do Jekyll, se você quiser aprender mais detalhadamente, acesse a [documentação do Jekyll](http://jekyllrb.com/docs/home). Em breve, pretendo lançar um passo-a-passo de como criar um blog com Jekyll, aguarde!
 
 Qualquer dúvida que aparecer, é só comentar ou me enviar um e-mail: [mateus.sousamedeiros@gmail.com](mailto:mateus.sousamedeiros@gmail.com).
