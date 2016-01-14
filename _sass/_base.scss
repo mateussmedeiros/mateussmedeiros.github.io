@@ -82,8 +82,11 @@ a {
 /*--------------
 ---- Listas ----
 --------------*/
-ul, ol {
+ul {
     list-style: disc;
+}
+
+ul, ol {
     padding-left: 20px;
 
     li {
