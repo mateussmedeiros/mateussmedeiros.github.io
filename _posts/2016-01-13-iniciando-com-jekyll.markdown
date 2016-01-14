@@ -22,6 +22,7 @@ Se quiser saber mais sobre o Jekyll e como ele funciona, basta acessar o [site o
 
 ##Instalando o Jekyll
 Para instalar o Jekyll, você precisa ter o **Ruby** instalado em sua máquina, caso você não tiver ele instalado, só seguir os tutoriais abaixo:
+
 - [Linux](http://michaelchelen.net/81fa/install-jekyll-2-ubuntu-14-04/) (Ruby + Jekyll)
 - [Windows](http://jekyll-windows.juthilo.com/) (Ruby + Jekyll)
 
