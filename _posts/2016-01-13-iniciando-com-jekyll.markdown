@@ -50,7 +50,7 @@ jekyll new nome-do-projeto
 
 Feito isso, o Jekyll irá criar o diretório de pastas do projeto, como você pode conferir na imagem abaixo.
 
-![Diretório de pastas do Jekyll](/assets/img/diretorio-pastas-jekyll.JPG){: .center }
+![Diretório de pastas do Jekyll](/assets/img/diretorio-pastas-jekyll.jpg){: .center }
 
 ## Diretório de Pastas
 Como vocês puderam ver, o Jekyll cria várias pastas e arquivos, vamos entender o que cada um faz:
