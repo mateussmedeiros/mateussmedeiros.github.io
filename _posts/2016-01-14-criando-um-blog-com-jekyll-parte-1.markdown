@@ -86,9 +86,9 @@ O código já está bastante comentado, você deve trocar os valores das variáv
 
 Vamos agora configurar as nossas pastas. Primeiramente criaremos a pasta `assets`, dentro dela criaremos 2 pastas: `js` e `img`, também moveremos a pasta `css` para cá, ficando assim:
 
--**css**: onde ficará o arquivo main.scss que o **sass** irá compilar.
--**img**: onde ficarão as imagens.
--**js**: onde ficarão os arquivos JavaScript.
+- **css**: onde ficará o arquivo main.scss que o **sass** irá compilar.
+- **img**: onde ficarão as imagens.
+- **js**: onde ficarão os arquivos JavaScript.
 
 Feito isso, vamos configurar a pasta `_includes`.
 
@@ -113,9 +113,11 @@ Iremos manter apenas o 3 primeiros arquivos e criar outros 5 arquivos, ficando a
 - **header.html**: é o header do nosso blog, onde ficará também o nosso menu.
 - **share.html**: é a seção de compartilhamento dos posts.
 - **svg.html**: é o arquivo onde ficará os ícones svg.
--**tags.html**: é o arquivo onde ficará o laço for para listar todas as tags utilizadas no blog.
+- **tags.html**: é o arquivo onde ficará o laço **for** para listar todas as tags utilizadas no blog.
 
 Vamos configurar agora cada um dos nossos arquivos. Irei colocar como ficou cada arquivo, ele será comentado, então darei apenas uma breve explicação de cada arquivo.
+
+**Aviso**: Não existe espaço entre as chaves, coloquei porque uso Jekyll, então não iriam funcionar os exemplos.
 
 #### head.html
 
@@ -126,39 +128,39 @@ Vamos configurar agora cada um dos nossos arquivos. Irei colocar como ficou cada
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Pega o título da página e exibe no title, se a página não tiver título, exibe o título do site -->
-  	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  	<title>{% if page.title %}{ { page.title } }{% else %}{ { site.title } }{% endif %}</title>
   	
   	<!-- Pega a descrição da página e exibe no title, se a página não tiver descrição, exibe a descrição do site -->
-  	<meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  	<meta name="description" content="{% if page.description %}{ { page.description | strip_html | strip_newlines | truncate: 160 } }{% else %}{ { site.description } }{% endif %}">
 	
 	<!-- Caminho do arquivo CSS, pode ser alterado de acordo com o projeto -->
-  	<link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
-  	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  	<link rel="stylesheet" href="{ { "/assets/css/main.css" | prepend: site.baseurl } }">
+  	<link rel="canonical" href="{ { page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url } }">
   	<!-- Caminho do Feed do blog -->
-  	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  	<link rel="alternate" type="application/rss+xml" title="{ { site.title } }" href="{ { "/feed.xml" | prepend: site.baseurl | prepend: site.url } }">
   	<!-- Caminho do favicon do blog, também pode ser alterado -->
     <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
 	
 	<!-- Social Meta Tags: Facebook | Twitter | Google+ / Já está configurado para o blog -->
   	<!-- Social: Facebook / Open Graph -->
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:title" content="{% if page.title %}{ { page.title } }{% else %}{ { site.title } }{% endif %}">
     <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
-    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ "/assets/img/image-blog.png" | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-    <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:url" content="{ { page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url } }">
+    <meta property="og:image" content="{% if page.image %}{ { page.image | prepend: site.baseurl | prepend: site.url } }{% else %}{{ "/assets/img/image-blog.png" | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+    <meta property="og:description" content="{% if page.description %}{ { page.description | strip_html | strip_newlines | truncate: 160 } }{% else %}{ { site.description } }{% endif %}">
+    <meta property="og:site_name" content="{ { site.title } }">
 
   	<!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="{{ site.author.twitter }}">
-    <meta name="twitter:title" content="{% if post.title %}{{ post.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta name="twitter:description" content="{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="twitter:image:src" content="{{ site.url }}{{ post.image }}">
+    <meta name="twitter:site" content="{ { site.author.twitter } }">
+    <meta name="twitter:title" content="{% if post.title %}{ { post.title } }{% else %}{ { site.title } }{% endif %}">
+    <meta name="twitter:description" content="{% if post.description %}{ { post.description | strip_html | strip_newlines | truncate: 160 } }{% else %}{ { site.description } }{% endif %}">
+    <meta property="twitter:image:src" content="{ { site.url } }{ { post.image } }">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="{% if post.title %}{{ post.title }}{% else %}{{ site.title }}{% endif %}"/>
-    <meta itemprop="description" content="{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta itemprop="image" content="{{ post.image | prepend: site.baseurl | prepend: site.url }}"/>
+    <meta itemprop="name" content="{% if post.title %}{ { post.title } }{% else %}{ { site.title } }{% endif %}"/>
+    <meta itemprop="description" content="{% if post.description %}{ { post.description | strip_html | strip_newlines | truncate: 160 } }{% else %}{ { site.description } }{% endif %}">
+    <meta itemprop="image" content="{ { post.image | prepend: site.baseurl | prepend: site.url } }"/>
 
 </head>
 {% endhighlight %}
@@ -196,9 +198,9 @@ Esse arquivo não precisa de muita explicação, já está bem comentado. Ele j�
   <!-- Título do Blog -->
   <hgroup class="title">
     <!-- Título Principal -->
-    <h1> <a href="/"> {{ site.title }} </a> </h1>  
+    <h1> <a href="/"> { { site.title } } </a> </h1>  
     <!-- Subtítulo -->
-    <h2> <a href="/"> {{ site.subtitle }} </a> </h2>
+    <h2> <a href="/"> { { site.subtitle } } </a> </h2>
   </hgroup>
   
 </header>
@@ -207,15 +209,15 @@ Esse arquivo não precisa de muita explicação, já está bem comentado. Ele j�
 
 Esse é o arquivo do nosso **header**, nele temos:
 
--**Menu**: ficará no topo à esquerda alinhado com o botão da pesquisa.
--**Pesquisa**: ficará fechado, se abrirá quando clicarmos no botão. Quando aberto, irá sobrepor a página inteira. Utilizaremos o plugin [Simple Jekyll Searching](https://github.com/christian-fei/Simple-Jekyll-Search){:target="_blank"} para fazer a pesquisa dos posts.
--**Título**: ficará abaixo do menu e centralizado, utilizaremos uma sombra para destacá-lo. Nele há 2 variáveis: o `{{ site.title }}` e o `{{ site.subtitle }}`, essas variáveis foram definidas no arquivo `_config.yml`.
+- **Menu**: ficará no topo à esquerda alinhado com o botão da pesquisa.
+- **Pesquisa**: ficará fechado, se abrirá quando clicarmos no botão. Quando aberto, irá sobrepor a página inteira. Utilizaremos o plugin [Simple Jekyll Searching](https://github.com/christian-fei/Simple-Jekyll-Search){:target="_blank"} para fazer a pesquisa dos posts.
+- **Título**: ficará abaixo do menu e centralizado, utilizaremos uma sombra para destacá-lo. Nele há 2 variáveis: o `{ { site.title } }` e o `{ { site.subtitle } }`, essas variáveis foram definidas no arquivo `_config.yml`.
 
 #### footer.html
 
 {% highlight html %}
 <footer class="footer">
-  <p> &copy; 2016 {{ site.title }} - {{ site.subtitle }} | Todos os Direitos Reservados </p>
+  <p> &copy; 2016 { { site.title } } - { { site.subtitle } } | Todos os Direitos Reservados </p>
   <p> Tutorial por <a href="http://devmateusmedeiros.com.br" target="_blank" title="Ir para o meu blog"> Mateus Medeiros </a> </p>
 </footer>
 {% endhighlight %}
@@ -230,19 +232,19 @@ Utilizamos as mesmas variáveis que no `header.html`. Esse arquivo pode ser edit
     <!-- Botões de Compartilhamento -->
 	<div class="share-buttons">
         <!-- Twitter -->
-		<a aria-label="Compartilhe no Twitter" href="https://twitter.com/intent/tweet?text=&quot;{{ page.twitter_text }}&quot;%20{{ site.url }}{{ page.url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}"
+		<a aria-label="Compartilhe no Twitter" href="https://twitter.com/intent/tweet?text=&quot;{ { page.twitter_text } }&quot;%20{ { site.url } }{ { page.url } }%20via%20&#64;{ { site.twitter_username } }&hashtags={% for tag in page.tags %}{ {tag}},{% endfor %}"
     	onclick="window.open(this.href, 'twitter-share');return false;" title="Compartilhe no Twitter">
         	<svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     	</a>
         
         <!-- Facebook -->
-    	<a aria-label="Compartilhe no Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+    	<a aria-label="Compartilhe no Facebook" href="https://www.facebook.com/sharer/sharer.php?u={ { site.url } }{ { page.url } }"
     	onclick="window.open(this.href, 'facebook-share');return false;" title="Compartilhe no Facebook">
         	<svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     	</a>
         
         <!-- Google+ -->
-    	<a aria-label="Compartilhe no Google Plus" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
+    	<a aria-label="Compartilhe no Google Plus" href="https://plus.google.com/share?url={ { site.url } }{ { page.url } }"
     	onclick="window.open(this.href, 'google-plus-share');return false;" title="Compartilhe no Google+">
         	<svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     	</a>
@@ -258,20 +260,20 @@ Criamos os botões de compartilhamento, utilizamos SVG para os ícones da redes 
 <section class="author">
 	<div class="details">
 		<!-- Imagem do autor -->
-		<img src="{{ site.author.img }}" alt="{{ site.author.name }}" class="img-author">
+		<img src="{ { site.author.img } }" alt="{ { site.author.name } }" class="img-author">
 		<p><b> Autor </b></p>
 		<!-- Nome do autor com link para o blog do autor -->
 		<h2 class="name">
-			<a href="{{ site.author.blog }}" target="_blank" title="Visite meu blog"> {{ site.author.name }} </a>
+			<a href="{ { site.author.blog } }" target="_blank" title="Visite meu blog"> {{ site.author.name }} </a>
 		</h2>
 		<!-- Descrição do autor -->
 		<p class="description">{{ site.author.bio }}</p>
 		<!-- Email do autor -->
-        <a class="email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+        <a class="email" href="mailto:{ { site.author.email } }">{{ site.author.email }}</a>
         <!-- Twitter do autor -->
-        <p> Twitter: <a href="http://twitter.com/{{ site.author.twitter }}"> @{{ site.author.twitter }}</a></p>
+        <p> Twitter: <a href="http://twitter.com/{ { site.author.twitter } }"> @{{ site.author.twitter }}</a></p>
         <!-- GitHub do autor -->
-        <p> GitHub: <a href="http://github.com/{{ site.author.github }}"> {{ site.author.github }}</a></p>
+        <p> GitHub: <a href="http://github.com/{ { site.author.github } }"> {{ site.author.github }}</a></p>
 	</div>
 </section>
 {% endhighlight %}
@@ -344,9 +346,10 @@ Criamos os nossos ícones SVG, iremos estilizá-los depois com o **SASS**.
 {% highlight html %}
 <div class="tags">
   <!-- Procura as tags já utilizadas e monta uma lista com os links de todas elas -->
-  {% for tag in post.tags %}
+  <!-- Não existe espaço entre {} e % -->
+  { % for tag in post.tags % }
       <a href="/tags/#{{tag}}">{{ tag }}</a>
-  {% endfor %}
+  { % endfor % }
 </div>
 {% endhighlight %}
 
@@ -357,5 +360,7 @@ Criamos um laço for, que irá procurar todas as tags já utilizadas no blog e i
 Essa foi a primeira parte do tutorial, já temos pronto a configuração do nosso blog e a nossa pasta `_includes`. Na próxima parte, iremos configurar a pasta `_layouts` e o arquivo `index.html`, que é a página inicial do nosso blog.
 
 Qualquer dúvida, é só comentar ou me enviar um email: [mailto:mateus.sousamedeiros@gmail.com](mateus.sousamedeiros@gmail.com)
+
+Lembrando que todo o código utilizado aqui, está disponível no [GitHub](https://github.com/mateussmedeiros/tutorial-jekyll){:target="_blank"}.
 
 **Até a próxima parte!**
