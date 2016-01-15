@@ -10,7 +10,6 @@ tags:
 categories:
 - Jekyll
 permalink: /criando-um-blog-com-jekyll-parte-1/
-image: https://jekyll.github.io/brand/jekyll-logo-light-solid.png
 ---
 
 ## Introdução
