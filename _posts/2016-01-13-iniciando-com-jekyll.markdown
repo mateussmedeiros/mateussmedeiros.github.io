@@ -10,7 +10,6 @@ tags:
 categories:
 - Jekyll
 permalink: /iniciando-com-jekyll/
-image: https://jekyll.github.io/brand/jekyll-logo-light-solid.png
 ---
 
 ## Introdução
@@ -18,13 +17,13 @@ Fala galera, como prometi que escreveria um post ensinado a usar o Jekyll, decid
 
 O Jekyll é um gerador de páginas estáticas, você consegue criar páginas utilizando o HTML e CSS, depois disso o Jekyll converte todo o site em arquivos estáticos, pronto para ser colocado no ar. Ele utiliza **Markdown** para a formatação de textos e posts, um padrão de templates chamado **Liquid** e **YAML** para as variáveis.
 
-Se quiser saber mais sobre o Jekyll e como ele funciona, basta acessar o [site oficial](http://jekyllrb.com) (disponível em inglês), mas se você não souber inglês ou não entender muito bem, tem uma tradução ainda em andamento do site oficial sendo feita pela comunidade Jekyll Brasil, só acessar este [link](http://jekyll-brasil.github.io/).
+Se quiser saber mais sobre o Jekyll e como ele funciona, basta acessar o [site oficial](http://jekyllrb.com){:target="_blank"} (disponível em inglês), mas se você não souber inglês ou não entender muito bem, tem uma tradução ainda em andamento do site oficial sendo feita pela comunidade Jekyll Brasil, só acessar este [link](http://jekyll-brasil.github.io/){:target="_blank"}.
 
 ##Instalando o Jekyll
 Para instalar o Jekyll, você precisa ter o **Ruby** instalado em sua máquina, caso você não tiver ele instalado, só seguir os tutoriais abaixo:
 
-- [Linux](http://michaelchelen.net/81fa/install-jekyll-2-ubuntu-14-04/) (Ruby + Jekyll)
-- [Windows](http://jekyll-windows.juthilo.com/) (Ruby + Jekyll)
+- [Linux](http://michaelchelen.net/81fa/install-jekyll-2-ubuntu-14-04/){:target="_blank"} (Ruby + Jekyll)
+- [Windows](http://jekyll-windows.juthilo.com/){:target="_blank"} (Ruby + Jekyll)
 
 No Mac, o Ruby já vem instalado.
 
@@ -60,7 +59,7 @@ Como vocês puderam ver, o Jekyll cria várias pastas e arquivos, vamos entender
 
 - **_includes**: são os arquivos com os códigos que se repetem ao longo do projeto, como o *header* e o *footer*.
 - **_layouts**: é a estrutura básica das páginas, por padrão vem 3 tipos: **default** para a página inicial e listagem de posts. A **page** para as páginas secundárias e **post** para as páginas de post.
-- **_posts**: são os posts que escrevemos, em geral escrevemos em [Markdown](https://daringfireball.net/projects/markdown/syntax).
+- **_posts**: são os posts que escrevemos, em geral escrevemos em [Markdown](https://daringfireball.net/projects/markdown/syntax){:target="_blank"}.
 - **_sass**: são os arquivos de estilização que geram o CSS, se você trabalha com **sass**, o Jekyll já compila para você.
 - **css**: pasta para onde vai os arquivos gerados pelo sass.
 - **_config.yml**: arquivo de configuração do seu blog, onde você colocará os dados referentes ao seu blog.
@@ -113,7 +112,7 @@ No Jekyll, você pode usar variáveis pré-definidas ou criar suas próprias var
 - **page.url**: link da página.
 - **page.tags**: mostra as tags utilizadas na página.
 
-Mais variáveis você pode encontrar na [documentação](http://jekyllrb.com/docs/variables/).
+Mais variáveis você pode encontrar na [documentação](http://jekyllrb.com/docs/variables/){:target="_blank"}.
 
 ### Utilizando as variáveis
 Depois de criadas, vamos utilizar as variáveis. A sua sintaxe é igual a de *mustache*, você abre duas chaves, coloca o nome da variável e fecha as chaves, ficando assim: ``{ { variável } }``.
@@ -171,7 +170,7 @@ Vamos entender o que cada variável faz:
 - **github_username**: seu nome de usuário no GitHub, também é opcional.
 - **markdown**: tipo de Markdown utilizado no seu projeto.
 
-Esses são as variáveis que já vem inclusas no jekyll. Mais opções você pode encontrar na [documentação do jekyll](http://jekyllrb.com/docs/configuration/).
+Essas são as variáveis que já vem inclusas no jekyll. Mais opções você pode encontrar na [documentação do jekyll](http://jekyllrb.com/docs/configuration/){:target="_blank"}.
 
 ## Gerando um servidor
 Vamos aprender agora como gerar um servidor para o seu ambiente de produção.
@@ -182,7 +181,7 @@ No terminal, digite o seguinte comando:
 jekyll serve
 {% endhighlight %}
 
-Com esse comando, o jekyll irá gerar um servidor - por padrão, na porta **4000** - e ficará assintindo os arquivos. Para acessar seu projeto, entre no endereço: http://localhost:4000/ ou http://127.0.0.1:4000/
+Com esse comando, o jekyll irá gerar um servidor - por padrão, na porta **4000** - e ficará assintindo os arquivos. Para acessar seu projeto, entre no endereço: [http://localhost:4000/](http://localhost:4000/){:target="_blank"} ou [http://127.0.0.1:4000/](http://127.0.0.1:4000/){:target="_blank"}.
 
 ## Gerando os arquivos estáticos
 Terminado o desenvolvimento do projeto, você pode gerar os arquivos estáticos do seu blog com o comando:
@@ -196,7 +195,7 @@ Com esse comando o jekyll irá gerar a pasta **_site**, que contém os arquivos 
 ## Hospedando seu blog no GitHub Pages
 Com o Jekyll, você pode facimente hospedar seu blog no GitHub Pages.
 
-1. Entre em sua conta no [GitHub](https://github.com/), caso não tenha, [crie uma](https://github.com/join).
+1. Entre em sua conta no [GitHub](https://github.com/){:target="_blank"}, caso não tenha, [crie uma](https://github.com/join){:target="_blank"}.
 2. Crie um repositório com o seguinte nome: **seunomedeusuario.github.io**
 3. Suba o seu blog - exceto a pasta **_site** - para o seu repositório usando o **git**, dessa forma:
 
@@ -219,10 +218,10 @@ git push -u origin master
 
 Pronto, você subiu seu blog para o GitHub Pages, e agora é só esperar entre 20 e 30 minutos, e você poderá acessar seu blog através da url: http://seunomedeusuario.github.io
 
-Se você quiser adicionar um domínio próprio no seu blog, siga [esse passo-a-passo do Willian Justen](http://willianjusten.com.br/dominio-proprio-no-github-pages/).
+Se você quiser adicionar um domínio próprio no seu blog, siga [esse passo-a-passo do Willian Justen](http://willianjusten.com.br/dominio-proprio-no-github-pages/){:target="_blank"}.
 
 ## Conclusão
-Esse foi o primeiro post da série sobre Jekyll, ensinado apenas o básico do Jekyll, se você quiser aprender mais detalhadamente, acesse a [documentação do Jekyll](http://jekyllrb.com/docs/home). Em breve, pretendo lançar um passo-a-passo de como criar um blog com Jekyll, aguarde!
+Esse foi o primeiro post da série sobre Jekyll, ensinado apenas o básico do Jekyll, se você quiser aprender mais detalhadamente, acesse a [documentação do Jekyll](http://jekyllrb.com/docs/home){:target="_blank"}. Em breve, pretendo lançar um passo-a-passo de como criar um blog com Jekyll, aguarde!
 
 Qualquer dúvida que aparecer, é só comentar ou me enviar um e-mail: [mateus.sousamedeiros@gmail.com](mailto:mateus.sousamedeiros@gmail.com).
 
