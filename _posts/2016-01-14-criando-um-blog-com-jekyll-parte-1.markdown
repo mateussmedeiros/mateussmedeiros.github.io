@@ -264,16 +264,16 @@ Criamos os botões de compartilhamento, utilizamos SVG para os ícones da redes 
 		<p><b> Autor </b></p>
 		<!-- Nome do autor com link para o blog do autor -->
 		<h2 class="name">
-			<a href="{ { site.author.blog } }" target="_blank" title="Visite meu blog"> {{ site.author.name }} </a>
+			<a href="{ { site.author.blog } }" target="_blank" title="Visite meu blog"> { { site.author.name } } </a>
 		</h2>
 		<!-- Descrição do autor -->
-		<p class="description">{{ site.author.bio }}</p>
+		<p class="description">{ { site.author.bio } }</p>
 		<!-- Email do autor -->
-        <a class="email" href="mailto:{ { site.author.email } }">{{ site.author.email }}</a>
+        <a class="email" href="mailto:{ { site.author.email } }">{  { site.author.email }  }</a>
         <!-- Twitter do autor -->
-        <p> Twitter: <a href="http://twitter.com/{ { site.author.twitter } }"> @{{ site.author.twitter }}</a></p>
+        <p> Twitter: <a href="http://twitter.com/{ { site.author.twitter } }"> @{  { site.author.twitter }  }</a></p>
         <!-- GitHub do autor -->
-        <p> GitHub: <a href="http://github.com/{ { site.author.github } }"> {{ site.author.github }}</a></p>
+        <p> GitHub: <a href="http://github.com/{ { site.author.github } }"> {  { site.author.github }  }</a></p>
 	</div>
 </section>
 {% endhighlight %}
