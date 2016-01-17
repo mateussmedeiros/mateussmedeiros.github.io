@@ -358,7 +358,7 @@ Criamos um laço for, que irá procurar todas as tags já utilizadas no blog e i
 
 Essa foi a primeira parte do tutorial, já temos pronto a configuração do nosso blog e a nossa pasta `_includes`. Na próxima parte, iremos configurar a pasta `_layouts` e o arquivo `index.html`, que é a página inicial do nosso blog.
 
-Qualquer dúvida, é só comentar ou me enviar um email: [mailto:mateus.sousamedeiros@gmail.com](mateus.sousamedeiros@gmail.com)
+Qualquer dúvida, é só comentar ou me enviar um email: [mateus.sousamedeiros@gmail.com](mailto:mateus.sousamedeiros@gmail.com)
 
 Lembrando que todo o código utilizado aqui, está disponível no [GitHub](https://github.com/mateussmedeiros/tutorial-jekyll){:target="_blank"}.
 
