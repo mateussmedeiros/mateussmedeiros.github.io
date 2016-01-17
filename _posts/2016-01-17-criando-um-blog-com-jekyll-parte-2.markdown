@@ -140,7 +140,7 @@ layout: default
       </li>
 
       <hr>
-    {% endfor %}
+    { % endfor % }
   </ul>
   
   <!-- Incrição do feed -->
