@@ -591,7 +591,10 @@ Esse é o arquivo responsável pela estrutura do layout. Você pode estilizar do
 }
 {% endhighlight %}
 
-Adaptamos o layout para os dispositivos móveis, incluimos os mixins que criamos no `main.scss` com os brekpoints que definimos também lá.
+Adaptamos o layout para os dispositivos móveis, incluimos os mixins que criamos no `main.scss` com os breakpoints que definimos também lá.
+
+## _syntax-highlighting.scss
+
 {% highlight sass %}
 /*--------------
 ---- Código ----
@@ -771,6 +774,7 @@ Primeiramente, crie o arquivo `search.json`, e digite isso:
 ---
 ---
 [
+  {% raw %}
   {% for post in site.posts %}
     {
       "title"    : "{{ post.title | escape }}",
@@ -780,6 +784,7 @@ Primeiramente, crie o arquivo `search.json`, e digite isso:
       "date"     : "{{ post.date }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
+  {% endraw %}
 ]
 {% endhighlight %}
 
