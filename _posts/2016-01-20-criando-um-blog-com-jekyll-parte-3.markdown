@@ -728,7 +728,7 @@ bower install --save jquery
 
 Vamos mudar o diretório das nossas dependências, ele ficará no seguinte caminho: `/assets/components/`. Para isso crie um arquivo chamado `.bowerrc` e nele adicione:
 
-{% highlight txt %}
+{% highlight json %}
 {
     "directory" : "assets/components"
 }
