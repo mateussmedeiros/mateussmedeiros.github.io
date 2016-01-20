@@ -593,7 +593,7 @@ Esse é o arquivo responsável pela estrutura do layout. Você pode estilizar do
 
 Adaptamos o layout para os dispositivos móveis, incluimos os mixins que criamos no `main.scss` com os breakpoints que definimos também lá.
 
-## _syntax-highlighting.scss
+### _syntax-highlighting.scss
 
 {% highlight sass %}
 /*--------------
