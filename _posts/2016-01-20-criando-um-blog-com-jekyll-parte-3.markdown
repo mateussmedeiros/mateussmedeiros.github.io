@@ -519,7 +519,7 @@ Esse é o arquivo responsável pela estrutura do layout. Você pode estilizar do
     	display: none;
     	clear: both;
 
-    	a {
+    	li {
         	float: none;
         	display: block;
         	margin: 0;
