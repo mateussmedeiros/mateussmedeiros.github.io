@@ -37,7 +37,7 @@ permalink: /meu-primeiro-post-com-jekyll/
 ---
 {% endhighlight %}
 
-Agora vamos escrever o ~~primeiro~~ post do nosso blog.
+Agora vamos escrever o <del>primeiro</del> post do nosso blog.
 
 ## Escrevendo nosso primeiro post
 

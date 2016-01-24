@@ -178,6 +178,10 @@ Vamos aprender agora como gerar um servidor para o seu ambiente de produção.
 No terminal, digite o seguinte comando:
 
 {% highlight sh %}
+# Entrar na pasta do projeto
+cd nome-do-projeto
+
+# Gerar o servidor
 jekyll serve
 {% endhighlight %}
 
