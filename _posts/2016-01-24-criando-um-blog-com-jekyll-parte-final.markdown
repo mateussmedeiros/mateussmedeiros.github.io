@@ -167,6 +167,7 @@ permalink: /tags/
             	{% endif %}
                 {% endraw %}
         	{% endfor %}
+            {% endraw %}
             {% raw %}
         	{% assign pages_list = nil %}
             {% endraw %}
