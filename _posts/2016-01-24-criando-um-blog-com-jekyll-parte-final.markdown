@@ -126,55 +126,34 @@ permalink: /tags/
 <div class="tags-list">
 {% raw %}
 {% assign tags_list = site.tags %}
-{% endraw %}
-  {% raw %}
   {% if tags_list.first[0] == null %}
-    {% raw %}
     {% for tag in tags_list %}
-        <a data-scroll href="#{% raw %}{{ tag }}{% endraw %}">{% raw %}{{ tag }}{% endraw %}</a>
+        <a data-scroll href="#{{ tag }}">{{ tag }}</a>
     {% endfor %}
-    {% endraw %}
   {% else %}
-    {% raw %}
     {% for tag in tags_list %}
-        <a data-scroll href="#{% raw %}{{ tag[0] }}{% endraw %}">{% raw %}{{ tag[0] }}{% endraw %}</a>
+        <a data-scroll href="#{{ tag[0] }}">{{ tag[0] }}</a>
     {% endfor %}
-    {% endraw %}
   {% endif %}
-  {% endraw %}
-{% raw %}
 {% assign tags_list = nil %}
 {% endraw %}
 </div>
-
 {% raw %}
 {% for tag in site.tags  %}
-	<div class="tag">
-    	<h2 class="tag-title" id="{% raw %}{{ tag[0] }}{% endraw %}">{% raw %}{{ tag[0] }}{% endraw %}</h2>
-    	<ul class="posts">
-            {% raw %}
-        	{% assign pages_list = tag[1] %}
-            {% endraw %}
-            {% raw %}
-        	{% for post in pages_list reversed %}
-                {% raw %}
-            	{% if post.title != null %}
-                {% raw %}
-            	{% if group == null or group == post.group %}
-            	<li><a href="{% raw %}{{ site.url }}{% endraw %}{% raw %}{{ post.url }}{% endraw %}">{{ post.title }}<span class="date"><time datetime="{% raw %}{{ post.date | date_to_xmlschema }}{% endraw %}" itemprop="datePublished">{{ post.date | date: "%d %b, %Y" }}</time></span></a></li>
-            	{% endif %}
-                {% endraw %}
-            	{% endif %}
-                {% endraw %}
-        	{% endfor %}
-            {% endraw %}
-            {% raw %}
-        	{% assign pages_list = nil %}
-            {% endraw %}
-            {% raw %}
-        	{% assign group = nil %}
-            {% endraw %}
-    	</ul>
+    <div class="tag">
+        <h2 class="tag-title" id="{{ tag[0] }}">{{ tag[0] }}</h2>
+        <ul class="posts">
+            {% assign pages_list = tag[1] %}
+            {% for post in pages_list reversed %}
+                {% if post.title != null %}
+                {% if group == null or group == post.group %}
+                <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%d %b, %Y" }}</time></span></a></li>
+                {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% assign pages_list = nil %}
+            {% assign group = nil %}
+        </ul>
     </div>
 {% endfor %}
 {% endraw %}
@@ -191,62 +170,41 @@ Com base na função criada acima, vamos criar a mesma função, mudando apenas 
 layout: page
 title: Categorias
 description: Procure os assuntos pelas categorias usadas no blog.
-permalink: /series/
+permalink: /categorias/
 ---
 <h2> Procure os assuntos pelas categorias usadas no blog </h2>
 
 <div class="categories-list">
 {% raw %}
 {% assign categories_list = site.categories %}
-{% endraw %}
-  {% raw %}
   {% if categories_list.first[0] == null %}
-    {% raw %}
     {% for category in categories_list %}
-        <a data-scroll href="#{% raw %}{{ category }}{% endraw %}">{% raw %}{{ category }}{% endraw %}</a>
+        <a data-scroll href="#{{ category }}">{{ category }}</a>
     {% endfor %}
-    {% endraw %}
   {% else %}
-    {% raw %}
     {% for category in categories_list %}
-        <a data-scroll href="#{% raw %}{{ category[0] }}{% endraw %}">{% raw %}{{ category[0] }}{% endraw %}</a>
+        <a data-scroll href="#{{ category[0] }}">{{ category[0] }}</a>
     {% endfor %}
-    {% endraw %}
   {% endif %}
-  {% endraw %}
-{% raw %}
 {% assign tags_list = nil %}
 {% endraw %}
 </div>
-
 {% raw %}
 {% for category in site.categories  %}
-	<div class="category">
-		<h2 class="category-title" id="{% raw %}{{ category[0] }}{% endraw %}">{% raw %}{{ category[0] }}{% endraw %}</h2>
-    	<ul class="posts">
-            {% raw %}
-        	{% assign pages_list = category[1] %}
-            {% endraw %}
-            {% raw %}
-        	{% for post in pages_list reversed %}
-                {% raw %}
-            	{% if post.title != null %}
-                {% raw %}
-            	{% if group == null or group == post.group %}
-            	<li><a href="{% raw %}{{ site.url }}{% endraw %}{% raw %}{{ post.url }}{% endraw %}">{{ post.title }}<span class="date"><time datetime="{% raw %}{{ post.date | date_to_xmlschema }}{% endraw %}" itemprop="datePublished">{{ post.date | date: "%d %b, %Y" }}</time></span></a></li>
-            	{% endif %}
-                {% endraw %}
-            	{% endif %}
-                {% endraw %}
-        	{% endfor %}
-            {% endraw %}
-            {% raw %}
-        	{% assign pages_list = nil %}
-            {% endraw %}
-            {% raw %}
-        	{% assign group = nil %}
-            {% endraw %}
-    	</ul>
+    <div class="category">
+        <h2 class="category-title" id="{{ category[0] }}">{{ category[0] }}</h2>
+        <ul class="posts">
+            {% assign pages_list = category[1] %}
+            {% for post in pages_list reversed %}
+                {% if post.title != null %}
+                {% if group == null or group == post.group %}
+                <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%d %b, %Y" }}</time></span></a></li>
+                {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% assign pages_list = nil %}
+            {% assign group = nil %}
+        </ul>
     </div>
 {% endfor %}
 {% endraw %}
