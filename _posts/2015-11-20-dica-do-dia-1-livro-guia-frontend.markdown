@@ -24,6 +24,6 @@ Nesse primeiro post da série, irei falar do livro [Guia Front-End: O caminho da
 ## Review
 O livro é fantástico, para você que está começando na área é ótimo, pois ele traz as tecnologias e técnicas que você precisa estudar para ser tornar um bom Desenvolvedor Front-End, desse jeito você não perde tempo com assuntos que não são tão importantes para sua carreira.
 
-Se você se interessou neste livro, pode comprar acessando [este link da Casa do Código](http://www.casadocodigo.com.br/products/livro-guia-frontend){:target="_blank"}, editora do livro. A versão E-book custa R$ 29,90 e a versão impressa R$ 59,90, também tem a opção de comprar o E-book mais a versão impressa por R$ 69,90.
+Se você se interessou neste livro, pode comprar acessando [este link da Casa do Código](http://www.casadocodigo.com.br/products/livro-guia-frontend){:target="_blank"}, editora do livro. A versão E-book custa R$ 29,90 e a versão impressa R$ 69,90, também tem a opção de comprar o E-book mais a versão impressa por R$ 79,90. *(Esses são os valores da promoção, acesso em 18/09/2016)*.
 
 Eu recomendo o livro, não deixe essa oportunidade passar. Para quem comprar, faça uma boa leitura!

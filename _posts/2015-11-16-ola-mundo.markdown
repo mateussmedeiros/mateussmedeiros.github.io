@@ -26,12 +26,12 @@ Qualquer dúvida que aparecer, não hesite em me mandar um e-mail ou comentar aq
 ## Tecnologias utilizadas no Blog 
 
 ### Jekyll 
-O [Jekyll](http://jekyllrb.com){:target="_blank"} é um gerador de páginas estáticas, perfeito para criar um blog sem a necessidade de um banco de dados. Escolhi ele por ser de fácil utilização e também pela facilidade de fazer o deploy no GitHub Pages <3. Outro fator que foi de grande peso para minha escolha foi a sua utilização por grande parte dos Devs que eu sigo, o que facilitou na hora de criar meu blog. 
+O [Jekyll](http://jekyllrb.com){:target="_blank"} é um gerador de páginas estáticas, perfeito para criar um blog sem a necessidade de um banco de dados. Escolhi ele por ser de fácil utilização e também pela facilidade de fazer o deploy no GitHub Pages ❤. Outro fator que foi de grande peso para minha escolha foi a sua utilização por grande parte dos Devs que eu sigo, o que facilitou na hora de criar meu blog. 
 
 Se você ficou interessado por essa tecnologia visite o site do [Jekyll](http://jekyllrb.com){:target="_blank"} ou também leia esse [post do Willian Justen](http://willianjusten.com.br/perguntas-e-respostas-jekyll/){:target="_blank"} onde ele ensina algumas coisas sobre o Jekyll. Em breve farei um post explicando como utilizar essa incrível ferramenta. Aguarde!
 
 ### SASS
-Pré-processadores são incríveis <3. O SASS foi o primeiro pré-processador de que eu ouvi falar, escolhi ele por ser de fácil aprendizado e também pela sua ampla comunidade. Abaixo segue um exemplo de um código escrito em CSS e depois ele escrito em `.scss` (formato de arquivo do SASS).
+Pré-processadores são incríveis ❤. O SASS foi o primeiro pré-processador de que eu ouvi falar, escolhi ele por ser de fácil aprendizado e também pela sua ampla comunidade. Abaixo segue um exemplo de um código escrito em CSS e depois ele escrito em `.scss` (formato de arquivo do SASS).
 
 {% highlight css %}
 .elemento {
