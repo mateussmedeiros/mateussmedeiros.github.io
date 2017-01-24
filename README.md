@@ -1,4 +1,4 @@
-# [mateussmedeiros.github.io](http://mateussmedeiros.github.io/)
+# [mateussmedeiros.github.io](http://mateussmedeiros.github.io/home/)
 Meu blog pessoal
 
 Blog sobre um Desenvolvedor Front End apaixonado por novas tecnologias, abordando assuntos sobre Desenvolvimento Web, com foco em Front End
