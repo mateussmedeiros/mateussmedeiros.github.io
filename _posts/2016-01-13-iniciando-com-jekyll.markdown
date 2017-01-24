@@ -19,7 +19,7 @@ O Jekyll é um gerador de páginas estáticas, você consegue criar páginas uti
 
 Se quiser saber mais sobre o Jekyll e como ele funciona, basta acessar o [site oficial](http://jekyllrb.com){:target="_blank"} (disponível em inglês), mas se você não souber inglês ou não entender muito bem, tem uma tradução ainda em andamento do site oficial sendo feita pela comunidade Jekyll Brasil, só acessar este [link](http://jekyll-brasil.github.io/){:target="_blank"}.
 
-##Instalando o Jekyll
+## Instalando o Jekyll
 Para instalar o Jekyll, você precisa ter o **Ruby** instalado em sua máquina, caso você não tiver ele instalado, só seguir os tutoriais abaixo:
 
 - [Linux](http://michaelchelen.net/81fa/install-jekyll-2-ubuntu-14-04/){:target="_blank"} (Ruby + Jekyll)
@@ -90,7 +90,7 @@ tags:
 - jekyll
 {% endhighlight %}
 
-##Variáveis
+## Variáveis
 No Jekyll, você pode usar variáveis pré-definidas ou criar suas próprias variáveis. Existem três tipos de variáveis: as **variáveis globais**, **variáveis do site** e **variáveis da página**. Vamos aprender algumas:
 
 ### Variáveis Globais
@@ -185,7 +185,7 @@ cd nome-do-projeto
 jekyll serve
 {% endhighlight %}
 
-Com esse comando, o jekyll irá gerar um servidor - por padrão, na porta **4000** - e ficará assintindo os arquivos. Para acessar seu projeto, entre no endereço: [http://localhost:4000/](http://localhost:4000/){:target="_blank"} ou [http://127.0.0.1:4000/](http://127.0.0.1:4000/){:target="_blank"}.
+Com esse comando, o jekyll irá gerar um servidor - por padrão, na porta **4000** - e ficará assistindo os arquivos. Para acessar seu projeto, entre no endereço: [http://localhost:4000/](http://localhost:4000/){:target="_blank"} ou [http://127.0.0.1:4000/](http://127.0.0.1:4000/){:target="_blank"}.
 
 ## Gerando os arquivos estáticos
 Terminado o desenvolvimento do projeto, você pode gerar os arquivos estáticos do seu blog com o comando:
