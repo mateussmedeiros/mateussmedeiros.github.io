@@ -16,7 +16,7 @@ Um simples tema de blog Jekyll
 
 ![Captura de tela do Tema](https://github.com/mateussmedeiros/blade-theme/blob/master/screenshot.png?raw=true)
 
-**O tema requer o *ruby* e *rubygems* instalados!**
+❗ **O tema requer o *ruby* e *rubygems* instalados!**
 
 * ✓ Layout responsivo
 * ✓ Pré-processador SASS
@@ -36,17 +36,19 @@ Um simples tema de blog Jekyll
 3. Instale as dependências do Ruby: `bundle install`
 4. Inicie o servidor Jekyll: `jekyll serve`
 
-Acesse: [localhost:4000](http://localhost:4000)
+Acesse: [localhost:4000](http://localhost:4000){:target="_blank"}
 
 -----
 
 ### Demo e Download
 
-[Demo](http://mateussmedeiros.github.io/blade-theme/)
-[Download](https://github.com/mateussmedeiros/blade-theme/archive/master.zip)
+[Demo ↗](http://mateussmedeiros.github.io/blade-theme/){:target="_blank"} |
+[Download ↗](https://github.com/mateussmedeiros/blade-theme/archive/master.zip){:target="_blank"}
+
+O tema também está disponível na [RubyGems ↗](https://rubygems.org/gems/blade-theme){:target="_blank"}
 
 -----
 
 ### Licença
 
-Este tema é liberado sob licença [MIT](https://github.com/mateussmedeiros/blade-theme/blob/master/LICENSE).
+Este tema é liberado sob licença [MIT ↗](https://github.com/mateussmedeiros/blade-theme/blob/master/LICENSE){:target="_blank"}.
