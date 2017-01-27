@@ -1,5 +1,5 @@
 {
-  "name": "Mateus Medeiros - Desenvolvedor Front End",
+  "name": "mateus-medeiros-desenvolvedor-front-end",
   "description": "Desenvolvedor Front End sempre a procura de novas tecnologias",
   "main": "",
   "moduleType": [],
@@ -15,7 +15,7 @@
     "Mateus Medeiros <mateus.sousamedeiros@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "http://devmateusmedeiros.com.br",
+  "homepage": "http://mateussmedeiros.github.io/",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -24,7 +24,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
-    "simple-jekyll-search": "~1.0.8"
+    "jquery": "latest",
+    "simple-jekyll-search": "latest"
   }
 }
