@@ -122,15 +122,15 @@
         color: $branco;
     }
 
-    a {
+    a, p {
         display: block;
         margin: 10px;
         color: $branco;
+    }
 
-        &:hover {
-            color: $azul;
-            text-decoration: underline;
-        }
+    a:hover {
+      color: $azul;
+      text-decoration: underline;
     }
 }  
 

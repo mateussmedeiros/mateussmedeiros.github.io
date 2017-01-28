@@ -33,7 +33,7 @@ SimpleJekyllSearch({
   resultsContainer: document.getElementById('results-container'),
   json: '/search.json',
   searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-  noResultsText: 'Sem resultados'
+  noResultsText: '<p>Sem resultados</p>'
 })
 
 $(window).resize(function(){
