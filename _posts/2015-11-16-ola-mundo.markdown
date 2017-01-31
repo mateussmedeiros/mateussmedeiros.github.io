@@ -124,6 +124,6 @@ gulp.task('images', function(cb) {
 Se quiser aprender mais sobre o Gulp, recomendo esse [post](http://tableless.com.br/gulp-o-novo-automatizador/){:target="_blank"}.
 
 ## Conclusão
-Esse foi um post para apresentar meu blog e explicar sobre as tecnologias que utilizei nele. Essa foi uma escolha pessoal para um projeto específico, não é uma combinação ideal para todos os projetos. Se tiver alguma dúvida ou sugestão, comente aqui ou envie um e-mail para [mateus.sousamedeiros@gmail.com](mailto:mateus.sousamedeiros@gmail.com). Todo feedback é bem vindo. Assine meu [RSS](/feed.xml/) e não perca nenhum post. 
+Esse foi um post para apresentar meu blog e explicar sobre as tecnologias que utilizei nele. Essa foi uma escolha pessoal para um projeto específico, não é uma combinação ideal para todos os projetos. Se tiver alguma dúvida ou sugestão, comente aqui ou envie um e-mail para [mateus.sousamedeiros@gmail.com](mailto:mateus.sousamedeiros@gmail.com). Todo feedback é bem vindo. Assine meu [RSS](/feed.xml) e não perca nenhum post. 
 
 Até mais!

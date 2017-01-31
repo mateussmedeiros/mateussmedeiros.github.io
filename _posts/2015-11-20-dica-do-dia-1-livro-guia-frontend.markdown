@@ -15,7 +15,7 @@ image: /assets/img/livro-guia-frontend.png
 ---
 
 ## Introdução
-Galera, estou iniciando agora uma série chamada *Dica do Dia*, onde darei um dica rápida para vocês, seja sobre um livro, um post que achei interessante ou um tutorial. Pretendo postar bastante coisa por aqui, por isso criei [essa página](/dica-do-dia/) onde estarão todos os posts dessa série. 
+Galera, estou iniciando agora uma série chamada *Dica do Dia*, onde darei um dica rápida para vocês, seja sobre um livro, um post que achei interessante ou um tutorial. Pretendo postar bastante coisa por aqui, por isso criei [essa página](http://mateussmedeiros.github.io/series/#Dica do Dia) onde estarão todos os posts dessa série. 
 
 Nesse primeiro post da série, irei falar do livro [Guia Front-End: O caminho das pedras para ser um dev Front-End](http://www.casadocodigo.com.br/products/livro-guia-frontend){:target="_blank"} do Diego Eis, criador do site [Tableless](http://tableless.com.br){:target="_blank"}.
 
