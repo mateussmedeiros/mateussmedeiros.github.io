@@ -15,6 +15,8 @@ permalink: /comecando-com-sass/
 
 Você já deve ter ouvido falar sobre pré-processadores CSS e como eles aumentam sua produtividade. O **Sass** foi o primeiro pré-processador que conheci e desde então tenho usado ele em todos os meus projetos. 
 
+![Logo - Sass](/assets/img/logo-sass.png){: .center }
+
 > Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
 
 Nesse post, ensinarei como instalá-lo em sua máquina e algumas features desse íncrivel pré-processador. Então chega de delongas e vamos lá!
