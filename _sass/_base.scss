@@ -19,6 +19,63 @@ button {
 ------------*/
 body {
     font-family: $fonte-principal;
-    font-size: 62.5%;
     color: $cor-secundaria;
+}
+
+/*------------------
+---- Tipografia ----
+------------------*/
+h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+h4 {
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+h5 {
+    font-size: 0.875rem;
+    line-height: 1.875rem;
+}
+
+h6 {
+    font-size: 0.75rem;
+    line-height: 1.75rem;
+}
+
+p, a, li {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+}
+
+p {
+    @extend %margins;
+}
+
+h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+/*-------------
+---- Links ----
+-------------*/
+a {
+    color: $cor-principal;
+    text-decoration: none;
+
+    &:hover {
+        color: $cor-principal-escuro;
+    }
 }

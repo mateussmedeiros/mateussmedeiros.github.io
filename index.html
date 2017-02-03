@@ -3,13 +3,15 @@ layout: default
 ---
 
 <div class="home">
+  
+  <div class="welcome">
+    <p class="welcome-title"> Olá Galera </p>
 
-  <p class="welcome-title"> Olá Galera </p>
-
-  <p> Meu nome é Mateus de Sousa Medeiros, tenho 16 anos e sou <b>Desenvolvedor Front End</b>. </p> 
-  <p> Criei esse blog, primeiro para testar o <b>Jekyll</b> e <b>SASS</b>; e segundo para ter um lugar onde posso compartilhar meu conhecimento. </p>
-  <p> Espero que gostem! </p>
-
+    <p> Meu nome é Mateus de Sousa Medeiros, tenho 16 anos e sou <b>Desenvolvedor Front End</b>. </p> 
+    <p> Criei esse blog, primeiro para testar o <b>Jekyll</b> e <b>SASS</b>; e segundo para ter um lugar onde posso compartilhar meu conhecimento. </p>
+    <p> Espero que gostem! </p>
+  </div>
+  
   <ul class="post-list">
     {% for post in paginator.posts %}
       <li class="post-container">
