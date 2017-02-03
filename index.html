@@ -7,31 +7,53 @@ layout: default
   <p class="welcome-title"> Olá Galera </p>
 
   <p> Meu nome é Mateus de Sousa Medeiros, tenho 16 anos e sou <b>Desenvolvedor Front End</b>. </p> 
-  <p> No meu workflow costumo usar HTML, CSS (SASS) e JavaScript (jQuery), além do Gulp como <i>Task Runner</i> e Git para versionar meus projetos. </p>
   <p> Criei esse blog, primeiro para testar o <b>Jekyll</b> e <b>SASS</b>; e segundo para ter um lugar onde posso compartilhar meu conhecimento. </p>
   <p> Espero que gostem! </p>
 
-  <h1 class="page-title"> Meu Blog </h1>
-
   <ul class="post-list">
-    {% for post in site.posts limit:2 %}
+    {% for post in paginator.posts %}
       <li class="post-container">
-        <span class="post-date">{{ post.date | date: "%-d %b, %Y" }}</span>
-
         <h2>
           <a class="post-link" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
 
-          <p class="post-description">{{ post.description }}</p>
+        <span class="post-date">{{ post.date | date: "%-d %b, %Y" }}</span>
 
-          <a href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais sobre {{ post.title }}</a>
+        <p class="post-description">{{ post.description }}</p>
 
-          {% include tags.html %}
+        <a href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais...</a>
+
+        {% include tags.html %}
       </li>
     {% endfor %}
+
+    {% if paginator.total_pages > 1 %}
+      <div class="pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Anterior</a>
+        {% else %}
+          <span>Anterior</span>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <em>{{ page }}</em>
+          {% elsif page == 1 %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+          {% else %}
+            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+          {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Próxima</a>
+        {% else %}
+          <span>Próxima</span>
+        {% endif %}
+      </div>
+    {% endif %}
   </ul>
   
-  <a href="blog"> Veja mais no blog... </a>
   <p class="rss-subscribe">Inscreva-se <a aria-label="Inscreva-se via RSS e receba todos os posts novos" href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a> e receba todos os novos posts </p>
 
 </div>

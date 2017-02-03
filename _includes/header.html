@@ -1,38 +1,26 @@
 <header class="header">
-  <button aria-expanded="false" aria-controls="menu" aria-label="Clique para abrir o menu" class="bt-menu"><svg class="icon-top icon-menu"><use xlink:href="#icon-menu"></use></svg></button>
+  
+  <div class="container-menu">
+    <button aria-expanded="false" aria-controls="menu" aria-label="Clique para abrir o menu" class="bt-menu"><svg class="icon-top icon-menu"><use xlink:href="#icon-menu"></use></svg></button>
     <nav class="menu">
       <a aria-label="Conheça-me um pouco mais" href="/sobre"> Sobre Mim </a>
       <a aria-label="Meu portfólio" href="/portfolio"> Portfólio </a>
-      <a aria-label="Meu Blog" href="/blog"> Blog </a>
       <a aria-label="Minhas Séries" href="/series"> Séries </a>
       <a aria-label="Procure os assuntos pelas tags" href="/tags"> Tags </a>
       <a aria-label="Fale comigo" href="/contato"> Contato </a>
     </nav>
   
-  <button aria-expanded="false" aria-controls="search-container" aria-label="Pesquisar no Blog" class="bt-search"><svg class="icon-top icon-search"><use xlink:href="#icon-search"></use></svg></button>
-  <div id="search-container">
-    <input type="text" id="search-input" placeholder="Pesquisar posts no blog...">
-    <button aria-label="Fechar Barra de Pesquisa" class="bt-close"><svg class="icon-top icon-close"><use xlink:href="#icon-close"></use></svg></button>
-    <ul id="results-container"></ul>
+    <button aria-expanded="false" aria-controls="search-container" aria-label="Pesquisar no Blog" class="bt-search"><svg class="icon-top icon-search"><use xlink:href="#icon-search"></use></svg></button>
+    <div id="search-container">
+      <input type="text" id="search-input" placeholder="Pesquisar posts no blog...">
+      <button aria-label="Fechar Barra de Pesquisa" class="bt-close"><svg class="icon-top icon-close"><use xlink:href="#icon-close"></use></svg></button>
+      <ul id="results-container"></ul>
+    </div>
   </div>
 
-  <hgroup class="title">
+  <div class="title">
     <h1> <a href="/"> Mateus Medeiros </a> </h1>  
     <h2> <a href="/"> Desenvolvedor Front End </a> </h2>
-  </hgroup>   
-
-  <div class="social-icons">
-    {% include svg.html %}
-
-    <a aria-label="Meu Facebook" href="https://facebook.com/mateus.sousamedeiros" target="_blank" title="Siga-me no Facebook"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a>
-  
-    <a aria-label="Meu Twitter" href="https://twitter.com/mateussousam" target="_blank" title="Siga-me no Twitter"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
-  
-    <a aria-label="Meu GitHub" href="https://github.com/mateussmedeiros" target="_blank" title="Conecte-se no meu GitHub"><svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg></a>
-
-    <a aria-label="Enviar E-mail" href="mailto:mateus.sousamedeiros@gmail.com" title="Envie-me um e-mail"><svg class="icon icon-email"><use xlink:href="#icon-email"></use></svg></a>
-
-    <a aria-label="Inscreva-se via RSS e receba todos os posts novos" href="/feed.xml" title="Inscreva-se via RSS e receba todos os posts novos"><svg class="icon icon-rss"><use xlink:href="#icon-rss"></use></svg></a>
-  </div>
+  </div>   
 
 </header>

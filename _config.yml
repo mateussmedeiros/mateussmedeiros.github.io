@@ -8,9 +8,12 @@ github_username:  mateussmedeiros
 # Build settings
 markdown: kramdown
 permalink: /:title/
+paginate: 3
+paginate_path: "/page/:num/"
 
 gems:
   - jekyll-sitemap
+  - jekyll-paginate
 
 css_folder:  "/assets/css"
 js_folder:  "/assets/js"
