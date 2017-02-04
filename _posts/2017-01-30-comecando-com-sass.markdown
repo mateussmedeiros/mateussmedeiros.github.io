@@ -6,7 +6,7 @@ author: Mateus Medeiros
 description: Sass é um íncrivel pré-processador CSS, aprenda a usá-lo em seus projetos.
 tags: 
 - frontend
-- gulp
+- sass
 - pre-processadores
 categories:
 - Pré-processadores

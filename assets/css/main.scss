@@ -32,8 +32,9 @@ $bp-mobile-large: 500px;
 }
 
 %botoes {
-	padding: 3px 5px;
+	padding: 3px 8px;
     margin-right: 5px;
+    border-radius: 3px;
 
     &:last-child {
       margin-right: 0;

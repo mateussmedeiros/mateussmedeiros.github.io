@@ -4,8 +4,8 @@ title: Tags
 description: Procure os assuntos pelas tags usadas no blog
 permalink: /tags/
 ---
-
 <h2> Procure os assuntos pelas tags usadas no blog </h2>
+<hr>
 
 <div class="tags-list">
 {% assign tags_list = site.tags %}
@@ -21,9 +21,11 @@ permalink: /tags/
 {% assign tags_list = nil %}
 </div>
 
+<hr>
+
 {% for tag in site.tags  %}
 	<div class="tag">
-    	<h2 class="tag-title" id="{{ tag[0] }}">{{ tag[0] }}</h2>
+    	<h3 class="tag-title" id="{{ tag[0] }}">{{ tag[0] }}</h3>
     	<ul class="posts">
         	{% assign pages_list = tag[1] %}
         	{% for post in pages_list reversed %}

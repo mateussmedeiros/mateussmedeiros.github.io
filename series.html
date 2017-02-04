@@ -4,7 +4,8 @@ title: Séries
 description: Séries escritas por mim abordando determinados assuntos
 permalink: /series/
 ---
-<h2> Séries escritas por mim abordando determinados assuntos </h2>
+<h2> Diversos assuntos abordados no blog </h2>
+<hr>
 
 <div class="categories-list">
 {% assign categories_list = site.categories %}
@@ -20,9 +21,11 @@ permalink: /series/
 {% assign tags_list = nil %}
 </div>
 
+<hr>
+
 {% for category in site.categories  %}
 	<div class="category">
-		<h2 class="category-title" id="{{ category[0] }}">{{ category[0] }}</h2>
+		<h3 class="category-title" id="{{ category[0] }}">{{ category[0] }}</h3>
     	<ul class="posts">
         	{% assign pages_list = category[1] %}
         	{% for post in pages_list reversed %}
