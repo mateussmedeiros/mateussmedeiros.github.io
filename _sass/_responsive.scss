@@ -84,7 +84,17 @@
 		}
 		
 		.text-details {
-			width: 100%;
+			width: 300px;
+
+      		h2 a {
+        		font-size: 1.3rem;
+        		line-height: 2.3rem;
+      		}
+
+      		p {
+      			font-size: 1.1rem;
+      			line-height: 2.1rem;
+      		}
 		}
 	}
 }
@@ -130,6 +140,15 @@
 
   		.job-img {
 			height: auto;
+		}
+	}
+	
+	/*-------------
+	---- Autor ----
+	-------------*/
+	.details {
+		.text-details {
+			width: 200px;
 		}
 	}
 }

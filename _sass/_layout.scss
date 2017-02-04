@@ -276,6 +276,7 @@
 ---- Autor ----
 -------------*/
 .author {
+  width: 100%;
   margin: 20px auto;
   background: $cinza;
 }
@@ -296,7 +297,7 @@
   }
 
   .text-details {
-    width: 500px;
+    max-width: 500px;
     float: right;
     margin-left: 25px;
 
