@@ -22,6 +22,13 @@ body {
     color: $cor-secundaria;
 }
 
+/*----------
+---- Hr ----
+----------*/
+hr {
+    margin: 10px 0;
+}
+
 /*------------------
 ---- Tipografia ----
 ------------------*/
@@ -93,4 +100,20 @@ ul, ol {
 img {
     display: block;
     margin: 5px auto;
+}
+
+/*-------------------
+---- Blockquotes ----
+-------------------*/
+blockquote {
+    border-left: 4px solid $cor-principal;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    letter-spacing: -1px;
+    font-style: italic;
+    padding-left: 10px;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
 }

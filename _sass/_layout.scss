@@ -123,10 +123,10 @@
 ---- Icones Sociais ----
 ----------------------*/
 .icon-top {
-    width: 25px;
-    height: 25px;
-    fill: $branco;
-    cursor: pointer;
+  width: 25px;
+  height: 25px;
+  fill: $branco;
+  cursor: pointer;
 }
 
 .icon {
@@ -137,7 +137,7 @@
   fill: $cor-principal;
 
   &:hover {
-    fill: $branco;
+    fill: $cor-principal-escuro;
   }
 }
 
@@ -259,6 +259,66 @@
   }
 }
 
+
+/*------------------------
+---- Compartilhamento ----
+------------------------*/
+.share {
+  margin: 10px auto;
+  text-align: center;
+}
+
+/*-------------
+---- Autor ----
+-------------*/
+.author {
+  margin: 20px auto;
+  background: $cinza;
+}
+
+.details {
+  clear: both;
+  padding: 15px;
+  display: table;
+  margin: 0 auto;
+
+  .img-author {
+    width: 180px;
+    height: 180px;
+    float: left;
+    margin: auto;
+    border: 2px solid $cor-principal;
+    border-radius: 50%;
+  }
+
+  .text-details {
+    width: 500px;
+    float: right;
+    margin-left: 25px;
+
+      .definition {
+        font-size: 1rem;
+        line-height: 2rem;  
+      }
+
+      h2 a {
+        font-size: 1.75rem;
+        line-height: 2.75rem;
+      }
+
+      p {
+        margin: 0;
+      }
+  }
+}
+
+/*-------------------
+---- Comentários ----
+-------------------*/
+.comments {
+  clear: both;
+  text-align: center;
+}
 
 /*--------------
 ---- Séries ----
