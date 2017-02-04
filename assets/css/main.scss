@@ -14,7 +14,7 @@ $fonte-principal: 'Open Sans', Arial, sans-serif;
 
 // Cores
 $cor-principal: #34afaa; // turquoise
-$cor-principal-escuro: darken(#34afaa, 10%);
+$cor-principal-escuro: darken(#34afaa, 15%);
 $cor-secundaria: #18252b; // midnightblue
 $cor-menu: #009a95; // green sea
 $branco: #FFF;
@@ -27,8 +27,27 @@ $bp-mobile-large: 500px;
 ///////////////////
 // Placeholders //
 //////////////////
-%margins {
+%margens {
     margin: 1em 0;
+}
+
+%botoes {
+	padding: 3px 5px;
+    margin-right: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+}
+
+%botao-principal {
+	background: $cor-secundaria;
+    color: $branco;
+
+    &:hover {
+      background: $cor-principal;
+      color: $cinza;
+    }
 }
 
 /////////////

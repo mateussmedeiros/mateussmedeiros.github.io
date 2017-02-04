@@ -140,3 +140,102 @@
     fill: $branco;
   }
 }
+
+/*----------------------
+---- Página Inicial ----
+----------------------*/
+.home {
+  width: 850px;
+  margin: 30px auto;
+}
+
+.welcome {
+  .welcome-title {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}
+
+.post-list {
+  padding: 10px 15px;
+  list-style-type: none;
+}
+
+.post-container {
+  padding: 10px 15px;
+  margin-bottom: 40px;
+  border: 2px solid $cor-principal;
+
+  .post-link {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: $cor-secundaria;
+
+    &:hover {
+      color: $cor-principal-escuro;
+    }
+  }
+
+  .post-date {
+    font-size: 0.85rem;
+    line-height: 1.85rem;
+  }
+
+  .post-description {
+    margin-bottom: 10px;
+  }
+
+  .post-permalink {
+    text-decoration: underline;
+  }
+}
+
+.tags {
+  margin-top: 15px;
+
+  a {
+    @extend %botoes;
+    @extend %botao-principal;
+  }
+}
+
+.pagination {
+  text-align: center;
+
+  a {
+    @extend %botoes;
+    @extend %botao-principal;
+  }
+
+  span, .selected {
+    @extend %botoes;
+  }
+
+  span {
+    background: lighten($cor-secundaria, 20%);
+    color: $cinza;
+    font-size: 1.2rem;
+    line-height: 2.2rem; 
+  } 
+
+  .selected {
+    background: $cor-principal;
+    color: $cinza;
+  }
+}
+
+/*--------------
+---- Footer ----
+--------------*/
+.footer {
+  padding: 20px 0;
+  background-color: $cor-secundaria;
+  color: $branco;
+  text-align: center;
+}
+
+.copy {
+  p {
+    margin-bottom: 0;
+  }
+}

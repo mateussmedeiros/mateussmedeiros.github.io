@@ -5,7 +5,7 @@ layout: default
 <div class="home">
   
   <div class="welcome">
-    <p class="welcome-title"> Olá Galera </p>
+    <p class="welcome-title"> <b>Olá Galera!</b> </p>
 
     <p> Meu nome é Mateus de Sousa Medeiros, tenho 16 anos e sou <b>Desenvolvedor Front End</b>. </p> 
     <p> Criei esse blog, primeiro para testar o <b>Jekyll</b> e <b>SASS</b>; e segundo para ter um lugar onde posso compartilhar meu conhecimento. </p>
@@ -19,11 +19,11 @@ layout: default
           <a class="post-link" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
 
-        <span class="post-date">{{ post.date | date: "%-d %b, %Y" }}</span>
+        <span class="post-date">Postado em: {{ post.date | date: "%-d %b, %Y" }}</span>
 
         <p class="post-description">{{ post.description }}</p>
 
-        <a href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais...</a>
+        <a class="post-permalink" href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais...</a>
 
         {% include tags.html %}
       </li>
@@ -39,7 +39,7 @@ layout: default
 
         {% for page in (1..paginator.total_pages) %}
           {% if page == paginator.page %}
-            <em>{{ page }}</em>
+            <span class="selected">{{ page }}</span>
           {% elsif page == 1 %}
             <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
           {% else %}
