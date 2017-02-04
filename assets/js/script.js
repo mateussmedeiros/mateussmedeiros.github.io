@@ -1,13 +1,29 @@
 // Abrir e Fechar - Menu
 $(".bt-menu").click(function() {
-	$(".menu").toggle();
+	$(".menu").show();
+	$(".wrapper").show();
 
 	if ( $(".menu").is(":visible") ) {
 		$(".bt-menu").attr('aria-expanded', 'true');
-
-	} else {
-		$(".bt-menu").attr('aria-expanded', 'false');
 	};
+});
+
+$(".bt-close-menu").click(function() {
+	$(".menu").hide();
+	$(".wrapper").hide();
+
+	if ( $(".menu").is(":hidden") ) {
+		$(".bt-menu").attr('aria-expanded', 'false');
+	}
+});
+
+$(window).resize(function() {
+	var tamanhoViewport = $(window).width();
+	if (tamanhoViewport > 800) {
+		$(".wrapper").show();
+	} else {
+		$(".wrapper").hide();	
+	}
 });
 
 // Abrir e Fechar - Barra de Pesquisa
