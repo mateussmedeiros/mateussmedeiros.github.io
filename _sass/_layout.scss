@@ -239,3 +239,49 @@
     margin-bottom: 0;
   }
 }
+
+/*----------------------
+---- Páginas / Post ----
+----------------------*/
+.page, .post {
+  width: 850px;
+  margin: 30px auto;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0 5px 0;
+  }
+}
+
+.post {
+  .post-date {
+    font-size: 1em;
+    line-height: 2em;
+  }
+}
+
+
+/*--------------
+---- Séries ----
+--------------*/
+.categories-list, .tags-list {
+  a {
+    @extend %botoes;
+    @extend %botao-principal; 
+  }  
+}
+
+.category, .tag {
+  ul {
+    margin-left: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+    list-style-type: none;
+    border-bottom: 1px solid $cor-principal;
+  }
+
+  span {
+    float: right;
+  }
+}
