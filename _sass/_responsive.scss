@@ -1,5 +1,115 @@
 @include media-query($bp-tablet-large) {
+	/*------------
+	---- Menu ----
+	------------*/
+	.bt-menu {
+		display: block;
+		padding-top: 10px;
+	}
+
+    .menu {
+    	display: none;
+    	clear: both;
+
+    	a {
+        	float: none;
+        	display: block;
+        	margin: 0;
+        	padding: 10px;
+        	border-bottom: 1px solid $branco;
+
+        	&:last-child {
+            	border-bottom: none;
+        	}
+    	}
+	}
+
+	.bt-search {
+  		padding-top: 10px;
+	}
+
+	/*------------
+	--- Página ---
+	------------*/
+	.page-content {
+		width: 100%;
+		padding: 0 40px;
+	}
+
+	.post-list {
+  		padding: 10px 0;
+  		margin: 10px 0;
+	}
+	
+	/*-----------------
+	---- Portfólio ----
+	-----------------*/
+	.job-item {
+		width: 47%;
+		margin-right: 1%;
+   	}
+
+	/*-------------
+	---- Autor ----
+	-------------*/
+	.author {
+		text-align: center;
+	}
+	
+	.details {
+		.img-author, .text-details {
+			float: none;
+			display: block;
+			margin: 0 auto;
+		}
+		
+		.text-details {
+			width: 100%;
+		}
+	}
 }
 
 @include media-query($bp-mobile-large) {
+	/*--------------
+	---- Header ----
+	--------------*/
+	.title {
+		h1 a {
+			font-size: 2.4rem;
+    		line-height: 3.4rem;
+		}
+
+		h2 {
+			font-size: 1.4rem;
+    		line-height: 2.4rem;	
+		}
+	}
+
+	/*------------
+	--- Página ---
+	------------*/
+	.page-content {
+		padding: 0 20px;
+	}
+
+	/*----------------
+	---- Pesquisa ----
+	----------------*/
+	#search-container {
+  		input[type=text]{
+    		width: 80%;
+  		}
+	}
+
+	/*-----------------
+	---- Portfólio ----
+	-----------------*/
+	.job-item {
+  		width: auto;
+		margin-right: 0;
+		
+  		.job-img {
+			height: auto;
+		}
+	}
 }
