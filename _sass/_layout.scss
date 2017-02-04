@@ -30,7 +30,6 @@
 ------------*/
 .container-menu {
   min-height: 50px;
-  padding: 5px 0 5px 10px;
   background-color: $cor-principal-escuro;
 }
 
@@ -41,6 +40,8 @@
 }
 
 .menu {
+  padding: 5px 0 5px 10px;
+
   a {
     float: left;
     margin-right: 20px;
