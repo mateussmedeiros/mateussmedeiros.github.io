@@ -7,6 +7,7 @@ description: Tema para blogs Jekyll, ideal para desenvolvedores.
 tags: 
 - frontend
 - jekyll
+- temas
 categories:
 - Jekyll
 permalink: /blade-theme-meu-primeiro-tema-para-jekyll/

@@ -7,13 +7,14 @@ description: Primeiro post da série sobre Jekyll, irei ensinar como utilizar es
 tags: 
 - frontend
 - jekyll
+- sass
 categories:
 - Jekyll
 permalink: /iniciando-com-jekyll/
 ---
 
 ## Introdução
-Fala galera, como prometi que escreveria um post ensinado a usar o Jekyll, decidi não escrever apenas um post, mas uma série sobre Jekyll e esse é o primeiro post da série, nesse post irei ensinar o básico dessa íncrivel ferramenta.
+Fala galera, como prometi que escreveria um post ensinado a usar o **Jekyll**, decidi não escrever apenas um post, mas uma **série** sobre Jekyll, e esse é o primeiro post da série. Nesse post irei ensinar o básico dessa íncrivel ferramenta.
 
 O Jekyll é um gerador de páginas estáticas, você consegue criar páginas utilizando o HTML e CSS, depois disso o Jekyll converte todo o site em arquivos estáticos, pronto para ser colocado no ar. Ele utiliza **Markdown** para a formatação de textos e posts, um padrão de templates chamado **Liquid** e **YAML** para as variáveis.
 
@@ -43,7 +44,7 @@ jekyll -v
 
 Pronto, Jekyll instalado, vamos iniciar nosso primeiro projeto.
 
-##Iniciando um Projeto
+## Iniciando um Projeto
 Para inicar um novo projeto, digite no terminal:
 
 {% highlight sh %}
@@ -59,16 +60,16 @@ Como vocês puderam ver, o Jekyll cria várias pastas e arquivos, vamos entender
 
 - **_includes**: são os arquivos com os códigos que se repetem ao longo do projeto, como o *header* e o *footer*.
 - **_layouts**: é a estrutura básica das páginas, por padrão vem 3 tipos: **default** para a página inicial e listagem de posts. A **page** para as páginas secundárias e **post** para as páginas de post.
-- **_posts**: são os posts que escrevemos, em geral escrevemos em [Markdown](https://daringfireball.net/projects/markdown/syntax){:target="_blank"}.
-- **_sass**: são os arquivos de estilização que geram o CSS, se você trabalha com **sass**, o Jekyll já compila para você.
-- **css**: pasta para onde vai os arquivos gerados pelo sass.
+- **_posts**: são os posts que escrevemos, em geral, escrevemos em [Markdown](https://daringfireball.net/projects/markdown/syntax){:target="_blank"}.
+- **_sass**: são os arquivos de estilização que geram o CSS, se você trabalha com **Sass**, o Jekyll já compila para você.
+- **css**: pasta para onde vão os arquivos gerados pelo Sass.
 - **_config.yml**: arquivo de configuração do seu blog, onde você colocará os dados referentes ao seu blog.
 - **about.md**: arquivo do tipo **page** escrito em **markdown**, que gerencia a página /about.
 - **feed.xml**: arquivo que gera o feed do seu blog, é importante para as pessoas conseguirem facilmente seguir seu blog.
 - **index.html**: a página inicial do seu blog.
 
 ## Front-Matter
-O Jekyll utiliza o YAML, para guardar as informações. o Front-Matter deve ser a primeira coisa escrita no seu arquivo. As informações devem ficar entre o par de três traços `---`. A sintaxe dele é a seguinte:
+O Jekyll utiliza o YAML para guardar as informações. o **Front-Matter** deve ser a primeira coisa escrita no seu arquivo. As informações devem ficar entre o par de três traços `---`. A sintaxe dele é a seguinte:
 
 {% highlight yaml %}
 ---

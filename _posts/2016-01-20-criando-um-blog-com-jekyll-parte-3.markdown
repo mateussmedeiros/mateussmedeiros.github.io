@@ -700,7 +700,7 @@ pre {
 
 {% endhighlight %}
 
-Por fim, estilizamos os **highlights** do blog, utilizei o mesmo que uso no [meu blog](http://devmateusmedeiros.com.br){:target="_blank"}. E terminamos a estilização, vamos agora adicionar **JavaScript**.
+Por fim, estilizamos os **highlights** do blog, utilizei o mesmo que uso nesse meu blog. E terminamos a estilização, vamos agora adicionar **JavaScript**.
 
 ## Adicionando JavaScript
 
@@ -719,7 +719,7 @@ bower -v
 
 Antes de instalar as dependências que iremos utilizar no blog, precisamos listá-las. Para isso digite o comando `bower init`. Ele irá nos fazer algumas perguntas, responda com as informações do seu blog (nem todas as perguntas precisam ser respondidas). Feito isso o bower irá criar o arquivo `bower.json`, você pode editá-lo como quiser.
 
-Agora vamos instalar 2 dependências: o **jquery** e o **Simple Jekyll Search**. Para instalar e já listá-las no arquivo `bower.json`, digite o comando:
+Agora vamos instalar 2 dependências: o **jQuery** e o **Simple Jekyll Search**. Para instalar e já listá-las no arquivo `bower.json`, digite o comando:
 
 {% highlight sh %}
 # Instalar o Simple Jekyll Search

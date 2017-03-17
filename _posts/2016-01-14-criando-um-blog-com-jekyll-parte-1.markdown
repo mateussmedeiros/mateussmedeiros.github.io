@@ -85,7 +85,7 @@ O código já está bastante comentado, você deve trocar os valores das variáv
 
 Vamos agora configurar as nossas pastas. Primeiramente criaremos a pasta `assets`, dentro dela criaremos 2 pastas: `js` e `img`, também moveremos a pasta `css` para cá, ficando assim:
 
-- **css**: onde ficará o arquivo main.scss que o **sass** irá compilar.
+- **css**: onde ficará o arquivo **main.scss** que o **sass** irá compilar.
 - **img**: onde ficarão as imagens.
 - **js**: onde ficarão os arquivos JavaScript.
 
@@ -111,12 +111,12 @@ Iremos manter apenas o 3 primeiros arquivos e criar outros 5 arquivos, ficando a
 - **head.html**: é o head do nosso blog.
 - **header.html**: é o header do nosso blog, onde ficará também o nosso menu.
 - **share.html**: é a seção de compartilhamento dos posts.
-- **svg.html**: é o arquivo onde ficará os ícones svg.
+- **svg.html**: é o arquivo onde ficarão os ícones svg.
 - **tags.html**: é o arquivo onde ficará o laço **for** para listar todas as tags utilizadas no blog.
 
 Vamos configurar agora cada um dos nossos arquivos. Irei colocar como ficou cada arquivo, ele será comentado, então darei apenas uma breve explicação de cada arquivo.
 
-**Aviso**: Não existe espaço entre as chaves, coloquei porque uso Jekyll, então não iriam funcionar os exemplos.
+**Aviso**: Não existe espaço entre as chaves, coloquei porque uso Jekyll, então os exemplos não funcionariam.
 
 #### head.html
 
@@ -209,7 +209,7 @@ Esse arquivo não precisa de muita explicação, já está bem comentado. Ele j�
 Esse é o arquivo do nosso **header**, nele temos:
 
 - **Menu**: ficará no topo à esquerda alinhado com o botão da pesquisa.
-- **Pesquisa**: ficará fechado, se abrirá quando clicarmos no botão. Quando aberto, irá sobrepor a página inteira. Utilizaremos o plugin [Simple Jekyll Searching](https://github.com/christian-fei/Simple-Jekyll-Search){:target="_blank"} para fazer a pesquisa dos posts.
+- **Pesquisa**: ficará fechado, abrirá quando clicarmos no botão. Quando aberto, irá sobrepor a página inteira. Utilizaremos o plugin [Simple Jekyll Searching](https://github.com/christian-fei/Simple-Jekyll-Search){:target="_blank"} para fazer a pesquisa dos posts.
 - **Título**: ficará abaixo do menu e centralizado, utilizaremos uma sombra para destacá-lo. Nele há 2 variáveis: o `{ { site.title } }` e o `{ { site.subtitle } }`, essas variáveis foram definidas no arquivo `_config.yml`.
 
 #### footer.html
@@ -251,7 +251,7 @@ Utilizamos as mesmas variáveis que no `header.html`. Esse arquivo pode ser edit
 </section>
 {% endhighlight %}
 
-Criamos os botões de compartilhamento, utilizamos SVG para os ícones da redes sociais. Configuraremos os ícones SVG no arquivo `svg.html`.
+Criamos os botões de compartilhamento, utilizamos SVG para os ícones das redes sociais. Configuraremos os ícones SVG no arquivo `svg.html`.
 
 #### author.html
 
@@ -291,7 +291,7 @@ Esse já está bastante comentado, ele puxará os valores das variáveis do auto
 <!-- Aqui vai o script fornecido pelo Disqus -->
 {% endhighlight %}
 
-Utilizaremos o Disqus para os comentários, depois irei fazer um post ensinando como implementar ele no seu blog.
+Utilizaremos o **Disqus** para os comentários, depois farei um post ensinando como implementar ele no seu blog.
 
 #### svg.html
 
@@ -352,11 +352,11 @@ Criamos os nossos ícones SVG, iremos estilizá-los depois com o **SASS**.
 </div>
 {% endhighlight %}
 
-Criamos um laço for, que irá procurar todas as tags já utilizadas no blog e irá montar uma lista de posts de cada tag encontrada.
+Criamos um laço for, que procurará todas as tags já utilizadas no blog e montará uma lista de posts de cada tag encontrada.
 
 ## Conclusão
 
-Essa foi a primeira parte do tutorial, já temos pronto a configuração do nosso blog e a nossa pasta `_includes`. Na próxima parte, iremos configurar a pasta `_layouts` e o arquivo `index.html`, que é a página inicial do nosso blog.
+Essa foi a primeira parte do tutorial, já temos pronto a configuração do nosso blog e a nossa pasta `_includes`. Na próxima parte, configuraremos a pasta `_layouts` e o arquivo `index.html`, que é a página inicial do nosso blog.
 
 Qualquer dúvida, é só comentar ou me enviar um email: [mateus.sousamedeiros@gmail.com](mailto:mateus.sousamedeiros@gmail.com)
 

@@ -26,7 +26,7 @@ Qualquer dúvida que aparecer, não hesite em me mandar um e-mail ou comentar aq
 ## Tecnologias utilizadas no Blog 
 
 ### Jekyll 
-O [Jekyll](http://jekyllrb.com){:target="_blank"} é um gerador de páginas estáticas, perfeito para criar um blog sem a necessidade de um banco de dados. Escolhi ele por ser de fácil utilização e também pela facilidade de fazer o deploy no GitHub Pages ❤. Outro fator que foi de grande peso para minha escolha foi a sua utilização por grande parte dos Devs que eu sigo, o que facilitou na hora de criar meu blog. 
+O [Jekyll](http://jekyllrb.com){:target="_blank"} é um gerador de páginas estáticas, perfeito para criar um blog sem a necessidade de um banco de dados. Escolhi ele por ser de fácil utilização e também pela facilidade de fazer o deploy no GitHub Pages ❤. Outro fator que foi de grande peso para minha escolha foi a sua utilização por grande parte dos Devs que eu sigo, o que facilitou na hora de criar o meu blog. 
 
 Se você ficou interessado por essa tecnologia visite o site do [Jekyll](http://jekyllrb.com){:target="_blank"} ou também leia esse [post do Willian Justen](http://willianjusten.com.br/perguntas-e-respostas-jekyll/){:target="_blank"} onde ele ensina algumas coisas sobre o Jekyll. Em breve farei um post explicando como utilizar essa incrível ferramenta. Aguarde!
 
@@ -59,7 +59,7 @@ $color-1: #000000;
 }
 {% endhighlight %}
 
-Na primeira linha eu criei um variável `$color-1` e passei para ela o valor hexadecimal da cor preta `#000000`, depois passei essa variável como o valor dos background dos elementos `.elemento` e `.elemento-2`. Depois se eu quiser alterar essa cor para azul, basta trocar o valor da variável `$color-1`, assim:
+Na primeira linha eu criei um variável `$color-1` e passei para ela o valor hexadecimal da cor preta: `#000000`, depois passei essa variável como o valor dos background dos elementos `.elemento` e `.elemento-2`. Depois se eu quiser alterar essa cor para azul, basta trocar o valor da variável `$color-1`, assim:
 
 {% highlight scss %}
 $color-1: #0015ff;
