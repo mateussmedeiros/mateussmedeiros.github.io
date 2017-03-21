@@ -102,6 +102,15 @@
       		}
 		}
 	}
+	
+	/*-----------------
+	---- Pesquisas ----
+	-----------------*/
+	#search-container {
+  		input[type="text"] {
+    		font-size: 1.4rem;
+  		}
+	}
 }
 
 @include media-query($bp-mobile-large) {
@@ -131,8 +140,9 @@
 	---- Pesquisa ----
 	----------------*/
 	#search-container {
-  		input[type=text]{
+  		input[type="text"] {
     		width: 80%;
+    		font-size: 1.2rem;
   		}
 	}
 

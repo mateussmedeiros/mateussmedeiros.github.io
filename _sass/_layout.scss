@@ -84,7 +84,7 @@
     background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
 
-    input[type=text]{
+    input[type="text"] {
         width: 400px;
         height: 30px;
         margin: 10px auto;
@@ -95,22 +95,16 @@
         text-align: center;
         font-size: 1.6rem;
         color: $branco;
-    }
+        
+        &::-webkit-input-placeholder {
+          color: $branco;
+          text-align: center;
+        }
 
-    ::-webkit-input-placeholder{
-        color: $branco;
-    }
+        &::-moz-placeholder {
+          text-align: center;  
+        }
 
-    :-ms-input-placeholder {
-        color: $branco;
-    }
-
-    ::-ms-input-placeholder {
-        color: $branco;
-    }
-
-    ::-moz-placeholder {
-        color: $branco;
     }
 
     a, p {
