@@ -61,8 +61,5 @@ $bp-mobile-large: 500px;
 }
 
 @import
-        "base",
-        "layout",
-        "syntax-highlighting",
-        "responsive"
+  "base/_syntax-highlighting"
 ;
