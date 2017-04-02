@@ -1,45 +1,56 @@
-<div class="banner">
-  <div class="container-fluid">
-    <!-- Navbar -->
-    <div class="navbar-container row">
-      <!-- Nav -->
-      <div class="col-md-10">
-          <button aria-expanded="false" aria-controls="navbar-nav" aria-label="Clique para abrir o menu" class="navbar-btn-open"><svg class="svg-icon"><use xlink:href="#icon-menu"></use></svg></button>
-          <nav class="navbar-nav">
-            <button aria-label="Fechar o menu" class="navbar-btn-close"> Fechar o menu </button>
-            <li class="navbar-item"><a class="navbar-link" aria-label="Voltar à página inicial" href="/"> Home </a></li>
-            <li class="navbar-item"><a class="navbar-link" aria-label="Conheça-me um pouco mais" href="/sobre"> Sobre Mim </a></li>
-            <li class="navbar-item"><a class="navbar-link" aria-label="Meu blog" href="/blog"> Blog </a> 
-              <ul class="navbar-dropdown">
-                <li class="navbar-dropdown-item"><a href="/series" class="navbar-dropdown-link"> Séries </a></li>
-                <li class="navbar-dropdown-item"><a href="/tags" class="navbar-dropdown-link"> Tags </a></li>
-              </ul>
-            </li>
-            <li class="navbar-item"><a class="navbar-link" aria-label="Meus projetos" href="/projetos"> Projetos </a></li>
-            <li class="navbar-item"><a class="navbar-link" aria-label="Meu portfólio" href="/portfolio"> Portfólio </a></li>
-            <li class="navbar-item"><a class="navbar-link" aria-label="Fale comigo" href="/contato"> Contato </a></li>
-          </nav>
-      </div><!-- col-10 -->
-      
-      <!-- Search -->
-      <div class="search col-md-2">
-        <button aria-expanded="false" aria-controls="search-container" aria-label="Pesquisar no Blog" class="search-btn-open"><svg class="svg-icon"><use xlink:href="#icon-search"></use></svg></button>
-        <div id="search-container">
-          <input class="search-input" type="text" id="search-input" placeholder="Pesquisar posts no blog...">
-          <button aria-label="Fechar Barra de Pesquisa" class="search-btn-close"><svg class="svg-icon"><use xlink:href="#icon-close"></use></svg></button>
-          <ul id="results-container"></ul>
-        </div><!-- search-container -->
-      </div><!-- col-2 -->
-    </div><!-- navbar-container -->
-    
-    <!-- Header -->
-    <header class="header">
-      <img class="header-img" src="/assets/img/logo-azul.png" alt="Logo">
+<header class="banner container">
 
-      <h1 class="header-title">Mateus Medeiros</h1>
-      <h2 class="header-subtitle">Desenvolvedor Front End</h2>
+  <!-- Navbar -->
+  <nav class="navbar">
 
-      <a href="#scroll" role="button" class="btn-scroll"><svg class="svg-icon"><use xlink:href="#icon-down-arrow"></use></svg></a>
-    </header>
-  </div><!-- container -->
-</div><!-- banner -->
+    <!-- Menu -->
+    <div class="navbar__menu col-md-10">
+      <button aria-expanded="false" aria-controls="navbar" aria-label="Clique para abrir o menu" class="navbar__menu__btn--open"><svg class="svg-icon"><use xlink:href="#icon-menu"></use></svg></button>
+
+      <ul class="navbar__menu__list">
+        <button aria-label="Fechar o menu" class="navbar__btn--close"> Fechar o menu </button>
+        <li class="navbar__menu__list__item"><a class="navbar__menu__list__item__link" aria-label="Voltar à página inicial" href="/"> Home </a></li>
+
+        <li class="navbar__menu__list__item"><a class="navbar__menu__list__item__link" aria-label="Conheça-me um pouco mais" href="/sobre"> Sobre Mim </a></li>
+
+        <li class="navbar__menu__list__item"><a class="navbar__menu__list__item__link" aria-label="Meu blog" href="/blog"> Blog </a>
+          
+          <ul class="navbar__menu__dropdown">
+            <li class="navbar__menu__dropdown__item"><a class="navbar__menu__dropdown__item__link" href="/series" aria-label="Séries do meu blog"> Séries </a></li>
+
+            <li class="navbar__menu__dropdown__item"><a class="navbar__menu__dropdown__item__link" href="/tags" aria-label="Tags utilizadas no blog"> Tags </a></li>  
+          </ul>
+
+        </li>
+
+        <li class="navbar__menu__list__item"><a class="navbar__menu__list__item__link" aria-label="Meus projetos" href="/projetos"> Projetos </a></li>
+
+        <li class="navbar__menu__list__item"><a class="navbar__menu__list__item__link" aria-label="Meu portfólio" href="/portfolio"> Portfólio </a></li>
+
+        <li class="navbar__menu__list__item"><a class="navbar__menu__list__item__link" aria-label="Fale comigo" href="/contato"> Contato </a></li>
+      </ul>
+    </div><!-- navbar__menu -->
+
+    <!-- Search -->
+    <div class="navbar__search col-md-2">
+      <button aria-expanded="false" aria-controls="navbar__search__container" aria-label="Pesquisar no Blog" class="navbar__search__btn--open"><svg class="svg-icon"><use xlink:href="#icon-search"></use></svg></button>
+
+      <div id="navbar__search__container">
+        <input class="navbar__search__input" type="text" id="navbar__search__input" placeholder="Pesquisar posts no blog...">
+        <button aria-label="Fechar Barra de Pesquisa" class="navbar__search__btn--close"><svg class="svg-icon"><use xlink:href="#icon-close"></use></svg></button>
+        <ul id="navbar__search__results-container"></ul>
+      </div><!-- navbar__search__container -->
+    </div><!-- navbar__search -->
+  </nav>
+
+  <!-- Header -->
+  <div class="header">
+    <img class="header__img" src="/assets/img/logo-azul.png" alt="Logo">
+
+    <h1 class="header__title">Mateus Medeiros</h1>
+    <h2 class="header__subtitle">Desenvolvedor Front End</h2>
+
+    <a href="#scroll" role="button" class="header__btn--scroll"><svg class="svg-icon"><use xlink:href="#icon-down-arrow"></use></svg></a>    
+  </div>
+  
+</header><!-- banner -->

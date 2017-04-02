@@ -54,11 +54,7 @@ $bp-mobile-large: 500px;
 /////////////
 // Mixins //
 ////////////
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
+
 
 @import
   "base/_syntax-highlighting"

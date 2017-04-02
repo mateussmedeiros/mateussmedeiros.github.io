@@ -24,14 +24,14 @@ permalink: /tags/
 <hr>
 
 {% for tag in site.tags  %}
-	<div class="tag">
-    	<h3 class="tag-title" id="{{ tag[0] }}">{{ tag[0] }}</h3>
-    	<ul class="tag-posts">
+	<div class="tags">
+    	<h3 class="tags__title" id="{{ tag[0] }}">{{ tag[0] }}</h3>
+    	<ul class="tags__posts">
         	{% assign pages_list = tag[1] %}
         	{% for post in pages_list reversed %}
             	{% if post.title != null %}
             	{% if group == null or group == post.group %}
-            	<li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%d %b, %Y" }}</time></span></a></li>
+            	<li class="tags__posts__item"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%d %b, %Y" }}</time></span></a></li>
             	{% endif %}
             	{% endif %}
         	{% endfor %}

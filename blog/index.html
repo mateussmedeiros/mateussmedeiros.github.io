@@ -4,18 +4,18 @@ layout: default
 
 <h2>Blog</h2>
 
-<ul class="post-list">
+<ul class="post__list">
   {% for post in paginator.posts %}
-    <li class="post-container">
+    <li class="post__list__item">
       <h2>
-        <a class="post-link" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a class="post__list__item__link" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
 
-      <span class="post-date">Postado em: {{ post.date | date: "%-d %b, %Y" }}</span>
+      <span class="post__list__item__date">Postado em: {{ post.date | date: "%-d %b, %Y" }}</span>
 
-      <p class="post-description">{{ post.description }}</p>
+      <p class="post__list__item__description">{{ post.description }}</p>
 
-      <a class="post-permalink" href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais...</a>
+      <a class="post__list__item__permalink" href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais...</a>
 
     </li>
   {% endfor %}
@@ -23,23 +23,23 @@ layout: default
   {% if paginator.total_pages > 1 %}
     <div class="pagination">
       {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Anterior</a>
+        <a class="pagination__item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Anterior</a>
       {% else %}
         <span>Anterior</span>
       {% endif %}
 
       {% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}
-          <span class="selected">{{ page }}</span>
+          <span class="pagination__item--selected">{{ page }}</span>
         {% elsif page == 1 %}
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+          <a class="pagination__item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
         {% else %}
-          <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+          <a class="pagination__item" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
         {% endif %}
       {% endfor %}
 
       {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Próxima</a>
+        <a class="pagination__item" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Próxima</a>
       {% else %}
         <span>Próxima</span>
       {% endif %}
