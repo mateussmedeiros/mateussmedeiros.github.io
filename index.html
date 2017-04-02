@@ -1,3 +1,130 @@
 ---
 layout: default
 ---
+
+<!-- About -->
+<section class="about">
+  <h2 class="page-title"> Sobre Mim </h2>
+  <p>Me chamo Mateus de Sousa Medeiros, tenho 16 anos e sou Desenvolvedor Front End. Comecei no ano de 2015 à aprender as maravilhas desse mundo do Desenvolvimento Web, especificamente na área de Front End. Sou apaixonado pelo que faço e o que me deixa mais feliz ainda, é a facilidade em aprender cada dia mais.</p>
+  <p>No meu workflow costumo utilizar HTML, CSS (SASS) e JavaScript (jQuery), além do Gulp como Task Runner e Git para versionar meus projetos.</p>
+</section>
+
+<!-- Skylls -->
+<section class="skylls">
+  <h2 class="page-title"> Habilidades </h2>
+  <div class="row skylls-container">
+    <div class="skylls-item col-md-4">
+      <h3>HTML</h3>
+    </div>
+    <div class="skylls-item col-md-4">
+      <h3>CSS</h3>
+    </div>
+    <div class="skylls-item col-md-4">
+      <h3>JavaScript</h3>
+    </div>
+  </div><!-- row -->
+
+  <div class="row skylls-container">
+    <div class="skylls-item col-md-4">
+      <h3>Sass</h3>
+    </div>
+    <div class="skylls-item col-md-4">
+      <h3>jQuery</h3>
+    </div>
+    <div class="skylls-item col-md-4">
+      <h3>Gulp</h3>
+    </div>
+  </div><!-- row -->
+
+  <button class="btn-default"><a href="/sobre.html/#skylls">Ver mais</a></button>
+</section>
+
+<!-- Portfolio -->
+<section class="portfolio">
+  <h2 class="page-title"> Portfólio </h2>
+
+  <div class="portfolio-container row">
+    <div class="portfolio-item col-md-4">
+      <img src="#" class="portfolio-img">
+      <h3 class="portfolio-title">Título do Job</h3>
+      <p class="portfolio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores, quo quibusdam, ipsam ullam suscipit veniam ea, odio unde quisquam obcaecati delectus dolorum nihil. Corporis ab quia animi perferendis blanditiis.</p>
+      <a href="#" class="portfolio-link">Link do Job</a>
+    </div><!-- portfolio-item -->
+
+    <div class="portfolio-item col-md-4">
+      <img src="#" class="portfolio-img">
+      <h3 class="portfolio-title">Título do Job</h3>
+      <p class="portfolio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores, quo quibusdam, ipsam ullam suscipit veniam ea, odio unde quisquam obcaecati delectus dolorum nihil. Corporis ab quia animi perferendis blanditiis.</p>
+      <a href="#" class="portfolio-link">Link do Job</a>
+    </div><!-- portfolio-item -->
+
+    <div class="portfolio-item col-md-4">
+      <img src="#" class="portfolio-img">
+      <h3 class="portfolio-title">Título do Job</h3>
+      <p class="portfolio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores, quo quibusdam, ipsam ullam suscipit veniam ea, odio unde quisquam obcaecati delectus dolorum nihil. Corporis ab quia animi perferendis blanditiis.</p>
+      <a href="#" class="portfolio-link">Link do Job</a>
+    </div><!-- portfolio-item -->
+  </div><!-- row -->
+
+  <button class="btn-default"><a href="/portfolio.html">Todos os trabalhos</a></button>
+</section>
+
+<!-- Projects/Blog Row -->
+<div class="row">
+
+  <!-- Projects -->
+  <section class="projects col-md-6">
+    <h2 class="page-title"> Projetos </h2>
+    <div class="project-container row">
+      <div class="project-item col-md-12">
+        <img src="#" class="project-img">
+        <h3 class="project-title">Lion Boilerplate</h3>
+        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi rerum laboriosam, facere quaerat aspernatur blanditiis alias ut, minima, voluptas fuga ipsum vero laudantium nesciunt. Mollitia dolores ipsum id, voluptas dolor?</p>
+        <a href="#" class="project-link">Link do Projeto</a>
+      </div><!-- project-item -->
+
+      <div class="project-item col-md-12">
+        <img src="#" class="project-img">
+        <h3 class="project-title">Blade Theme</h3>
+        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi rerum laboriosam, facere quaerat aspernatur blanditiis alias ut, minima, voluptas fuga ipsum vero laudantium nesciunt. Mollitia dolores ipsum id, voluptas dolor?</p>
+        <a href="#" class="project-link">Link do Projeto</a>
+      </div><!-- project-item -->
+    </div><!-- row -->
+
+    <button class="btn-default"><a href="/projetos.html">Todos os projetos</a></button>
+  </section>
+
+  <!-- Blog -->
+  <section class="blog col-md-6">
+    <h2 class="page-title"> Blog </h2>
+
+    {% for post in site.posts limit:2 %}
+      <li class="post-container">
+        <h3>
+          <a class="post-link" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h3>
+
+        <span class="post-date">Postado em: {{ post.date | date: "%-d %b, %Y" }}</span>
+
+        <p class="post-description">{{ post.description }}</p>
+
+        <a class="post-permalink" href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais...</a>
+
+      </li>
+    {% endfor %}
+
+    <button class="btn-default"><a href="/blog/">Todos os posts</a></button>
+  </section>
+</div><!-- row -->
+
+<!-- Contact -->
+<section class="contact">
+  <h2 class="page-title"> Contato </h2>
+  <div class="contact-item">
+    <p>mateus.sousamedeiros@gmail.com</p>
+  </div>
+
+  <div class="contact-item">
+    <p>(13) 99156-2159</p>
+  </div>
+</section>
