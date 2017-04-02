@@ -1,10 +1,10 @@
-<div class="safe-area">
+<div class="banner">
   <div class="container-fluid">
     <!-- Navbar -->
     <div class="navbar-container row">
       <!-- Nav -->
       <div class="col-md-10">
-          <button aria-expanded="false" aria-controls="navbar-nav" aria-label="Clique para abrir o menu" class="navbar-btn-open">Open/Close</button>
+          <button aria-expanded="false" aria-controls="navbar-nav" aria-label="Clique para abrir o menu" class="navbar-btn-open"><svg class="svg-icon"><use xlink:href="#icon-menu"></use></svg></button>
           <nav class="navbar-nav">
             <button aria-label="Fechar o menu" class="navbar-btn-close"> Fechar o menu </button>
             <li class="navbar-item"><a class="navbar-link" aria-label="Voltar à página inicial" href="/"> Home </a></li>
@@ -22,11 +22,11 @@
       </div><!-- col-10 -->
       
       <!-- Search -->
-      <div class="col-md-2">
-        <button aria-expanded="false" aria-controls="search-container" aria-label="Pesquisar no Blog" class="bt-search">Pesquisar</button>
+      <div class="search col-md-2">
+        <button aria-expanded="false" aria-controls="search-container" aria-label="Pesquisar no Blog" class="search-btn-open"><svg class="svg-icon"><use xlink:href="#icon-search"></use></svg></button>
         <div id="search-container">
           <input class="search-input" type="text" id="search-input" placeholder="Pesquisar posts no blog...">
-          <button aria-label="Fechar Barra de Pesquisa" class="bt-close">Fechar Pesquisa</button>
+          <button aria-label="Fechar Barra de Pesquisa" class="search-btn-close"><svg class="svg-icon"><use xlink:href="#icon-close"></use></svg></button>
           <ul id="results-container"></ul>
         </div><!-- search-container -->
       </div><!-- col-2 -->
@@ -39,7 +39,7 @@
       <h1 class="header-title">Mateus Medeiros</h1>
       <h2 class="header-subtitle">Desenvolvedor Front End</h2>
 
-      <div class="icon-down">\/</div>
+      <a href="#scroll" role="button" class="btn-scroll"><svg class="svg-icon"><use xlink:href="#icon-down-arrow"></use></svg></a>
     </header>
   </div><!-- container -->
-</div><!-- safe-area -->
+</div><!-- banner -->

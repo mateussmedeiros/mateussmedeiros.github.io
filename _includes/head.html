@@ -57,5 +57,5 @@
     <meta itemprop="name" content="{% if post.title %}{{ post.title }}{% else %}{{ site.title }}{% endif %}"/>
     <meta itemprop="description" content="{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta itemprop="image" content="{{ "/assets/img/portfolio/image-blog.png" | prepend: site.baseurl | prepend: site.url }}"/>
-
+    
 </head>
