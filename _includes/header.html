@@ -1,0 +1,45 @@
+<div class="safe-area" style="border: 1px solid red;">
+  <div class="container-fluid" style="border: 1px solid grey;">
+    <!-- Navbar -->
+    <div class="navbar-container row" style="border: 1px solid green;">
+      <!-- Nav -->
+      <div class="col-md-10" style="border: 1px solid blue;">
+          <button aria-expanded="false" aria-controls="navbar-nav" aria-label="Clique para abrir o menu" class="navbar-btn-open">Open/Close</button>
+          <nav class="navbar-nav">
+            <button aria-label="Fechar o menu" class="navbar-btn-close"> Fechar o menu </button>
+            <li class="navbar-item"><a class="navbar-link" aria-label="Voltar à página inicial" href="/"> Home </a></li>
+            <li class="navbar-item"><a class="navbar-link" aria-label="Conheça-me um pouco mais" href="/sobre"> Sobre Mim </a></li>
+            <li class="navbar-item"><a class="navbar-link" aria-label="Meu blog" href="/blog"> Blog </a> 
+              <ul class="navbar-dropdown">
+                <li class="navbar-dropdown-item"><a href="/series" class="navbar-dropdown-link"> Séries </a></li>
+                <li class="navbar-dropdown-item"><a href="/tags" class="navbar-dropdown-link"> Tags </a></li>
+              </ul>
+            </li>
+            <li class="navbar-item"><a class="navbar-link" aria-label="Meus projetos" href="/projetos"> Projetos </a></li>
+            <li class="navbar-item"><a class="navbar-link" aria-label="Meu portfólio" href="/portfolio"> Portfólio </a></li>
+            <li class="navbar-item"><a class="navbar-link" aria-label="Fale comigo" href="/contato"> Contato </a></li>
+          </nav>
+      </div><!-- col-10 -->
+      
+      <!-- Search -->
+      <div class="col-md-2" style="border: 1px solid yellow;">
+        <button aria-expanded="false" aria-controls="search-container" aria-label="Pesquisar no Blog" class="bt-search">Pesquisar</button>
+        <div id="search-container">
+          <input class="search-input" type="text" id="search-input" placeholder="Pesquisar posts no blog...">
+          <button aria-label="Fechar Barra de Pesquisa" class="bt-close">Fechar Pesquisa</button>
+          <ul id="results-container"></ul>
+        </div><!-- search-container -->
+      </div><!-- col-2 -->
+    </div><!-- navbar-container -->
+    
+    <!-- Header -->
+    <header class="header">
+      <img class="header-img" src="assets/img/logo-azul.png" alt="Logo">
+
+      <h1 class="header-title">Mateus Medeiros</h1>
+      <h2 class="header-subtitle">Desenvolvedor Front End</h2>
+
+      <div class="icon-down">\/</div>
+    </header>
+  </div><!-- container -->
+</div><!-- safe-area -->
