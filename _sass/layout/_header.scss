@@ -8,16 +8,15 @@
 
   &__wrapper {
     height: 100%;
+    display: -webkit-flex;
     display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-  -ms-align-items: stretch;
-  -webkit-align-items: stretch;
-          align-items: stretch;
-
-  -ms-justify-content: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+    display: flex;
+    -webkit-align-items: stretch;
+        -ms-align-items: stretch;
+            align-items: stretch;
+    -webkit-justify-content: center;
+        -ms-justify-content: center;
+            justify-content: center;
   }
 }
 
@@ -57,7 +56,7 @@
         color: $color-default;
 
         &:hover {
-          color: $color-secundary;
+          color: $color-default;
         }
       }
     }
@@ -103,6 +102,9 @@
   }
 }
 
+// ==========================================================================
+// Scroll
+// ==========================================================================
 .scroll{
   height: 10%;
 
