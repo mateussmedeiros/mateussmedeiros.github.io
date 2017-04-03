@@ -1,0 +1,17 @@
+@keyframes pulse {
+  from {
+    opacity: .5;
+    top: 0;
+  }
+
+  50% {
+    opacity: 1;
+    top: -20px;
+  }
+
+  to {
+    opacity: .5;
+    top: 0;
+  }
+  
+}

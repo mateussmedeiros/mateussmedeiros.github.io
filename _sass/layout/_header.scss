@@ -1,0 +1,118 @@
+// ==========================================================================
+// Container
+// ==========================================================================
+.banner {
+  height: 100vh;
+  width: 100%;
+  background: $color-primary;
+
+  &__wrapper {
+    height: 100%;
+    display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: stretch;
+  -webkit-align-items: stretch;
+          align-items: stretch;
+
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  }
+}
+
+// ==========================================================================
+// Navbar
+// ==========================================================================
+.navbar {
+  height: 10%;
+  padding: 30px 0;
+
+  button {
+    background: none;
+    border: none;
+  }
+}
+
+// Menu
+// ==========================================================================
+.navbar__menu {
+
+  &__list {
+    list-style: none;
+
+    &__item {
+      display: inline-block;
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &__link,
+      .navbar__menu__dropdown__item__link {
+        font-size: 1.2rem;
+        line-height: 20px;
+        font-weight: normal;
+        color: $color-default;
+
+        &:hover {
+          color: $color-secundary;
+        }
+      }
+    }
+  }
+}
+
+// Search
+// ==========================================================================
+.navbar__search {
+
+  &__wrapper {
+    height: 100%;
+    @extend %align-center-vertical;
+    @extend %align-center-horizontal;
+  }
+}
+
+// ==========================================================================
+// Header
+// ==========================================================================
+.header {
+  height: 80%;
+  text-align: center;
+
+  &__wrapper {
+    height: 100%;
+    @extend %align-center-vertical;
+    @extend %align-center-horizontal;
+  }
+
+  &__img {
+    width: 250px;
+  }
+
+  &__title {
+    font-size: 4rem;
+    color: $color-default;
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    color: $color-primary-dark;
+  }
+}
+
+.scroll{
+  height: 10%;
+
+  &__wrapper {
+    text-align: center;
+  }
+
+  &-icon {
+    position: relative;
+    bottom: 30px;
+    animation: pulse 1.2s infinite;
+  }
+}

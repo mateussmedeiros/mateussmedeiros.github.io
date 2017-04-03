@@ -1,0 +1,16 @@
+.header__title,
+.page__title {
+  font-family: $font-title;
+}
+
+.header__subtitle {
+  font-family: $font-default;
+  font-weight: normal;
+}
+
+a,
+p,
+li {
+  font-family: $font-default;
+  font-weight: 300;
+}

@@ -1,0 +1,15 @@
+%align-center-vertical {
+  //height: 100%;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+
+%align-center-horizontal {
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
