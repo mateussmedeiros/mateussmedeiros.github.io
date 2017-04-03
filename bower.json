@@ -25,6 +25,7 @@
   ],
   "dependencies": {
     "jquery": "latest",
-    "simple-jekyll-search": "latest"
+    "simple-jekyll-search": "latest",
+    "jquery-smooth-scroll": "^2.1.2"
   }
 }

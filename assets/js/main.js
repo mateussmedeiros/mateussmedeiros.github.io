@@ -1,0 +1,1 @@
+$('a.scroll__btn').smoothScroll();
