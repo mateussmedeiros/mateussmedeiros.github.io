@@ -92,12 +92,15 @@
   }
 
   &__title {
+    font-family: $font-title;
     font-size: 4rem;
     color: $color-default;
   }
 
   &__subtitle {
+    font-family: $font-default;
     font-size: 2rem;
+    font-weight: normal;
     color: $color-primary-dark;
   }
 }
