@@ -11,12 +11,24 @@
   }
 
   a {
-    font-size: 1rem;
+    font-size: 0.85rem;
+    font-weight: normal;
     color: $color-default;
 
     &:hover {
       color: $color-default;
       text-decoration: none;
     }
+  }
+}
+
+.btn--center {
+  margin: 25px auto 10px auto;
+  padding: 5px 15px;
+  background: darken($color-primary, 10%);
+
+  a {
+    font-size: 1rem;
+    font-weight: bold;
   }
 }

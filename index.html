@@ -1,125 +1,126 @@
 ---
 layout: default
 ---
+<div class="home">
+  <!-- About -->
+  <section class="about">
+    <h2 class="page__title"> Sobre Mim </h2>
+    <p>Me chamo Mateus de Sousa Medeiros, tenho 16 anos e sou Desenvolvedor Front End. Comecei no ano de 2015 à aprender as maravilhas desse mundo do Desenvolvimento Web, especificamente na área de Front End. Sou apaixonado pelo que faço e o que me deixa mais feliz ainda, é a facilidade em aprender cada dia mais.</p>
+    <p>No meu workflow costumo utilizar HTML, CSS (SASS) e JavaScript (jQuery), além do Gulp como Task Runner e Git para versionar meus projetos.</p>
+  </section>
 
-<!-- About -->
-<section class="about">
-  <h2 class="page__title"> Sobre Mim </h2>
-  <p>Me chamo Mateus de Sousa Medeiros, tenho 16 anos e sou Desenvolvedor Front End. Comecei no ano de 2015 à aprender as maravilhas desse mundo do Desenvolvimento Web, especificamente na área de Front End. Sou apaixonado pelo que faço e o que me deixa mais feliz ainda, é a facilidade em aprender cada dia mais.</p>
-  <p>No meu workflow costumo utilizar HTML, CSS (SASS) e JavaScript (jQuery), além do Gulp como Task Runner e Git para versionar meus projetos.</p>
-</section>
+  <hr>
 
-<hr>
+  <!-- Skylls -->
+  <section class="skylls">
+    <h2 class="page__title"> Habilidades </h2>
+    
+    <div class="skylls__container row">
+      <div class="col-md-6">
+        <ul class="skylls__list">
+          <li class="skylls__list__item">HTML</li>
+          <li class="skylls__list__item">CSS</li>
+          <li class="skylls__list__item">JavaScript</li>
+          <li class="skylls__list__item">SASS</li>
+          <li class="skylls__list__item">jQuery</li>
+          <li class="skylls__list__item">SEO</li>
+        </ul>
+      </div><!-- col-6 -->
 
-<!-- Skylls -->
-<section class="skylls">
-  <h2 class="page__title"> Habilidades </h2>
-  
-  <div class="skylls__container row">
-    <div class="col-md-6">
-      <ul class="skylls__list">
-        <li class="skylls__list__item">HTML</li>
-        <li class="skylls__list__item">CSS</li>
-        <li class="skylls__list__item">JavaScript</li>
-        <li class="skylls__list__item">SASS</li>
-        <li class="skylls__list__item">jQuery</li>
-        <li class="skylls__list__item">SEO</li>
-      </ul>
-    </div><!-- col-6 -->
-
-    <div class="col-md-6">
-      <ul class="skylls__list">
-        <li class="skylls__list__item">Gulp</li>
-        <li class="skylls__list__item">Git</li>
-        <li class="skylls__list__item">Bower</li>
-        <li class="skylls__list__item">Jekyll</li>
-        <li class="skylls__list__item">WordPress</li>
-        <li class="skylls__list__item">Design Responsivo</li>
-      </ul>
-    </div><!-- col-6 -->
-  </div><!-- row -->
-</section>
-
-<hr>
-
-<!-- Portfolio -->
-<section class="portfolio">
-  <h2 class="page__title"> Portfólio </h2>
-
-  <div class="portfolio__container row">
-    <div class="portfolio__item col-md-4">
-      <img src="/assets/img/portfolio/bolhas-de-sabao.png" class="portfolio__item__img">
-      <h3 class="portfolio__item__title">Bolhas de Sabão</h3>
-      <p class="portfolio__item__description">Desenvolvimento do Template para Blogger, utilizando HTML, XML, CSS e JavaScript (jQuery)</p>
-      <button class="btn--default"><a href="http://vi-bolhasdesabao.blogspot.com.br/" class="portfolio__item__link">Conferir o site</a></button>
-    </div><!-- portfolio-item -->
-  </div><!-- row -->
-</section>
-
-<hr>
-
-<!-- Projects/Blog Row -->
-<div class="row">
-
-  <!-- Projects -->
-  <section class="projects col-md-6">
-    <h2 class="page__title"> Projetos </h2>
-    <div class="project__container row">
-      <div class="project__item col-md-12">
-        <img src="/assets/img/projects/lion-boilerplate.png" class="project__item__img">
-        <h3 class="project__item__title">Lion</h3>
-        <p class="project__item__description">Um boilerplate simples para iniciar projetos de acordo com meu workflow usando Gulp</p>
-        <button class="btn--default"><a href="https://github.com/mateussmedeiros/lion" class="project__item__link">Conferir projeto</a></button>
-      </div><!-- project-item -->
-
-      <div class="project__item col-md-12">
-        <img src="/assets/img/projects/blade-theme.png" class="project__item__img">
-        <h3 class="project__item__title">Blade Theme</h3>
-        <p class="project__item__description">Um tema simples para blogs Jekyll</p>
-        <button class="btn--default"><a href="https://mateussmedeiros.github.io/blade-theme/" class="project__item__link">Conferir projeto</a></button>
-      </div><!-- project-item -->
+      <div class="col-md-6">
+        <ul class="skylls__list">
+          <li class="skylls__list__item">Gulp</li>
+          <li class="skylls__list__item">Git</li>
+          <li class="skylls__list__item">Bower</li>
+          <li class="skylls__list__item">Jekyll</li>
+          <li class="skylls__list__item">WordPress</li>
+          <li class="skylls__list__item">Design Responsivo</li>
+        </ul>
+      </div><!-- col-6 -->
     </div><!-- row -->
-
-    <button class="btn btn--default"><a href="/projetos.html">Todos os projetos</a></button>
   </section>
 
-  <!-- Blog -->
-  <section class="blog col-md-6">
-    <h2 class="page__title"> Blog </h2>
+  <hr>
 
-    <ul class="post__list">
-      {% for post in site.posts limit:2 %}
-        <li class="post__list__item">
-          <h3>
-            <a class="post__list__item__link" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h3>
+  <!-- Portfolio -->
+  <section class="portfolio">
+    <h2 class="page__title"> Portfólio </h2>
 
-          <span class="post__list__item__date">Postado em: {{ post.date | date: "%-d %b, %Y" }}</span>
-
-          <p class="post__list__item__description">{{ post.description }}</p>
-
-          <button class="btn--default"><a class="post__list__item__permalink" href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais...</a></button>
-
-        </li>
-      {% endfor %}
-    </ul>
-
-    <button class="btn--default"><a href="/blog/">Todos os posts</a></button>
+    <div class="portfolio__container row">
+      <div class="portfolio__item col-md-4">
+        <img src="/assets/img/portfolio/bolhas-de-sabao.png" class="portfolio__item__img">
+        <h3 class="portfolio__item__title">Bolhas de Sabão</h3>
+        <p class="portfolio__item__description">Desenvolvimento do Template para Blogger, utilizando HTML, XML, CSS e JavaScript (jQuery)</p>
+        <button class="btn--default"><a href="http://vi-bolhasdesabao.blogspot.com.br/" class="portfolio__item__link">Conferir o site</a></button>
+      </div><!-- portfolio-item -->
+    </div><!-- row -->
   </section>
-</div><!-- row -->
 
-<hr>
+  <hr>
 
-<!-- Contact -->
-<section class="contact container">
-  <h2 class="page__title"> Contato </h2>
-  <div class="contact__item">
-    <svg class="svg-icon contact__item__icon"><use xlink:href="#icon-email"></use></svg>
-    <p class="contact__item__text">mateus.sousamedeiros@gmail.com</p>
-  </div>
+  <!-- Projects/Blog Row -->
+  <div class="row">
 
-  <div class="contact__item">
-    <svg class="svg-icon contact__item__icon"><use xlink:href="#icon-phone"></use></svg>
-    <p class="contact__item__text">(13) 99156-2159</p>
-  </div>
-</section>
+    <!-- Projects -->
+    <section class="project col-md-6">
+      <h2 class="page__title"> Projetos </h2>
+      <div class="project__container row">
+        <div class="project__item col-md-12">
+          <img src="/assets/img/projects/lion-boilerplate.png" class="project__item__img">
+          <h3 class="project__item__title">Lion</h3>
+          <p class="project__item__description">Boilerplate para projetos com Gulp</p>
+          <button class="btn--default"><a href="https://github.com/mateussmedeiros/lion" class="project__item__link">Conferir projeto</a></button>
+        </div><!-- project-item -->
+
+        <div class="project__item col-md-12">
+          <img src="/assets/img/projects/blade-theme.png" class="project__item__img">
+          <h3 class="project__item__title">Blade Theme</h3>
+          <p class="project__item__description">Tema simples para blogs Jekyll</p>
+          <button class="btn--default"><a href="https://mateussmedeiros.github.io/blade-theme/" class="project__item__link">Conferir projeto</a></button>
+        </div><!-- project-item -->
+      </div><!-- row -->
+
+      <button class="btn--default btn--center"><a href="/projetos.html">Todos os projetos</a></button>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog col-md-6">
+      <h2 class="page__title"> Blog </h2>
+
+      <ul class="post__list">
+        {% for post in site.posts limit:2 %}
+          <li class="post__list__item">
+            <h3>
+              <a class="post__list__item__link" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h3>
+
+            <span class="post__list__item__date">Postado em: {{ post.date | date: "%-d %b, %Y" }}</span>
+
+            <p class="post__list__item__description">{{ post.description }}</p>
+
+            <button class="btn--default"><a class="post__list__item__permalink" href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais...</a></button>
+
+          </li>
+        {% endfor %}
+      </ul>
+
+      <button class="btn--default btn--center"><a href="/blog/">Todos os posts</a></button>
+    </section>
+  </div><!-- row -->
+
+  <hr>
+
+  <!-- Contact -->
+  <section class="contact container">
+    <h2 class="page__title"> Contato </h2>
+    <div class="contact__item">
+      <svg class="svg-icon contact__item__icon"><use xlink:href="#icon-email"></use></svg>
+      <p class="contact__item__text">mateus.sousamedeiros@gmail.com</p>
+    </div>
+
+    <div class="contact__item">
+      <svg class="svg-icon contact__item__icon"><use xlink:href="#icon-phone"></use></svg>
+      <p class="contact__item__text">(13) 99156-2159</p>
+    </div>
+  </section>
+</div>
