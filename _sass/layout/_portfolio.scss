@@ -1,0 +1,20 @@
+.portfolio,
+.project {
+  &__item {
+    
+    &__img {
+      border: 1px solid $color-primary;
+      max-height: 300;
+    }
+
+    &__title {
+      font-size: 1.4rem;
+    }
+
+    &__description,
+    &__link {
+      font-size: 1rem;
+    }
+
+  }
+}

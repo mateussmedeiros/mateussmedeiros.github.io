@@ -1,0 +1,22 @@
+.btn--default {
+  display: block;
+  margin: 5px 0;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 5px;
+  background: $color-primary;
+
+  &:hover {
+    background: $color-primary-dark;
+  }
+
+  a {
+    font-size: 1rem;
+    color: $color-default;
+
+    &:hover {
+      color: $color-default;
+      text-decoration: none;
+    }
+  }
+}

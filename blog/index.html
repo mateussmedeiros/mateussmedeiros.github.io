@@ -15,8 +15,7 @@ layout: default
 
       <p class="post__list__item__description">{{ post.description }}</p>
 
-      <a class="post__list__item__permalink" href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais...</a>
-
+      <button class="btn--default"><a class="post__list__item__permalink" href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais...</a></button>
     </li>
   {% endfor %}
 
