@@ -6,8 +6,23 @@
 }
 
 .page__title {
-  margin: 15px 0 10px 0;
+  margin: 15px 0;
   font-family: $font-title;
   font-size: 1.9rem;
   text-align: center;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 3px;
+    margin: 0 auto;
+    background-color: $color-primary;
+  }
+
+  &--small{
+    &:after {
+      width: 2rem;
+    }
+  }
 }
