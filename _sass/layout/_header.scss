@@ -55,8 +55,10 @@
         font-weight: normal;
         color: $color-default;
 
-        &:hover {
-          color: $color-default;
+        &:hover,
+        &:active {
+          color: $color-secundary;
+          text-decoration: none;
         }
       }
     }
@@ -102,6 +104,10 @@
     font-size: 2rem;
     font-weight: normal;
     color: $color-primary-dark;
+  }
+
+  a:hover {
+    text-decoration: none;
   }
 }
 
