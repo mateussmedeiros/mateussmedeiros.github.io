@@ -91,7 +91,7 @@ layout: default
         {% for post in site.posts limit:2 %}
           <li class="post__list__item">
             <h3>
-              <a class="post__list__item__link" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a>
+              <a class="post__list__item__title" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a>
             </h3>
 
             <span class="post__list__item__date">Postado em: {{ post.date | date: "%-d %b, %Y" }}</span>

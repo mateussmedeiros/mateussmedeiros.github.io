@@ -1,3 +1,9 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+// Default
+// ==========================================================================
 .btn--default {
   display: block;
   margin: 5px 0;
@@ -22,6 +28,8 @@
   }
 }
 
+// Center
+// ==========================================================================
 .btn--center {
   margin: 25px auto 10px auto;
   padding: 5px 15px;
@@ -30,5 +38,38 @@
   a {
     font-size: 1rem;
     font-weight: bold;
+  }
+}
+
+// Pagination
+// ==========================================================================
+.pagination {
+  margin: 15px 0;
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background: $color-primary;
+    color: $color-default;
+
+    &--selected {
+      background: $color-primary-dark;
+    }
+
+    &--disabled {
+      background: lighten($color-primary, 40%);
+    }
+  }
+
+  a {
+    &:hover {
+      background: $color-primary-dark;
+      color: $color-default;
+      text-decoration: none;
+    }
   }
 }

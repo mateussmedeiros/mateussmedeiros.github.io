@@ -1,14 +1,13 @@
 ---
-layout: default
+layout: page
+title: Blog
 ---
-
-<h2>Blog</h2>
 
 <ul class="post__list">
   {% for post in paginator.posts %}
     <li class="post__list__item">
       <h2>
-        <a class="post__list__item__link" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a class="post__list__item__title" href="{{ post.permalink | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
 
       <span class="post__list__item__date">Postado em: {{ post.date | date: "%-d %b, %Y" }}</span>
@@ -16,6 +15,7 @@ layout: default
       <p class="post__list__item__description">{{ post.description }}</p>
 
       <button class="btn--default"><a class="post__list__item__permalink" href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais...</a></button>
+
     </li>
   {% endfor %}
 
@@ -24,12 +24,12 @@ layout: default
       {% if paginator.previous_page %}
         <a class="pagination__item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Anterior</a>
       {% else %}
-        <span>Anterior</span>
+        <span class="pagination__item pagination__item--disabled">Anterior</span>
       {% endif %}
 
       {% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}
-          <span class="pagination__item--selected">{{ page }}</span>
+          <span class="pagination__item pagination__item--selected">{{ page }}</span>
         {% elsif page == 1 %}
           <a class="pagination__item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
         {% else %}
@@ -40,7 +40,7 @@ layout: default
       {% if paginator.next_page %}
         <a class="pagination__item" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Próxima</a>
       {% else %}
-        <span>Próxima</span>
+        <span class="pagination__item pagination__item--disabled">Próxima</span>
       {% endif %}
     </div>
   {% endif %}
