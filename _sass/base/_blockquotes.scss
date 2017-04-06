@@ -1,0 +1,12 @@
+blockquote {
+  margin: 30px;
+  padding: 5px 25px;
+  border-left: 5px solid $color-primary;
+
+  p {  
+    margin-bottom: 0;
+    color: lighten($color-secundary, 25%);
+    font-style: italic;
+    letter-spacing: -1px;
+  }
+}

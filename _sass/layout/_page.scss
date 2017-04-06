@@ -11,14 +11,7 @@
   font-size: 1.9rem;
   text-align: center;
 
-  &:after {
-    content: '';
-    display: block;
-    width: 4rem;
-    height: 3px;
-    margin: 0 auto;
-    background-color: $color-primary;
-  }
+  @extend %title-border;
 
   &--small{
     &:after {

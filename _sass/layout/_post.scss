@@ -1,6 +1,122 @@
+// ==========================================================================
+// Post
+// ==========================================================================
+
+// Content
+// ==========================================================================
 .post {
+
   &__title {
     margin-bottom: 15px;
     border-bottom: 1px solid darken($color-default, 15px);
+  }
+
+  &__info,
+  &__info__tag {
+    font-size: 0.85rem;
+  }
+
+  &__info__tag {
+    margin-right: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__content {
+    h2, 
+    h3,
+    h4 {
+      margin: 25px 0 15px 0;
+    }
+
+    a {
+      //font-weight: normal;
+      text-decoration: underline;
+    }
+  }
+
+  &__img {
+    display: block;
+    margin: 20px auto;
+    width: auto;
+    max-width: 100%; 
+  }
+}
+
+// Author
+// ==========================================================================
+.author {
+  width: 100%;
+  background: darken($color-default, 5%);
+
+  &__details {
+    display: flex;
+    padding: 10px 0;
+  }
+
+  &__img__container {
+    width: 20%;
+  }
+
+  &__img {
+    width: 175px;
+    height: 175px;
+    border: 3.5px solid $color-primary;
+    border-radius: 50%;
+  }
+
+  &__info {
+    width: 80%;
+    @extend %align-center-vertical;
+
+    &__title {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    &__link {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+  }
+}
+
+// Comments / Share
+// ==========================================================================
+.comments,
+.share {
+  margin: 15px auto;
+
+  &__title {
+    text-align: center;
+
+    @extend %title-border;
+  }
+}
+
+// Share
+.share {
+  text-align: center;
+
+  &__buttons {
+    margin-top: 15px;
+
+    &__icon {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+    fill: $color-primary;
+
+    &:hover {
+      fill: $color-primary-dark;
+    }
   }
 }
