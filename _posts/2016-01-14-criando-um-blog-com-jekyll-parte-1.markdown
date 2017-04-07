@@ -18,7 +18,7 @@ Fala galera, recebi vários feedbacks positivos do post anterior, o que me motiv
 
 Nessa primeira parte, iremos configurar a pasta `_includes` e o arquivo `_config.yml`. Preparei um pequeno layout que servirá de base para a construção do nosso blog. Você pode conferir abaixo:
 
-![Layout do nosso blog com Jekyll](/assets/img/layout-tutorial-jekyll.png){: .center }
+![Layout do nosso blog com Jekyll](/assets/img/posts/layout-tutorial-jekyll.png){: .post-blog__img }
 
 Todo o código utilizado aqui, estará disponível no [repositório que criei no GitHub](https://github.com/mateussmedeiros/tutorial-jekyll){:target="_blank"}.
 

@@ -16,7 +16,7 @@ permalink: /dica-do-dia-2-livros-casa-do-codigo/
 ## Introdução
 Fala galera, fiquei um tempo sem postar aqui no blog, mas hoje estou voltando para dar continuidade à série [Dica do Dia](http://devmateusmedeiros.com.br/dica-do-dia/). Hoje irei falar sobre os livros maneiros da editora [Casa do Código](http://casadocodigo.com.br).
 
-![Casa do Código - Livros e Tecnologia](/assets/img/logo-casa-do-codigo.png){: .center }
+![Casa do Código - Livros e Tecnologia](/assets/img/posts/logo-casa-do-codigo.png){: .post-blog__img }
 
 ## Livros para aprender a programar com ótimo custo-benefício
 No site da [Casa do Código](http://casadocodigo.com.br), você encontra livros sobre diversos assuntos: [Front End](http://www.casadocodigo.com.br/collections/livros-de-front-end), [Web](http://www.casadocodigo.com.br/collections/livros-desenvolvimento-web), [Mobile](http://www.casadocodigo.com.br/collections/livros-de-mobile), [Games](http://www.casadocodigo.com.br/collections/livros-de-games), [Java](http://www.casadocodigo.com.br/collections/livros-de-java), [Agile](http://www.casadocodigo.com.br/collections/livros-de-agile) entre [outros](http://www.casadocodigo.com.br/collections/outros).

@@ -5,4 +5,9 @@ a {
     color: $color-primary-dark;
     text-decoration: underline;
   }
+
+  &:active {
+    color: $color-primary-dark;
+    text-decoration: none;  
+  }
 }

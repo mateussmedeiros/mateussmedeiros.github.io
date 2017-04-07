@@ -6,8 +6,8 @@
   padding: 0;
 
   &__item {
-    margin: 20px 0;  
-    padding: 15px 0;
+    margin: 10px 0;  
+    padding: 10px 0 15px 0;
     border-bottom: 1px solid darken($color-default, 15px);
 
     &:last-child {
