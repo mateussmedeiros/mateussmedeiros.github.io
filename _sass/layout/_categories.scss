@@ -1,0 +1,22 @@
+.category, 
+.tags {
+  &__posts {
+    padding-left: 0;
+    list-style: none;
+
+    &__item {
+      margin-bottom: 10px;
+      border-bottom: 1px solid $color-primary;
+
+      &__link {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &__date {
+        float: right;
+      }
+    }
+  }
+}

@@ -11,11 +11,11 @@ permalink: /series/
 {% assign categories_list = site.categories %}
   {% if categories_list.first[0] == null %}
     {% for category in categories_list %}
-        <a data-scroll href="#{{ category }}">{{ category }}</a>
+        <a class="btn--default" data-scroll href="#{{ category }}">{{ category }}</a>
     {% endfor %}
   {% else %}
     {% for category in categories_list %}
-        <a data-scroll href="#{{ category[0] }}">{{ category[0] }}</a>
+        <a class="btn--default" data-scroll href="#{{ category[0] }}">{{ category[0] }}</a>
     {% endfor %}
   {% endif %}
 {% assign tags_list = nil %}
@@ -31,7 +31,7 @@ permalink: /series/
         	{% for post in pages_list reversed %}
             	{% if post.title != null %}
             	{% if group == null or group == post.group %}
-            	<li class="category__posts__item"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%d %b, %Y" }}</time></span></a></li>
+            	<li class="category__posts__item"><a class="category__posts__item__link" href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="category__posts__item__date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%d %b, %Y" }}</time></span></a></li>
             	{% endif %}
             	{% endif %}
         	{% endfor %}

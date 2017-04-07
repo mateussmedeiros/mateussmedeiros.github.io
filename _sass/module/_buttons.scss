@@ -31,6 +31,11 @@ button {
   text-decoration: none;
 }
 
+.tags-list .btn--default,
+.categories-list .btn-default {
+  display: inline-block;
+}
+
 // Center
 // ==========================================================================
 .btn--center {
