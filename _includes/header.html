@@ -34,13 +34,15 @@
 
           <!-- Search -->
           <div class="navbar__search col-lg-1">
-            <button aria-expanded="false" aria-controls="navbar__search__container" aria-label="Pesquisar no Blog" class="navbar__search__btn--open"><svg class="svg-icon navbar-icon"><use xlink:href="#icon-search"></use></svg></button>
-
-            <div class=" navbar__search__container is-hidden" id="search-container" >
-              <input class="navbar__search__input" type="text" id="search-input" placeholder="Pesquisar posts no blog...">
-              <button aria-label="Fechar Barra de Pesquisa" class="navbar__search__btn--close"><svg class="svg-icon navbar-icon"><use xlink:href="#icon-close"></use></svg></button>
-              <ul class="navbar__search__results-container" id="results-container"></ul>
-            </div><!-- navbar__search__container -->
+            <button aria-expanded="false" aria-controls="navbar__search__wrapper" aria-label="Pesquisar no Blog" class="navbar__search__btn--open" id="search-open" onclick="openSearch()"><svg class="svg-icon navbar-icon"><use xlink:href="#icon-search"></use></svg></button>
+            
+            <div class="navbar__search__wrapper is-hidden" id="search-wrapper">
+              <div class="navbar__search__container">
+                <input class="navbar__search__input" type="text" id="search-input" placeholder="Pesquisar posts no blog...">
+                <button aria-label="Fechar barra de pesquisa" class="navbar__search__btn--close" onclick="closeSearch()"><svg class="svg-icon navbar-icon"><use xlink:href="#icon-close"></use></svg></button>
+                <ul class="navbar__search__results" id="results-container"></ul>
+              </div><!-- navbar__search__container -->
+            </div><!-- navbar__search__wrapper -->
           </div><!-- navbar__search -->
         </div><!-- row -->
       </nav><!-- navbar -->
