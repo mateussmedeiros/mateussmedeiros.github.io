@@ -2,45 +2,46 @@
 // Buttons
 // ==========================================================================
 button {
+  background: transparent;
+  border: 0;
   cursor: pointer;
 }
 
 // Default
 // ==========================================================================
 .btn--default {
-  display: block;
+  width: auto;
   margin: 5px 0;
-  padding: 3px 10px;
+  padding: 5px 10px;
   border: none;
   border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: $color-default;
   background: $color-primary;
 
   &:hover {
+    color: $color-default;
+    text-decoration: none;
     background: $color-primary-dark;
   }
+}
 
-  a {
-    font-size: 0.85rem;
-    font-weight: normal;
-    color: $color-default;
-
-    &:hover {
-      color: $color-default;
-      text-decoration: none;
-    }
-  }
+.post__content .btn--default {
+  text-decoration: none;
 }
 
 // Center
 // ==========================================================================
 .btn--center {
+  display: block;
   margin: 25px auto 10px auto;
-  padding: 5px 15px;
-  background: darken($color-primary, 10%);
 
   a {
+    padding: 7.5px 15px;
     font-size: 1rem;
     font-weight: bold;
+    background: darken($color-primary, 10%);
   }
 }
 

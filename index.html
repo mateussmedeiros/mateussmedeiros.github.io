@@ -51,7 +51,7 @@ layout: default
         <img src="/assets/img/portfolio/bolhas-de-sabao.png" class="portfolio__item__img">
         <h3 class="portfolio__item__title">Bolhas de Sabão</h3>
         <p class="portfolio__item__description">Desenvolvimento do Template para Blogger, utilizando HTML, XML, CSS e JavaScript (jQuery)</p>
-        <button class="btn--default"><a href="http://vi-bolhasdesabao.blogspot.com.br/" class="portfolio__item__link">Conferir o site</a></button>
+        <a role="button" href="http://vi-bolhasdesabao.blogspot.com.br/" class="btn--default portfolio__item__link">Conferir o site</a>
       </div><!-- portfolio-item -->
     </div><!-- row -->
   </section>
@@ -69,18 +69,18 @@ layout: default
           <img src="/assets/img/projects/lion-boilerplate.png" class="project__item__img">
           <h3 class="project__item__title">Lion</h3>
           <p class="project__item__description">Boilerplate para projetos com Gulp</p>
-          <button class="btn--default"><a href="https://github.com/mateussmedeiros/lion" class="project__item__link">Conferir projeto</a></button>
+          <a role="button" href="https://github.com/mateussmedeiros/lion" class="btn--default project__item__link">Conferir projeto</a>
         </div><!-- project-item -->
 
         <div class="project__item col-md-12">
           <img src="/assets/img/projects/blade-theme.png" class="project__item__img">
           <h3 class="project__item__title">Blade Theme</h3>
           <p class="project__item__description">Tema simples para blogs Jekyll</p>
-          <button class="btn--default"><a href="https://mateussmedeiros.github.io/blade-theme/" class="project__item__link">Conferir projeto</a></button>
+          <a role="button" href="https://mateussmedeiros.github.io/blade-theme/" class="btn--default project__item__link">Conferir projeto</a>
         </div><!-- project-item -->
       </div><!-- row -->
 
-      <button class="btn--default btn--center"><a href="/projetos.html">Todos os projetos</a></button>
+      <button class="btn--center"><a href="/projetos/" class="btn--default">Todos os projetos</a></button>
     </section>
 
     <!-- Blog -->
@@ -98,13 +98,13 @@ layout: default
 
             <p class="post__list__item__description">{{ post.description }}</p>
 
-            <button class="btn--default"><a class="post__list__item__permalink" href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais...</a></button>
+            <a role="button" class="btn--default post__list__item__permalink" href="{{ post.permalink | prepend: site.baseurl }}"> Leia mais...</a>
 
           </li>
         {% endfor %}
       </ul>
 
-      <button class="btn--default btn--center"><a href="/blog/">Todos os posts</a></button>
+      <button class="btn--center"><a href="/blog/" class="btn--default">Todos os posts</a></button>
     </section>
   </div><!-- row -->
 
