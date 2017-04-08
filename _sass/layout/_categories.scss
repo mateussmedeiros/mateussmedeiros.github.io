@@ -20,3 +20,20 @@
     }
   }
 }
+
+@include media-query($bp-mobile) {
+  .category, 
+  .tags {
+    &__posts {
+      &__item {
+        &__link {
+          font-size: 1rem;
+        }
+        
+        &__date {
+          display: none;
+        }
+      }
+    }
+  }
+}

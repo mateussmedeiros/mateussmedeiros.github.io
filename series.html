@@ -4,24 +4,6 @@ title: Séries
 description: Séries escritas por mim abordando determinados assuntos
 permalink: /series/
 ---
-<h2> Diversos assuntos abordados no blog </h2>
-<hr>
-
-<div class="category-list">
-{% assign categories_list = site.categories %}
-  {% if categories_list.first[0] == null %}
-    {% for category in categories_list %}
-        <a class="btn--default" data-scroll href="#{{ category }}">{{ category }}</a>
-    {% endfor %}
-  {% else %}
-    {% for category in categories_list %}
-        <a class="btn--default" data-scroll href="#{{ category[0] }}">{{ category[0] }}</a>
-    {% endfor %}
-  {% endif %}
-{% assign tags_list = nil %}
-</div>
-
-<hr>
 
 {% for category in site.categories  %}
 	<div class="category">
