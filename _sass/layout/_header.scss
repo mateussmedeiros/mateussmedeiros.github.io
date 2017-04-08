@@ -175,6 +175,10 @@
             margin: 0 auto;
           }
         }
+
+        &--dropdown:hover .navbar__menu__dropdown {
+          display: none;
+        }
       }
     }
 
