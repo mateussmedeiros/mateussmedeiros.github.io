@@ -31,7 +31,7 @@ SimpleJekyllSearch({
   json: '/search.json',
   searchResultTemplate: '<li class="navbar__search__results__item"><a class="navbar__search__results__item__link" href="{url}" title="{desc}">{title}</a></li>',
   noResultsText: '<p class="navbar__search__results--no-results">Nenhum post foi encontrado! :(</p>'
-})
+});
 
 // ==========================================================================
 // Menu

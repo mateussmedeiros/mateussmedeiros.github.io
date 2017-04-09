@@ -1,11 +1,17 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var rename = require("gulp-rename");
-var imageop = require('gulp-image-optimization');
+var imagemin = require('gulp-imagemin');
+const jshint = require('gulp-jshint');
+ 
+gulp.task('lint', function() {
+  return gulp.src('assets/js/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});
 
-// Minificar JS
 gulp.task('uglify', function() {
-  return gulp.src('assets/js/script.js')
+  return gulp.src('assets/js/main.js')
     .pipe(uglify())
     .pipe(rename({
             suffix: '.min'
@@ -13,11 +19,12 @@ gulp.task('uglify', function() {
     .pipe(gulp.dest('assets/js'));
 });
 
-// Compactar Imagens 
-gulp.task('images', function(cb) {
-    gulp.src(['assets/img/*.png','assets/img/*.jpg','assets/img/*.gif','assets/img/*.jpeg']).pipe(imageop({
-        optimizationLevel: 5,
-        progressive: true,
-        interlaced: true
-    })).pipe(gulp.dest('assets/img')).on('end', cb).on('error', cb);
+gulp.task('images', function() {
+  return gulp.src('assets/img/**/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('assets/img/'))
+});
+
+gulp.task('default', function() {
+    gulp.run('uglify', 'images', 'lint');
 });
