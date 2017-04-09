@@ -1,4 +1,4 @@
-# [http://mateusmedeiros.com/](http://mateusmedeiros.com/)
+# [mateusmedeiros.com](http://mateusmedeiros.com/)
 Meu site pessoal
 
 ## Versão
