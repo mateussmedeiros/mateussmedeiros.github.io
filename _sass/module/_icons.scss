@@ -38,3 +38,10 @@
     fill: $color-default;
   }
 }
+
+@include media-query($bp-tablet) {
+  .footer-icon {
+    width: 35px;
+    height: 35px;
+  }
+}

@@ -38,7 +38,7 @@
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ "/assets/img/portfolio/image-blog.png" | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+    <meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ "/assets/img/img-blog.png" | prepend: site.baseurl | prepend: site.url }}{% endif %}">
     <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:site_name" content="{{ site.title }}">
 
@@ -50,12 +50,12 @@
     {% if page.image %}
     <meta property="twitter:image:src" content="{{ site.url }}{{post.image }}">
     {% else %}
-    <meta property="twitter:image:src" content="{{ "/assets/img/portfolio/image-blog.png" | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="twitter:image:src" content="{{ "/assets/img/img-blog.png" | prepend: site.baseurl | prepend: site.url }}">
     {% endif %}
 
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="{% if post.title %}{{ post.title }}{% else %}{{ site.title }}{% endif %}"/>
     <meta itemprop="description" content="{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta itemprop="image" content="{{ "/assets/img/portfolio/image-blog.png" | prepend: site.baseurl | prepend: site.url }}"/>
+    <meta itemprop="image" content="{{ "/assets/img/img-blog.png" | prepend: site.baseurl | prepend: site.url }}"/>
     
 </head>

@@ -5,8 +5,8 @@ layout: default
   <!-- About -->
   <section class="about">
     <h2 class="page__title"> Sobre Mim </h2>
-    <p>Me chamo Mateus de Sousa Medeiros, tenho 16 anos e sou Desenvolvedor Front End. Comecei no ano de 2015 à aprender as maravilhas desse mundo do Desenvolvimento Web, especificamente na área de Front End. Sou apaixonado pelo que faço e o que me deixa mais feliz ainda, é a facilidade em aprender cada dia mais.</p>
-    <p>No meu workflow costumo utilizar HTML, CSS (SASS) e JavaScript (jQuery), além do Gulp como Task Runner e Git para versionar meus projetos.</p>
+    <p>Meu nome é Mateus Medeiros, tenho 16 anos e sou <b>Desenvolvedor Front End</b>. Atualmente trabalho como <b>Freelancer</b>. Sou apaixonado pelo que faço e o que me deixa mais feliz ainda, é a facilidade em aprender cada dia mais.</p>
+    <p>No meu workflow costumo utilizar HTML, CSS (SASS) e JavaScript (jQuery), além do Gulp para automatizar tarefas, e Git para versionar meus projetos.</p>
   </section>
 
   <hr>
@@ -51,7 +51,7 @@ layout: default
         <img src="/assets/img/portfolio/bolhas-de-sabao.png" class="portfolio__item__img">
         <h3 class="portfolio__item__title">Bolhas de Sabão</h3>
         <p class="portfolio__item__description">Desenvolvimento do Template para Blogger, utilizando HTML, XML, CSS e JavaScript (jQuery)</p>
-        <a role="button" href="http://vi-bolhasdesabao.blogspot.com.br/" class="btn--default portfolio__item__link">Conferir o site</a>
+        <a role="button" href="http://vi-bolhasdesabao.blogspot.com.br/" target="_blank" class="btn--default portfolio__item__link">Conferir o site</a>
       </div><!-- portfolio-item -->
     </div><!-- row -->
   </section>
@@ -69,18 +69,20 @@ layout: default
           <img src="/assets/img/projects/lion-boilerplate.png" class="project__item__img">
           <h3 class="project__item__title">Lion</h3>
           <p class="project__item__description">Boilerplate para projetos com Gulp</p>
-          <a role="button" href="https://github.com/mateussmedeiros/lion" class="btn--default project__item__link">Conferir projeto</a>
+          <a role="button" href="https://github.com/mateussmedeiros/lion" target="_blank" class="btn--default project__item__link">Conferir projeto</a>
         </div><!-- project-item -->
 
         <div class="project__item col-md-12">
           <img src="/assets/img/projects/blade-theme.png" class="project__item__img">
           <h3 class="project__item__title">Blade Theme</h3>
           <p class="project__item__description">Tema simples para blogs Jekyll</p>
-          <a role="button" href="https://mateussmedeiros.github.io/blade-theme/" class="btn--default project__item__link">Conferir projeto</a>
+          <a role="button" href="https://mateussmedeiros.github.io/blade-theme/" target="_blank" class="btn--default project__item__link">Conferir projeto</a>
         </div><!-- project-item -->
       </div><!-- row -->
 
-      <button class="btn--center"><a href="/projetos/" class="btn--default">Todos os projetos</a></button>
+      <div class="btn__container">
+        <a role="button" href="/projetos/" class="btn--default btn--center">Todos os projetos</a>
+      </div>
     </section>
 
     <!-- Blog -->
@@ -104,7 +106,9 @@ layout: default
         {% endfor %}
       </ul>
 
-      <button class="btn--center"><a href="/blog/" class="btn--default">Todos os posts</a></button>
+      <div class="btn__container">
+        <a role="button" href="/blog/" class="btn--default btn--center">Todos os posts</a>
+      </div>
     </section>
   </div><!-- row -->
 
