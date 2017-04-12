@@ -39,6 +39,7 @@ SimpleJekyllSearch({
 // Variables
 var btnMenu = document.getElementById('menu-open');
 var menuContainer = document.getElementById('menu-list');
+var listMenu = document.getElementById('navbar-menu-list');
 var btnDropdown = document.getElementById('open-dropdown');
 var menuDropdown = document.getElementById('menu-dropdown');
 
@@ -46,22 +47,24 @@ var menuDropdown = document.getElementById('menu-dropdown');
 function openMenu() {
   menuContainer.classList.add('is-visibly'); 
   btnMenu.setAttribute('aria-expanded', true);
+  listMenu.classList.add('slide-left');
 }
 
 // Close Menu Container
 function closeMenu() {
   menuContainer.classList.remove('is-visibly'); 
   btnMenu.setAttribute('aria-expanded', false);
+  listMenu.classList.remove('slide-left');
 }
 
 // Open/Close Dropdown Menu
 function controlDropdown() {
   if(!menuDropdown.classList.contains("is-visibly")) {
     menuDropdown.classList.remove('is-hidden');
-    menuDropdown.classList.add('is-visibly');
+    menuDropdown.classList.add('is-visibly', 'slide-bottom');
     btnDropdown.setAttribute('aria-expanded', true);
   } else if(menuDropdown.classList.contains("is-visibly")) {
-    menuDropdown.classList.remove('is-visibly');
+    menuDropdown.classList.remove('is-visibly', 'slide-bottom');
     menuDropdown.classList.add('is-hidden');
     btnDropdown.setAttribute('aria-expanded', false);
   }
