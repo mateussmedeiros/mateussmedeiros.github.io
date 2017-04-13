@@ -1,0 +1,28 @@
+.form-contact {
+
+  &__group {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    } 
+
+    &__label {
+      margin-bottom: 5px;
+      font-family: "Open Sans", Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    &__item {
+      display: block;
+      width: 250px;
+      min-height: 30px;
+      font-size: 0.85rem;
+    }
+
+    &__option {
+      font-size: 0.85rem;
+    }
+  }    
+}

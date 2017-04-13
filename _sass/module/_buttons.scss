@@ -50,6 +50,13 @@ button {
   background: darken($color-primary, 10%);
 }
 
+// Submit
+// ==========================================================================
+.btn--submit {
+  padding: 5px 15px;
+  font-size: 1rem;
+}
+
 // Pagination
 // ==========================================================================
 .pagination {

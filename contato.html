@@ -5,12 +5,34 @@ description: Entre em contato com o desenvolvedor Mateus Medeiros
 permalink: /contato/
 ---
 
-<p>Gostou de alguma postagem ou ficou interessado em um conhecimento meu?</p>
+<h2> Quer falar comigo? Envie uma mensagem! </h2>
 
-<p>Tem alguma sugestão ou dúvida?</p>
+<p>Preencha o formulário abaixo: </p>
 
-<p>Quer me contratar para algum serviço?</p>
-
-<p>Entre em contato comigo pelo e-mail <a href="mailto:mateus.sousamedeiros@gmail.com">mateus.sousamedeiros@gmail.com</a></p>
-
-<p><b>Todo feedback é bem vindo!</b></p>
+<form class="form-contact" action="https://formspree.io/mateus.sousamedeiros@gmail.com" method="POST">
+    <div class="form-contact__group">
+        <label class="form-contact__group__label" for="name">Nome:</label>
+        <input type="text" name="name" id="name" placeholder="Digite seu nome" class="form-contact__group__item">
+    </div>
+    <div class="form-contact__group">
+        <label class="form-contact__group__label" for="_replyto">E-mail:</label>
+        <input type="email" id="_replyto" name="_replyto" placeholder="Digite seu e-mail" class="form-contact__group__item">
+    </div>
+    <div class="form-contact__group">
+        <label class="form-contact__group__label" for="_subject">Assunto:</label>
+        <select class="form-contact__group__item" name="_subject" id="_subject">
+            <option class="form-contact__group__option">Mensagem</option>
+            <option class="form-contact__group__option">Dúvida</option>
+            <option class="form-contact__group__option">Serviço</option>
+            <option class="form-contact__group__option">Outro</option>
+        </select>
+    </div>
+    <div class="form-contact__group">
+        <label class="form-contact__group__label" for="msg">Mensagem:</label>
+        <textarea name="msg" id="msg" rows="5" placeholder="Digite sua mensagem" class="form-contact__group__item"></textarea>
+    </div>
+    <div class="form-contact__group">
+        <button type="submit" class="btn--default btn--submit">Enviar</button>
+    </div>
+    <input type="hidden" name="_next" value="/confirmacao-email" />
+</form>
