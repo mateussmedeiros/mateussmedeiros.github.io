@@ -79,7 +79,7 @@
 
         &:hover,
         &:active {
-          color: $color-primary;
+          color: lighten($color-primary, 15%);
           text-decoration: none;
         }
       }
@@ -361,7 +361,6 @@
   &__subtitle {
     font-family: $font-default;
     font-size: 2rem;
-    font-weight: normal;
     color: $color-primary;
   }
 
