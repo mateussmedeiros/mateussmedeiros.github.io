@@ -23,8 +23,8 @@
 }
 
 .banner-page {
-  height: 60vh;
-  height: 60%;
+  height: 40vh;
+  height: 40%;
 }
 
 // ==========================================================================
@@ -382,6 +382,19 @@
 
     &__subtitle {
       font-size: 1.5rem;
+    }
+  }
+
+  .banner-page {
+    .header {
+
+      &__title {
+        font-size: 2.25rem;
+      }
+
+      &__subtitle {
+        font-size: 1.25rem;
+      }
     }
   }
 }
