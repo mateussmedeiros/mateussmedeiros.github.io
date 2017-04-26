@@ -2,6 +2,23 @@
 // Scrool
 // ==========================================================================
 $('a.scroll__btn').smoothScroll();
+$('a.scroll-top__btn').smoothScroll();
+
+// Scroll Top
+// ==========================================================================
+window.onscroll = function(){
+  var btnScrollTop = document.getElementById('scrool-top_btn');
+  var header = document.getElementById('top');
+  var top = window.pageYOffset || document.documentElement.scrollTop;
+
+  if(top > 50) {
+    btnScrollTop.classList.remove('is-hidden');
+    btnScrollTop.classList.add('is-visibly');
+  } else {
+    btnScrollTop.classList.remove('is-visibly'); 
+    btnScrollTop.classList.add('is-hidden'); 
+  }
+};
 
 // ==========================================================================
 // Search
