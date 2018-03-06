@@ -4,7 +4,7 @@ layout: default-page
 <article class="post-blog container" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-blog__header">
-    <h1 class="post-blog__title" itemprop="name headline">{{ page.title }}</h1>
+    <h2 class="post-blog__title" itemprop="name headline">{{ page.title }}</h2>
     <p class="post-blog__info"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %b, %Y" }}</time> | {% for tag in page.tags %} <a class="post-blog__info__tag" href="/tags/#{{tag}}"> #{{ tag }}</a> {% endfor %} </p>
   </header>
 
