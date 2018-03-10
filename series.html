@@ -7,7 +7,7 @@ permalink: /series/
 
 {% for category in site.categories  %}
 	<div class="category">
-		<h3 class="category__title" id="{{ category[0] }}">{{ category[0] }}</h3>
+		<h2 class="category__title" id="{{ category[0] }}">{{ category[0] }}</h2>
     	<ul class="category__posts">
         	{% assign pages_list = category[1] %}
         	{% for post in pages_list reversed %}
