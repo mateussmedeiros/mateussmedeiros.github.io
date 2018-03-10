@@ -18,9 +18,19 @@
 
   &__info__tag {
     margin-right: 5px;
+    padding: 5px 10px;
+    background: $color-primary;
+    color: $color-default;
+    border-radius: 5px;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &:hover {
+      background: $color-primary-dark;
+      color: $color-default;
+      text-decoration: none;
     }
   }
 
@@ -32,7 +42,6 @@
     }
 
     a {
-      //font-weight: normal;
       text-decoration: underline;
     }
   }
