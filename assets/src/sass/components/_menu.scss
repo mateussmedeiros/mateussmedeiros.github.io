@@ -1,0 +1,17 @@
+.menu {
+  display: flex;
+  list-style: none;
+
+  > .menu-item {
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  > .menu-item > .menu-link {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $black;
+  }
+}

@@ -1,22 +1,16 @@
 title: Mateus Medeiros - Desenvolvedor Front End
 email: mateus.sousamedeiros@gmail.com
-description: "Site do Desenvolvedor Front End Mateus Medeiros. HTML5, CSS3, JavaScript, jQuery, Sass, Gulp, Bower, WordPress, Freelancer"
-url: "https://mateusmedeiros.com/" 
+description: "Site do Desenvolvedor Front End Mateus Medeiros. HTML5, CSS3, JavaScript, jQuery, Sass, Gulp, WordPress, Freelancer"
+url: "https://mateusmedeiros.com/"
 twitter_username: mateussousam
 github_username:  mateussmedeiros
 
 # Build settings
 markdown: kramdown
 permalink: /:title/
-paginate: 5
-paginate_path: "/blog/page/:num"
+#paginate: 5
+#paginate_path: "/blog/page/:num"
 
-plugins:
-  - jekyll-sitemap
-  - jekyll-paginate
-
-css_folder:  "/assets/css"
-js_folder:  "/assets/js"
-img_folder:  "/assets/img"
-sass:
-    style: compressed
+#plugins:
+  #- jekyll-sitemap
+  #- jekyll-paginate

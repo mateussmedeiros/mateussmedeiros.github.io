@@ -1,0 +1,40 @@
+{
+  "name": "mateussmedeiros.github.io",
+  "version": "5.0.0",
+  "description": "Site do Desenvolvedor Front End Mateus Medeiros. HTML5, CSS3, JavaScript, jQuery, Sass, Gulp, WordPress, Freelancer",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateussmedeiros/mateussmedeiros.github.io.git"
+  },
+  "keywords": [
+    "FrontEnd",
+    "Freelancer",
+    "HTML5",
+    "CSS3",
+    "JavaScript"
+  ],
+  "author": "Mateus Medeiros <mateus.sousamedeiros@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mateussmedeiros/mateussmedeiros.github.io/issues"
+  },
+  "homepage": "https://github.com/mateussmedeiros/mateussmedeiros.github.io#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "slick-carousel": "^1.8.1"
+  }
+}
