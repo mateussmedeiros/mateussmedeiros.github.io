@@ -1,0 +1,61 @@
+I"�<p>Fala galera, dando continuidade à série <a href="http://mateussmedeiros.github.io/series/#Dica do Dia" target="_blank">Dica do dia</a>, trago à vocês, um compilado de links para se manter atualizado no Front End. São diversos links, desde blogs à ferramentas. Vou deixar um índice abaixo para facilitar a navegação.</p>
+
+<ul>
+  <li><a href="#blogs">Blogs</a></li>
+  <li><a href="#ferramentas">Ferramentas</a></li>
+  <li><a href="#outros">Outros Links</a></li>
+</ul>
+
+<h2 id="blogs">Blogs</h2>
+
+<p>Blogs de devs que eu sigo e também da comunidade, são blogs que me ajudam bastante. Tem desde posts técnicos à dicas para sua carreira, vale a pena conferir.</p>
+
+<ul>
+  <li><a href="http://tableless.com.br/" target="_blank">Tableless</a> - Blog com ótimos conteúdos de diversas áreas.</li>
+  <li><a href="http://www.frontendbrasil.com.br/" target="_blank">Front End Brasil</a> - Blog da comunidade Front End no Brasil.</li>
+  <li><a href="http://www.maujor.com/" target="_blank">Maujor</a> - Simplesmente, o blog do dinossauro das Css, Maurício Samy Silva. Ótimo conteúdo, principalmente sobre CSS.</li>
+  <li><a href="https://willianjusten.com.br/" target="_blank">Willian Justen</a> - Blog do Willian Justen, ótimo material! Em especial, sobre SVG.</li>
+  <li><a href="https://woliveiras.com.br/" target="_blank">William Oliveira</a> - Blog do William Oliveira, ótimo conteúdo lá. Vale a pena conferir!</li>
+  <li><a href="http://www.felipefialho.com/blog/" target="_blank">Felipe Fialho</a> - Blog do Felipe Filho, bastante material sobre a área Front End.</li>
+  <li><a href="https://nandomoreira.me/blog/" target="_blank">Nando Moreira</a> - Blog do Fernando Moreira, ótimo conteúdo sobre Jekyll.</li>
+  <li><a href="http://sergiolopes.org/" target="_blank">Sérgio Lopes</a> - Blog do Sérgio Lopes, ótimo conteúdo sobre Acessibilidade e Perfomance.</li>
+  <li><a href="http://blog.da2k.com.br/" target="_blank">Da2k</a> - Blog do Fernando Daciuk, ótimo material sobre Js.</li>
+  <li><a href="http://nomadev.com.br/" target="_blank">Nomadev</a> - Blog do Suíssa, também tem bastante material sobre Js.</li>
+  <li><a href="http://www.raphaelfabeni.com.br/blog/" target="_blank">Raphael Fabeni</a> - Blog do Raphael Fabeni, bastante conteúdo sobre CSS.</li>
+  <li><a href="http://gabsferreira.com/#open" target="_blank">Gabriel Ferreira</a> - Blog do Gabriel Ferreira, tem um conteúdo bem bacana.</li>
+</ul>
+
+<h2 id="ferramentas">Ferramentas</h2>
+
+<p>Algumas ferramentas bem úteis que tenho utilizado recentemente.</p>
+
+<h3 id="feedly">Feedly</h3>
+<p>Se você, assim como eu, acompanha diversos blogs, fica difícil acompanhar o conteúdo deles. Com o <a href="https://feedly.com/" target="_blank">Feedly</a>, você consegue marcar os blogs que segue e acompanhá-los. Ele é um agregador de links através do <strong>RSS</strong>, sempre que sai algum conteúdo novo, ele te informa.</p>
+
+<p>Mas ficar entrando toda vez no Feedly, para ver se tem conteúdo novo, é uma tarefa cansativa. Para isso, existem extensões para o <strong>Chrome</strong> e <strong>Firefox</strong>, que te notificam quando sai algum conteúdo. O que ajuda muito!</p>
+
+<ul>
+  <li><a href="https://chrome.google.com/webstore/detail/feedly-notifier/egikgfbhipinieabdmcpigejkaomgjgb?hl=pt-BR" target="_blank">Feedly Notifier Chrome</a></li>
+  <li><a href="https://addons.mozilla.org/pt-br/firefox/addon/feedly-notifier/" target="_blank">Feedly Notifier Firefox</a></li>
+</ul>
+
+<h3 id="pocket">Pocket</h3>
+<p>Com tantos links para ler no dia, nem sempre conseguimos ler tudo. Quem nunca quis salvar aquele link para ler mais tarde? Mas nem sempre temos onde salvá-los. Com o <a href="https://getpocket.com" target="_blank">Pocket</a>, conseguimos salvar esses links e acessá-los quando quisermos. E o bom dele, é que é possível sincronizar com seu computador, tablet e celular.</p>
+
+<h2 id="outros">Outros Links</h2>
+
+<ul>
+  <li><a href="http://devnaestrada.com.br/">DEVNAESTRADA</a> - Podcasts sobre front-end, back-end e desenvolvimento web.</li>
+  <li><a href="http://codepen.io/" target="_blank">Codepen</a> - “Playground para o lado Front End da web”. Você pode criar, compartilhar e pesquisar exemplos de códigos.</li>
+  <li><a href="http://caniuse.com/" target="_blank">Can I Use</a> - Site para consultar o suporte dos navegadores para tecnologias Front End.</li>
+  <li><a href="" target="_blank">Como perder peso no browser</a> - Um guia de perfomance Front End.</li>
+  <li><a href="https://www.codecademy.com/pt" target="_blank">Codecademy</a> - Cursos gratuitos de diversas áreas.</li>
+  <li><a href="http://jsbooks.revolunet.com/" target="_blank">Js books</a> - Diversos livros gratuitos sobre JavaScript para baixar.</li>
+</ul>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Bom galera, esses são alguns links que utilizo para me manter atualizado no Front End.</p>
+
+<p>E você, conhece algum outro blog? Ou usa aquela ferramenta que sempre te auxilia? <strong>Comente aí!</strong></p>
+:ET

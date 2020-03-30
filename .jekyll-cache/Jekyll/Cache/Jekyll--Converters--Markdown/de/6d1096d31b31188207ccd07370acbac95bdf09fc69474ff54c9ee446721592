@@ -1,0 +1,45 @@
+I"�<p>Um simples tema de blog Jekyll</p>
+
+<p><img src="https://github.com/mateussmedeiros/blade-theme/blob/master/screenshot.png?raw=true" alt="Captura de tela do Tema" /></p>
+
+<p>❗ <strong>O tema requer o <em>ruby</em> e <em>rubygems</em> instalados!</strong></p>
+
+<ul>
+  <li>✓ Layout responsivo</li>
+  <li>✓ Pré-processador SASS</li>
+  <li>✓ Sintaxe highlight</li>
+  <li>✓ Configurações de autor</li>
+  <li>✓ Paginação</li>
+  <li>✓ Barra de pesquisa</li>
+  <li>✓ Comentários com Disqus</li>
+  <li>✓ Compartilhamento de posts</li>
+</ul>
+
+<hr />
+
+<h3 id="comece-em-4-passos">Comece em 4 passos</h3>
+
+<ol>
+  <li>Faça o download ou clone o repositório: <code class="highlighter-rouge">git clone https://github.com/mateussmedeiros/blade-theme.git</code></li>
+  <li>Entre no diretório: <code class="highlighter-rouge">cd blade-theme</code></li>
+  <li>Instale as dependências do Ruby: <code class="highlighter-rouge">bundle install</code></li>
+  <li>Inicie o servidor Jekyll: <code class="highlighter-rouge">jekyll serve</code></li>
+</ol>
+
+<p>Acesse: <a href="http://localhost:4000" target="_blank">localhost:4000</a></p>
+
+<hr />
+
+<h3 id="demo-e-download">Demo e Download</h3>
+
+<p><a href="http://mateussmedeiros.github.io/blade-theme/" target="_blank">Demo ↗</a> |
+<a href="https://github.com/mateussmedeiros/blade-theme/archive/master.zip" target="_blank">Download ↗</a></p>
+
+<p>O tema também está disponível na <a href="https://rubygems.org/gems/blade-theme" target="_blank">RubyGems ↗</a></p>
+
+<hr />
+
+<h3 id="licença">Licença</h3>
+
+<p>Este tema é liberado sob licença <a href="https://github.com/mateussmedeiros/blade-theme/blob/master/LICENSE" target="_blank">MIT ↗</a>.</p>
+:ET

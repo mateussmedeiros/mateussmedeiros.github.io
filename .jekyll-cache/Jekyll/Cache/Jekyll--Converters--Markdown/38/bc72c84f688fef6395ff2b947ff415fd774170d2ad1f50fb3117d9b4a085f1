@@ -1,0 +1,108 @@
+I"J2<h2 id="introdução">Introdução</h2>
+<p>Antes de começar esse primeiro post, deixa eu me apresentar, né?</p>
+
+<p>Meu nome é Mateus de Sousa Medeiros, tenho 15 anos e sou Desenvolvedor Front End. Comecei esse ano à aprender as maravilhas desse mundo do <strong>Desenvolvimento Web</strong>, especificamente na área de <strong>Front End</strong>. Sou apaixonado pelo que faço e o que me deixa mais feliz ainda, é a facilidade em aprender cada dia mais.</p>
+
+<p>Criei esse blog, primeiramente para testar o <strong>Jekyll</strong> e <strong>SASS</strong>, e segundo para ter um lugar onde posso compartilhar meu conhecimento. Pretendo escrever bastante coisa sobre a área de Desenvolvimento Web, com foco em Front End. Também darei dicas de novas tecnologias que estou utilizando, e técnicas de estudo que estão me auxiliando.</p>
+
+<p>Qualquer dúvida que aparecer, não hesite em me mandar um e-mail ou comentar aqui.</p>
+
+<h2 id="tecnologias-utilizadas-no-blog">Tecnologias utilizadas no Blog</h2>
+
+<h3 id="jekyll">Jekyll</h3>
+<p>O <a href="http://jekyllrb.com" target="_blank">Jekyll</a> é um gerador de páginas estáticas, perfeito para criar um blog sem a necessidade de um banco de dados. Escolhi ele por ser de fácil utilização e também pela facilidade de fazer o deploy no GitHub Pages ❤. Outro fator que foi de grande peso para minha escolha foi a sua utilização por grande parte dos Devs que eu sigo, o que facilitou na hora de criar o meu blog.</p>
+
+<p>Se você ficou interessado por essa tecnologia visite o site do <a href="http://jekyllrb.com" target="_blank">Jekyll</a> ou também leia esse <a href="http://willianjusten.com.br/perguntas-e-respostas-jekyll/" target="_blank">post do Willian Justen</a> onde ele ensina algumas coisas sobre o Jekyll. Em breve farei um post explicando como utilizar essa incrível ferramenta. Aguarde!</p>
+
+<h3 id="sass">SASS</h3>
+<p>Pré-processadores são incríveis ❤. O SASS foi o primeiro pré-processador de que eu ouvi falar, escolhi ele por ser de fácil aprendizado e também pela sua ampla comunidade. Abaixo segue um exemplo de um código escrito em CSS e depois ele escrito em <code class="highlighter-rouge">.scss</code> (formato de arquivo do SASS).</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.elemento</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="m">#000000</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#ffffff</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.elemento-2</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="m">#000000</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Suponha que você queira alterar a cor do background dos dois elementos, você teria que alterar primeiro em <code class="highlighter-rouge">.elemento</code> e depois em <code class="highlighter-rouge">.elemento-2</code>. É aí que entra o SASS, esse mesmo código pode ser escrito assim em <code class="highlighter-rouge">.scss</code>:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$color-1</span><span class="p">:</span> <span class="mh">#000000</span><span class="p">;</span>
+
+<span class="nc">.elemento</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$color-1</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.elemento-2</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$color-1</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Na primeira linha eu criei um variável <code class="highlighter-rouge">$color-1</code> e passei para ela o valor hexadecimal da cor preta: <code class="highlighter-rouge">#000000</code>, depois passei essa variável como o valor dos background dos elementos <code class="highlighter-rouge">.elemento</code> e <code class="highlighter-rouge">.elemento-2</code>. Depois se eu quiser alterar essa cor para azul, basta trocar o valor da variável <code class="highlighter-rouge">$color-1</code>, assim:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$color-1</span><span class="p">:</span> <span class="mh">#0015ff</span><span class="p">;</span>
+
+<span class="nc">.elemento</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$color-1</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.elemento-2</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$color-1</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Esse foi um exemplo básico de como pré-processadores agilizam o desenvolvimento, muitas outras coisas podem serem feitas. Se você ficou interessado em aprender sobre esse pré-processador recomendo esses <a href="http://tableless.com.br/code/css/pre-processadores/sass/" target="_blank">posts no site do Tableless</a>.</p>
+
+<h3 id="svg">SVG</h3>
+<p>Desde que comecei a aprender Desenvolvimento Web, sempre ouvi falar do SVG, mas nunca parei para pesquisar sobre isso. Eu acompanho blogs de alguns devs, quando estava lendo alguns posts no blog do <a href="http://willianjusten.com.br/" target="_blank">Willian Justen</a>, achei um sobre SVG e parei para ler. Fiquei encantado com o SVG e resolvi utilizá-lo, os ícones das redes sociais e os botões de compartilhamento desse blog foram feitos em SVG.</p>
+
+<p>Se você quiser aprender mais sobre SVG, recomendo esses <a href="http://willianjusten.com.br/tutorial-svg/" target="_blank">tutoriais do Willian Justen</a>.</p>
+
+<h3 id="bower">Bower</h3>
+<p>Sempre utilizo alguma biblioteca ou um framework nos meus projetos, e atualizá-los na mão é um trabalho cansativo. Eu precisava de alguma ferramenta para automatizar esse processo, foi aí que eu descobri o Bower. O Bower é um gerenciador de dependências front end, ou seja você conseguirá facilmente gerenciar as dependências utilizadas no seu projeto. Isso facilita na hora de atualizar alguma biblioteca ou framework.</p>
+
+<p>Se tiver interesse em aprender mais sobre essa ferramenta, recomendo esse dois posts: <a href="http://tableless.com.br/bower-na-pratica/" target="_blank">Bower na prática</a> e <a href="http://www.carvalhoweb.com/articles/bower-guia-definitivo/" target="_blank">Bower: O guia/tutorial definitivo</a>.</p>
+
+<h3 id="gulp">Gulp</h3>
+<p>O Gulp é meu automatizador de tarefas favoritos, ele é rápido e de fácil aprendizado. Nesse blog, utilizei os seguintes plugins:</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/gulp-uglify" target="_blank">gulp-uglify</a> - Para minificar meus arquivos JavaScript.</li>
+  <li><a href="https://www.npmjs.com/package/gulp-rename" target="_blank">gulp-rename</a> - Para renomear os arquivos minificados.</li>
+  <li><a href="https://www.npmjs.com/package/gulp-image-optimization" target="_blank">gulp-image-optimization</a> - Para otimizar minhas imagens.</li>
+</ul>
+
+<p>E meu arquivo <code class="highlighter-rouge">gulpfile.js</code> ficou assim:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">gulp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">gulp</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">uglify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">gulp-uglify</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">rename</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">gulp-rename</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">imageop</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">gulp-image-optimization</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="c1">// Minificar JS</span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="dl">'</span><span class="s1">uglify</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="dl">'</span><span class="s1">assets/js/script.js</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">uglify</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">rename</span><span class="p">({</span>
+            <span class="na">suffix</span><span class="p">:</span> <span class="dl">'</span><span class="s1">.min</span><span class="dl">'</span>
+        <span class="p">}))</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="dl">'</span><span class="s1">assets/js</span><span class="dl">'</span><span class="p">));</span>
+<span class="p">});</span>
+
+<span class="c1">// Compactar Imagens </span>
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="dl">'</span><span class="s1">images</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">([</span><span class="dl">'</span><span class="s1">assets/img/*.png</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">assets/img/*.jpg</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">assets/img/*.gif</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">assets/img/*.jpeg</span><span class="dl">'</span><span class="p">]).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">imageop</span><span class="p">({</span>
+        <span class="na">optimizationLevel</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="na">progressive</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="na">interlaced</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">})).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="dl">'</span><span class="s1">assets/img</span><span class="dl">'</span><span class="p">)).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">end</span><span class="dl">'</span><span class="p">,</span> <span class="nx">cb</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">cb</span><span class="p">);</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>Se quiser aprender mais sobre o Gulp, recomendo esse <a href="http://tableless.com.br/gulp-o-novo-automatizador/" target="_blank">post</a>.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+<p>Esse foi um post para apresentar meu blog e explicar sobre as tecnologias que utilizei nele. Essa foi uma escolha pessoal para um projeto específico, não é uma combinação ideal para todos os projetos. Se tiver alguma dúvida ou sugestão, comente aqui ou envie um e-mail para <a href="mailto:mateus.sousamedeiros@gmail.com">mateus.sousamedeiros@gmail.com</a>. Todo feedback é bem vindo. Assine meu <a href="/feed.xml">RSS</a> e não perca nenhum post.</p>
+
+<p>Até mais!</p>
+:ET

@@ -1,0 +1,253 @@
+I";B<h2 id="introdução">Introdução</h2>
+
+<p>Fala galera, chegamos à última parte desse tutorial de Jekyll, hoje irei ensinar como escrever <strong>posts</strong>, adicionar <strong>páginas</strong> e também subiremos ele para o <strong>GitHub</strong>. Vamos lá!</p>
+
+<h2 id="como-escrever-posts">Como escrever posts</h2>
+
+<p>Escrever posts no Jekyll é fácil, eles ficam na pasta <code class="highlighter-rouge">_posts</code> e são escritos em <a href="https://daringfireball.net/projects/markdown/syntax" target="_blank">Markdown</a>. O nome do arquivo deve ser escrito da seguinte forma: <code class="highlighter-rouge">YYYY-MM-DD-nome-do-post.markdown</code>.</p>
+
+<p>Cada arquivo no ínicio deve ter o <strong>Front-Matter</strong>. As informações devem ficar entre o par de três traços <code class="highlighter-rouge">---</code>. A sintaxe dele é a seguinte:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Meu primeiro post com Jekyll</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2016-01-24 17:22:00 -0300</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Mateus Medeiros</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Meu primeiro post com Jekyll.</span>
+<span class="na">tags</span><span class="pi">:</span> 
+<span class="pi">-</span> <span class="s">jekyll</span>
+<span class="na">categories</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">Jekyll</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/meu-primeiro-post-com-jekyll/</span>
+<span class="nn">---</span></code></pre></figure>
+
+<p>Agora vamos escrever o <del>primeiro</del> post do nosso blog.</p>
+
+<h2 id="escrevendo-nosso-primeiro-post">Escrevendo nosso primeiro post</h2>
+
+<p>Na pasta <code class="highlighter-rouge">_posts</code>, crie o arquivo <code class="highlighter-rouge">2016-01-24-meu-primeiro-post-com-jekyll.markdown</code>. No ínicio do arquivo adicione o <strong>Front-Matter</strong> com as informações do post:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Meu primeiro post com Jekyll</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2016-01-24 17:22:00 -0300</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Mateus Medeiros</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Meu primeiro post com Jekyll.</span>
+<span class="na">tags</span><span class="pi">:</span> 
+<span class="pi">-</span> <span class="s">jekyll</span>
+<span class="na">categories</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">Jekyll</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/meu-primeiro-post-com-jekyll/</span>
+<span class="nn">---</span></code></pre></figure>
+
+<p>Depois só escrever o post que desejar, lembrando que ele é escrito em <a href="https://daringfireball.net/projects/markdown/syntax" target="_blank">Markdown</a>.</p>
+
+<h2 id="como-adicionar-páginas">Como adicionar páginas</h2>
+
+<p>Adicionar páginas também é fácil, elas podem ser escritas em <strong>Markdown</strong> ou em <strong>HTML</strong>. Elas também devem conter no ínicio o <strong>Front-Matter</strong>. Agora vamos adicionar algumas ao nosso blog, mas antes vamos editar a nossa página <code class="highlighter-rouge">about.md</code>.</p>
+
+<h2 id="página-aboutmd">Página about.md</h2>
+
+<p>Abra o arquivo <code class="highlighter-rouge">about.md</code> e abaixo do Front-Matter, adicione uma descrição sobre o assunto tratado no seu blog. O meu ficou assim:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Sobre</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/sobre/</span>
+<span class="nn">---</span>
+
+<span class="s">Tutorial de como criar um blog com Jekyll, feito por [Mateus Medeiros](http://devmateusmedeiros.com.br){:target="_blank"}. Você pode conferir esse tutorial em meu [blog](http://devmateusmedeiros.com.br){:target="_blank"}.</span>
+
+<span class="s">Repositório no GitHub</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Tutorial-Jekyll</span><span class="pi">]</span><span class="s">(https://github.com/mateussmedeiros/tutorial-jekyll){:target="_blank"}</span>
+
+<span class="c1">## Partes do Tutorial:</span>
+
+<span class="pi">-</span> <span class="pi">[</span><span class="nv">Criando um blog com Jekyll - Parte 1</span><span class="pi">]</span><span class="s">(http://devmateusmedeiros.com.br/criando-um-blog-com-jekyll-parte-1/)</span>
+<span class="pi">-</span> <span class="pi">[</span><span class="nv">Criando um blog com Jekyll - Parte 2</span><span class="pi">]</span><span class="s">(http://devmateusmedeiros.com.br/criando-um-blog-com-jekyll-parte-2/)</span>
+<span class="pi">-</span> <span class="pi">[</span><span class="nv">Criando um blog com Jekyll - Parte 3</span><span class="pi">]</span><span class="s">(http://devmateusmedeiros.com.br/criando-um-blog-com-jekyll-parte-3/)</span>
+<span class="pi">-</span> <span class="pi">[</span><span class="nv">Criando um blog com Jekyll - Parte Final</span><span class="pi">]</span><span class="s">(http://devmateusmedeiros.com.br/criando-um-blog-com-jekyll-parte-final/)</span></code></pre></figure>
+
+<h2 id="adicionando-novas-páginas">Adicionando novas páginas</h2>
+
+<p>Vamos adicionar mais algumas páginas ao nosso blog:</p>
+
+<ul>
+  <li><strong>tags.html</strong>: onde ficará as <strong>tags</strong> utilizadas no blog.</li>
+  <li><strong>categorias.html</strong>: onde ficará as <strong>categorias</strong> utilizadas no blog.</li>
+  <li><strong>contato.md</strong>: será a página de contato do nosso blog.</li>
+</ul>
+
+<p>Agora vamos lá!</p>
+
+<h3 id="tagshtml">tags.html</h3>
+
+<p>Iremos criar uma função que irá listar os posts com as tags listadas no blog e criará um menu de acesso rápido, ficando assim:</p>
+
+<p><a href="#">Tag</a> <a href="#">Tag2</a></p>
+
+<h2 id="tag">Tag</h2>
+<p><a href="#">link-do-post</a>
+<a href="#">link-do-post</a></p>
+
+<h2 id="tag2">Tag2</h2>
+<p><a href="#">link-do-post</a>
+<a href="#">link-do-post</a></p>
+
+<p>O arquivo ficou assim:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: page
+title: Tags
+description: Procure os assuntos pelas tags usadas no blog
+permalink: /tags/
+---
+
+<span class="nt">&lt;h2&gt;</span> Procure os assuntos pelas tags usadas no blog <span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tags-list"</span><span class="nt">&gt;</span>
+
+{% assign tags_list = site.tags %}
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %}
+        <span class="nt">&lt;a</span> <span class="na">data-scroll</span> <span class="na">href=</span><span class="s">"#{{ tag }}"</span><span class="nt">&gt;</span>{{ tag }}<span class="nt">&lt;/a&gt;</span>
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %}
+        <span class="nt">&lt;a</span> <span class="na">data-scroll</span> <span class="na">href=</span><span class="s">"#{{ tag[0] }}"</span><span class="nt">&gt;</span>{{ tag[0] }}<span class="nt">&lt;/a&gt;</span>
+    {% endfor %}
+  {% endif %}
+{% assign tags_list = nil %}
+
+<span class="nt">&lt;/div&gt;</span>
+
+{% for tag in site.tags  %}
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tag"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"tag-title"</span> <span class="na">id=</span><span class="s">"{{ tag[0] }}"</span><span class="nt">&gt;</span>{{ tag[0] }}<span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"posts"</span><span class="nt">&gt;</span>
+            {% assign pages_list = tag[1] %}
+            {% for post in pages_list reversed %}
+                {% if post.title != null %}
+                {% if group == null or group == post.group %}
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"{{ site.url }}{{ post.url }}"</span><span class="nt">&gt;</span>{{ post.title }}<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;&lt;time</span> <span class="na">datetime=</span><span class="s">"{{ post.date | date_to_xmlschema }}"</span> <span class="na">itemprop=</span><span class="s">"datePublished"</span><span class="nt">&gt;</span>{{ post.date | date: "%d %b, %Y" }}<span class="nt">&lt;/time&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% assign pages_list = nil %}
+            {% assign group = nil %}
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+{% endfor %}</code></pre></figure>
+
+<p>Essa função peguei do blog do <a href="http://willianjusten.com.br" target="_blank">Willian Justen</a>.</p>
+
+<h3 id="categoriashtml">categorias.html</h3>
+
+<p>Com base na função criada acima, vamos criar a mesma função, mudando apenas a variável.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: page
+title: Categorias
+description: Procure os assuntos pelas categorias usadas no blog.
+permalink: /categorias/
+---
+<span class="nt">&lt;h2&gt;</span> Procure os assuntos pelas categorias usadas no blog <span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"categories-list"</span><span class="nt">&gt;</span>
+
+{% assign categories_list = site.categories %}
+  {% if categories_list.first[0] == null %}
+    {% for category in categories_list %}
+        <span class="nt">&lt;a</span> <span class="na">data-scroll</span> <span class="na">href=</span><span class="s">"#{{ category }}"</span><span class="nt">&gt;</span>{{ category }}<span class="nt">&lt;/a&gt;</span>
+    {% endfor %}
+  {% else %}
+    {% for category in categories_list %}
+        <span class="nt">&lt;a</span> <span class="na">data-scroll</span> <span class="na">href=</span><span class="s">"#{{ category[0] }}"</span><span class="nt">&gt;</span>{{ category[0] }}<span class="nt">&lt;/a&gt;</span>
+    {% endfor %}
+  {% endif %}
+{% assign tags_list = nil %}
+
+<span class="nt">&lt;/div&gt;</span>
+
+{% for category in site.categories  %}
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"category-title"</span> <span class="na">id=</span><span class="s">"{{ category[0] }}"</span><span class="nt">&gt;</span>{{ category[0] }}<span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"posts"</span><span class="nt">&gt;</span>
+            {% assign pages_list = category[1] %}
+            {% for post in pages_list reversed %}
+                {% if post.title != null %}
+                {% if group == null or group == post.group %}
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"{{ site.url }}{{ post.url }}"</span><span class="nt">&gt;</span>{{ post.title }}<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;&lt;time</span> <span class="na">datetime=</span><span class="s">"{{ post.date | date_to_xmlschema }}"</span> <span class="na">itemprop=</span><span class="s">"datePublished"</span><span class="nt">&gt;</span>{{ post.date | date: "%d %b, %Y" }}<span class="nt">&lt;/time&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% assign pages_list = nil %}
+            {% assign group = nil %}
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+{% endfor %}</code></pre></figure>
+
+<h3 id="contatomd">contato.md</h3>
+
+<p>Vamos criar agora uma página de contato, ela será escrita em <strong>Markdown</strong>. A minha ficou assim:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">page</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Contato</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/contato/</span>
+<span class="nn">---</span>
+
+<span class="err">*</span><span class="nv">*Quer</span> <span class="s">falar comigo?**</span>
+
+<span class="na">Entre em contato pelo e-mail</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">mateus.sousamedeiros@gmail.com</span><span class="pi">]</span><span class="s">(mailto:mateus.sousamedeiros@gmail.com)</span></code></pre></figure>
+
+<p>Você pode editar do jeito que desejar.</p>
+
+<h2 id="editando-o-menu">Editando o menu</h2>
+
+<p>Criamos nossas páginas, agora vamos adicioná-las ao menu. Para isso, abra o arquivo <code class="highlighter-rouge">header.html</code>, e troque os links do menu, ficando assim:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Menu --&gt;</span>
+<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/sobre"</span><span class="nt">&gt;</span> Sobre <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/categorias"</span><span class="nt">&gt;</span> Categorias <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/tags"</span><span class="nt">&gt;</span> Tags <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/contato"</span><span class="nt">&gt;</span> Contato <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<h2 id="subindo-para-o-github">Subindo para o GitHub</h2>
+
+<p>Você pode subir seu blog para o GitHub e hospedá-lo com o GitHub Pages:</p>
+
+<ol>
+  <li>Entre em sua conta no <a href="https://github.com/" target="_blank">GitHub</a>, caso não tenha, <a href="https://github.com/join" target="_blank">crie uma</a>.</li>
+  <li>Crie um repositório com o seguinte nome: <strong>seunomedeusuario.github.io</strong></li>
+  <li>Suba o seu blog - exceto a pasta <strong>_site</strong> - para o seu repositório usando o <strong>git</strong>, dessa forma:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Iniciar um repositório na pasta do projeto</span>
+git init
+
+<span class="c"># Adicionar todos os arquivos</span>
+git add <span class="nb">.</span>
+
+<span class="c"># Commitar os arquivos</span>
+git commit <span class="nt">-m</span> <span class="s2">"Commit Inicial"</span>
+
+<span class="c"># Adicionar o repositório</span>
+git remote add origin https://github.com/seunomedeusuario/seunomedeusuario.github.io.git
+
+<span class="c"># Subir o seu blog</span>
+git push <span class="nt">-u</span> origin master</code></pre></figure>
+
+<p>Pronto, você subiu seu blog para o GitHub Pages, e agora é só esperar entre 20 e 30 minutos, e você poderá acessar seu blog através da url: http://seunomedeusuario.github.io</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Chegamos ao fim do nosso tutorial, espero que eu tenha ajudado vocês à criarem um blog com Jekyll. Qualquer dúvida, comente aqui ou me mande um email: <a href="mailto:mateus.sousamedeiros@gmail.com">mateus.sousamedeiros@gmail.com</a>.</p>
+
+<p>Você pode acessar o <a href="https://github.com/mateussmedeiros/tutorial-jekyll/" target="_blank">repositório</a> ou a <a href="http://devmateusmedeiros.com.br/tutorial-jekyll/" target="_blank">demo do tutorial</a>.</p>
+
+<p><strong>Até a próxima!</strong></p>
+:ET

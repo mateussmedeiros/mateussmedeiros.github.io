@@ -15,14 +15,14 @@ sass.compiler = require('node-sass');
 ---------------*/
 const paths = {
   dev: {
-    img: `assets/src/images/**/*`,
-    js:`assets/src/js/*.js`,
-    sass: `assets/src/sass/**/*.scss`,
+    img: `assets/images/**/*`,
+    js:`assets/js/*.js`,
+    sass: `assets/sass/**/*.scss`,
   },
   dist: {
-    img: `assets/dist/images`,
-    js: `assets/dist/js`,
-    css: `assets/dist/css`,
+    img: `assets/images`,
+    js: `assets/js`,
+    css: `assets/css`,
   }
 }
 
@@ -45,14 +45,14 @@ const assets = {
 /*-------------
 -- FUNCTIONS --
 -------------*/
-// Compilar SASS
+/* Compilar SASS
 function compSass() {
   return gulp
     .src(paths.dev.sass)
     .pipe(sass({ outputStyle: 'compressed' }).on("error", sass.logError))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(gulp.dest(paths.dist.css));
-}
+}*/
 
 // Importar CSS dos assets
 function vendorCss() {
@@ -98,7 +98,7 @@ function minImg() {
 
 // Assistir arquivos
 function watch() {
-  gulp.watch(paths.dev.sass, compSass);
+  //gulp.watch(paths.dev.sass, compSass);
   gulp.watch(paths.dev.img, minImg);
   gulp.watch(paths.dev.js, minJs);
 }
@@ -110,4 +110,4 @@ gulp.task("default", watch);
 gulp.task("assets", vendorCss);
 gulp.task("image", minImg);
 gulp.task("js", gulp.series(vendorJs, minJs));
-gulp.task("sass", compSass);
+//gulp.task("sass", compSass);

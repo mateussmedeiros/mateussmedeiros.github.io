@@ -1,0 +1,153 @@
+I"9)<h2 id="introdução">Introdução</h2>
+
+<p>Dando continuidade ao tutorial de como criar um blog com Jekyll, hoje vamos configurar a pasta <code class="highlighter-rouge">_layouts</code> e a página inicial do blog, o arquivo <code class="highlighter-rouge">index.html</code>. Você pode acompanhar o andamento do nosso tutorial no <a href="https://github.com/mateussmedeiros/tutorial-jekyll" target="_blank">GitHub</a>. Se você ainda não viu a primeira parte, corre lá e depois volta aqui:</p>
+
+<ul>
+  <li><a href="http://devmateusmedeiros.com.br/criando-um-blog-com-jekyll-parte-1/" target="_blank">Parte 1</a>.</li>
+</ul>
+
+<h2 id="pasta-_layouts">Pasta _layouts</h2>
+
+<p>Na pasta <code class="highlighter-rouge">_layouts</code>, tem - por padrão - 3 arquivos:</p>
+
+<ul>
+  <li><strong>default.html</strong>: estrutura padrão das páginas.</li>
+  <li><strong>page.html</strong>: estrutura de páginas secundárias.</li>
+  <li><strong>post.html</strong>: estrutura dos posts.</li>
+</ul>
+
+<p>Nós iremos manter todas elas, vamos agora editá-las. Lembrando que <strong>não existe</strong> espaço entre as chaves.</p>
+
+<h3 id="defaulthtml">default.html</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="c">&lt;!-- Incui o arquivo head.html --&gt;</span>
+  { % include head.html % }
+
+  <span class="nt">&lt;body&gt;</span>
+    <span class="c">&lt;!-- Inclui o arquivo header.html --&gt;</span>
+    { % include header.html % }
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-content"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!-- Inclui o conteúdo da página --&gt;</span>
+      { { content } }
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="c">&lt;!-- Inclui o arquivo footer.html --&gt;</span>
+    { % include footer.html % }
+
+  <span class="nt">&lt;/body&gt;</span>
+
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>Nós mantemos a maior parte do arquivo, apenas retiramos o <strong>wrapper</strong> da página. Aqui estamos incluindo os arquivos <code class="highlighter-rouge">head.html</code>, <code class="highlighter-rouge">header.html</code> e <code class="highlighter-rouge">footer.html</code> que estão na pasta <code class="highlighter-rouge">_includes</code> que configuramos na <a href="http://devmateusmedeiros.com.br/criando-um-blog-com-jekyll-parte-1/" target="_blank">parte anterior</a>.</p>
+
+<h3 id="pagehtml">page.html</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: default
+---
+<span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"post"</span><span class="nt">&gt;</span>
+	<span class="c">&lt;!-- Chamamos o título da página --&gt;</span>
+	<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"post-title"</span><span class="nt">&gt;</span>{ { page.title } }<span class="nt">&lt;/h1&gt;</span>
+	
+	<span class="c">&lt;!-- Incluimos o conteúdo da página --&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-content"</span><span class="nt">&gt;</span>
+  		{ { content } }
+	<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;/article&gt;</span></code></pre></figure>
+
+<p>Incluimos a estrutura do arquivo <code class="highlighter-rouge">default.html</code>, e colocamos uma estrutura simples com apenas o título e o conteúdo da página.</p>
+
+<h2 id="posthtml">post.html</h2>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: default
+---
+<span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"post"</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/BlogPosting"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Chamamos o título do post --&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"post-title"</span> <span class="na">itemprop=</span><span class="s">"name headline"</span><span class="nt">&gt;</span>{ { page.title } }<span class="nt">&lt;/h1&gt;</span>
+  <span class="c">&lt;!-- Incluimos a data e o autor do post --&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"post-meta"</span><span class="nt">&gt;&lt;time</span> <span class="na">datetime=</span><span class="s">"{ { page.date | date_to_xmlschema } }"</span> <span class="na">itemprop=</span><span class="s">"datePublished"</span><span class="nt">&gt;</span>{ { page.date | date: "%-d %b, %Y" } }<span class="nt">&lt;/time&gt;</span>{ % if page.author % } | <span class="nt">&lt;span</span> <span class="na">itemprop=</span><span class="s">"author"</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/Person"</span><span class="nt">&gt;&lt;span</span> <span class="na">itemprop=</span><span class="s">"name"</span><span class="nt">&gt;</span>{ { page.author } }<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>{ % endif % }<span class="nt">&lt;/p&gt;</span>
+  
+  <span class="c">&lt;!-- Icluimos o conteúdo do post --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-content"</span> <span class="na">itemprop=</span><span class="s">"articleBody"</span><span class="nt">&gt;</span>
+    { { content } }
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- Incluimos os botões de compartilhamento --&gt;</span>
+  { % include share.html % }
+
+  <span class="c">&lt;!-- Incluimos a seção com o autor do post --&gt;</span>
+  { % include author.html % }
+
+  <span class="c">&lt;!-- Incluimos os comentários --&gt;</span>
+  { % include comments.html % }
+
+<span class="nt">&lt;/article&gt;</span></code></pre></figure>
+
+<p>Aqui também incluimos o arquivo <code class="highlighter-rouge">default.html</code>, abaixo do título incluimos a <strong>data</strong> e o <strong>autor</strong> do post. Depois do conteúdo, incluimos os arquivos que criamos na <a href="http://devmateusmedeiros.com.br/criando-um-blog-com-jekyll-parte-1/" target="_blank">parte anterior</a>: <code class="highlighter-rouge">share.html</code>, <code class="highlighter-rouge">author.html</code> e <code class="highlighter-rouge">comments.html</code>.</p>
+
+<h2 id="página-inicial-do-blog-indexhtml">Página inicial do blog: index.html</h2>
+
+<p>Terminamos as estruturas dos layouts, agora vamos editar nossa página inicial. Ela ficou assim:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: default
+---
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"home"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"post-list"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Procura os posts no blog e lista eles --&gt;</span>
+    { % for post in site.posts % }
+      <span class="nt">&lt;li&gt;</span>
+        <span class="c">&lt;!-- Inclui o título com link do post --&gt;</span>
+        <span class="nt">&lt;h2&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"post-link"</span> <span class="na">href=</span><span class="s">"{ { post.url | prepend: site.baseurl } }"</span><span class="nt">&gt;</span>{ { post.title } }<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/h2&gt;</span>
+
+        <span class="c">&lt;!-- Inclui a data e autor do post --&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"post-meta"</span><span class="nt">&gt;</span>{ { post.date | date: "%-d %b, %Y" } } { % if page.author % } | { { page.author } } { % endif % }<span class="nt">&lt;/span&gt;</span>
+
+        <span class="c">&lt;!-- Inclui a descrição do post --&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"post-description"</span><span class="nt">&gt;</span>{ { post.description } }<span class="nt">&lt;/p&gt;</span>
+        
+        <span class="c">&lt;!-- Inclui um Leia mais com o link do post --&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{ { post.permalink | prepend: site.baseurl } }"</span><span class="nt">&gt;</span> Leia mais sobre { { post.title } }...<span class="nt">&lt;/a&gt;</span>
+        
+        <span class="c">&lt;!-- Inclui as tags do post --&gt;</span>
+        { % include tags.html % }
+      <span class="nt">&lt;/li&gt;</span>
+
+      <span class="nt">&lt;hr&gt;</span>
+    { % endfor % }
+  <span class="nt">&lt;/ul&gt;</span>
+  
+  <span class="c">&lt;!-- Incrição do feed --&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"rss-subscribe"</span><span class="nt">&gt;</span> Inscreva-se <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{ { "</span><span class="err">/</span><span class="na">feed</span><span class="err">.</span><span class="na">xml</span><span class="err">"</span> <span class="err">|</span> <span class="na">prepend:</span> <span class="na">site</span><span class="err">.</span><span class="na">baseurl</span> <span class="err">}</span> <span class="err">}"</span><span class="nt">&gt;</span>via RSS<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Listamos os posts com:</p>
+
+<ul>
+  <li><strong>Título</strong></li>
+  <li><strong>Data</strong> e <strong>autor</strong> do post</li>
+  <li><strong>Descrição</strong> do post</li>
+  <li><strong>Leia mais</strong> com o link do post</li>
+  <li><strong>Tags</strong> do post</li>
+</ul>
+
+<p>No final da página, tem um link para subscrição do <strong>feed</strong> do blog.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Chegamos ao final da segunda parte, configuramos a pasta <code class="highlighter-rouge">_layouts</code> e a página inicial do blog. Até agora já temos prontos as pastas: <code class="highlighter-rouge">_includes</code> e <code class="highlighter-rouge">_layouts</code> e os arquivos: <code class="highlighter-rouge">_config.yml</code> e <code class="highlighter-rouge">index.html</code>. Na próxima parte vamos editar nosso <strong>CSS</strong>, adicionar <strong>JavaScript</strong> e aprender a escrever posts.</p>
+
+<p>Dúvida? Comente!</p>
+
+<p><strong>Até a próxima!</strong></p>
+:ET

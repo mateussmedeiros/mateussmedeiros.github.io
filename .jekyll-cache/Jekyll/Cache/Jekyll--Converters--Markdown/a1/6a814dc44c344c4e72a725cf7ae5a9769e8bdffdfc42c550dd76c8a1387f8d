@@ -1,0 +1,336 @@
+I"y�<h2 id="introdução">Introdução</h2>
+
+<p>Fala galera, recebi vários feedbacks positivos do post anterior, o que me motivou ainda mais a continuar essa série sobre Jekyll. Vamos lá para esse segundo post, iremos aprender passo-a-passo como criar um blog com jekyll. Para não ficar muito longo, irei dividir esse tutorial em partes.</p>
+
+<p>Nessa primeira parte, iremos configurar a pasta <code class="highlighter-rouge">_includes</code> e o arquivo <code class="highlighter-rouge">_config.yml</code>. Preparei um pequeno layout que servirá de base para a construção do nosso blog. Você pode conferir abaixo:</p>
+
+<p><img src="/assets/img/posts/layout-tutorial-jekyll.png" alt="Layout do nosso blog com Jekyll" class="post-blog__img" /></p>
+
+<p>Todo o código utilizado aqui, estará disponível no <a href="https://github.com/mateussmedeiros/tutorial-jekyll" target="_blank">repositório que criei no GitHub</a>.</p>
+
+<h2 id="preparando-o-projeto">Preparando o projeto</h2>
+
+<p>A primeira coisa que iremos fazer é criar a pasta do nosso blog, abra o seu terminal e digite:</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">jekyll new tutorial-jekyll</code></pre></figure>
+
+<p>O nome que escolhi para a minha pasta foi <strong>tutorial-jekyll</strong>, você pode escolher o nome que quiser para a sua pasta.</p>
+
+<h2 id="gerando-o-servidor">Gerando o servidor</h2>
+
+<p>Criado a pasta do nosso blog, vamos gerar um servidor para acompanharmos o andamento do desenvolvimento. Ainda no terminal digite:</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Entrar na pasta do blog</span>
+<span class="nb">cd </span>tutorial-jekyll
+
+<span class="c"># Gerar o servidor</span>
+jekyll serve</code></pre></figure>
+
+<p>O servidor será criado na porta <strong>4000</strong> por padrão, para acessar entre em <a href="http://localhost:4000" target="_blank">http://localhost:4000</a> ou <a href="http://127.0.0.1:4000" target="_blank">http://127.0.0.1:4000</a>.</p>
+
+<h2 id="configurando-o-blog">Configurando o blog</h2>
+
+<p>Vamos agora configurar o nosso blog, abra o arquivo <code class="highlighter-rouge">_config.yml</code> no seu editor preferido e vamos lá.</p>
+
+<p>O meu arquivo <code class="highlighter-rouge">_config.yml</code> ficou assim:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># Site settings</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Tutorial Jekyll</span> <span class="c1"># Título do Blog</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">Como construir um blog com Jekyll</span> <span class="c1"># Subtítulo do Blog, opcional</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Tutorial</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">como</span><span class="nv"> </span><span class="s">construir</span><span class="nv"> </span><span class="s">um</span><span class="nv"> </span><span class="s">blog</span><span class="nv"> </span><span class="s">com</span><span class="nv"> </span><span class="s">Jekyll,</span><span class="nv"> </span><span class="s">feito</span><span class="nv"> </span><span class="s">por</span><span class="nv"> </span><span class="s">Mateus</span><span class="nv"> </span><span class="s">Medeiros"</span> <span class="c1"># Descrição do Blog</span>
+<span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://tutorial-jekyll.github.io"</span> <span class="c1"># Endereço do nosso blog</span>
+
+<span class="c1"># Author Settings</span>
+<span class="na">author</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Mateus Medeiros</span> <span class="c1"># Nome do autor</span>
+    <span class="na">img</span><span class="pi">:</span> <span class="s">/assets/img/perfil.jpg</span> <span class="c1"># Imagem do Autor</span>
+    <span class="na">blog</span><span class="pi">:</span> <span class="s">http://devmateusmedeiros.com.br</span> <span class="c1"># Blog do autor</span>
+    <span class="na">email</span><span class="pi">:</span> <span class="s">mateus.sousamedeiros@gmail.com</span> <span class="c1"># Email do autor</span>
+    <span class="na">twitter</span><span class="pi">:</span> <span class="s">mateussousam</span> <span class="c1"># Twitter do autor</span>
+    <span class="na">github</span><span class="pi">:</span>  <span class="s">mateussmedeiros</span> <span class="c1"># GitHub do autor</span>
+    <span class="na">bio</span><span class="pi">:</span> <span class="s">Desenvolvedor Front End apaixonado por novas tecnologias. Sou apaixonado pelo que faço e procuro aprender cada dia mais.</span> <span class="c1"># Descrição do autor</span>
+
+<span class="c1"># Build settings</span>
+<span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span> <span class="c1"># Estilo do Markdown</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/:categories/:title/</span> <span class="c1"># Configuração dos links do blog</span>
+<span class="na">css_folder</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">/assets/css"</span> <span class="c1"># Caminho dos arquivos css</span>
+<span class="na">js_folder</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">/assets/js"</span> <span class="c1"># Caminho dos arquivos js</span>
+<span class="na">img_folder</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">/assets/img"</span> <span class="c1"># Caminho das imagens</span>
+<span class="na">sass</span><span class="pi">:</span>
+    <span class="na">style</span><span class="pi">:</span> <span class="s">compressed</span> <span class="c1"># Configuração dos arquivos css gerados pelo sass, compressed gera o css minificado</span></code></pre></figure>
+
+<p>O código já está bastante comentado, você deve trocar os valores das variáveis de acordo com as informações do seu blog.</p>
+
+<h2 id="configurando-as-pastas">Configurando as pastas</h2>
+
+<p>Vamos agora configurar as nossas pastas. Primeiramente criaremos a pasta <code class="highlighter-rouge">assets</code>, dentro dela criaremos 2 pastas: <code class="highlighter-rouge">js</code> e <code class="highlighter-rouge">img</code>, também moveremos a pasta <code class="highlighter-rouge">css</code> para cá, ficando assim:</p>
+
+<ul>
+  <li><strong>css</strong>: onde ficará o arquivo <strong>main.scss</strong> que o <strong>sass</strong> irá compilar.</li>
+  <li><strong>img</strong>: onde ficarão as imagens.</li>
+  <li><strong>js</strong>: onde ficarão os arquivos JavaScript.</li>
+</ul>
+
+<p>Feito isso, vamos configurar a pasta <code class="highlighter-rouge">_includes</code>.</p>
+
+<h3 id="pasta-_includes">Pasta _includes</h3>
+
+<p>A nossa pasta <code class="highlighter-rouge">_includes</code> contém - por padrão - 7 arquivos:</p>
+
+<ul>
+  <li><strong>footer.html</strong></li>
+  <li><strong>head.html</strong></li>
+  <li><strong>header.html</strong></li>
+  <li><strong>icon-github.html</strong></li>
+  <li><strong>icon-github.svg</strong></li>
+  <li><strong>icon-twitter.html</strong></li>
+  <li><strong>icon-twitter.svg</strong></li>
+</ul>
+
+<p>Iremos manter apenas o 3 primeiros arquivos e criar outros 5 arquivos, ficando assim:</p>
+
+<ul>
+  <li><strong>author.html</strong>: é seção do autor de cada post.</li>
+  <li><strong>comments.html</strong>: é a seção de comentários nos posts.</li>
+  <li><strong>footer.html</strong>: é o footer do nosso blog.</li>
+  <li><strong>head.html</strong>: é o head do nosso blog.</li>
+  <li><strong>header.html</strong>: é o header do nosso blog, onde ficará também o nosso menu.</li>
+  <li><strong>share.html</strong>: é a seção de compartilhamento dos posts.</li>
+  <li><strong>svg.html</strong>: é o arquivo onde ficarão os ícones svg.</li>
+  <li><strong>tags.html</strong>: é o arquivo onde ficará o laço <strong>for</strong> para listar todas as tags utilizadas no blog.</li>
+</ul>
+
+<p>Vamos configurar agora cada um dos nossos arquivos. Irei colocar como ficou cada arquivo, ele será comentado, então darei apenas uma breve explicação de cada arquivo.</p>
+
+<p><strong>Aviso</strong>: Não existe espaço entre as chaves, coloquei porque uso Jekyll, então os exemplos não funcionariam.</p>
+
+<h4 id="headhtml">head.html</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;head&gt;</span>
+  	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+  	<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
+  	<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+	
+	<span class="c">&lt;!-- Pega o título da página e exibe no title, se a página não tiver título, exibe o título do site --&gt;</span>
+  	<span class="nt">&lt;title&gt;</span>{ { page.title } }<span class="nt">&lt;/title&gt;</span>
+  	
+  	<span class="c">&lt;!-- Pega a descrição da página e exibe no title, se a página não tiver descrição, exibe a descrição do site --&gt;</span>
+  	<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">content=</span><span class="s">"{ { page.description | strip_html | strip_newlines | truncate: 160 } }"</span><span class="nt">&gt;</span>
+	
+	<span class="c">&lt;!-- Caminho do arquivo CSS, pode ser alterado de acordo com o projeto --&gt;</span>
+  	<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"{ { "</span><span class="err">/</span><span class="na">assets</span><span class="err">/</span><span class="na">css</span><span class="err">/</span><span class="na">main</span><span class="err">.</span><span class="na">css</span><span class="err">"</span> <span class="err">|</span> <span class="na">prepend:</span> <span class="na">site</span><span class="err">.</span><span class="na">baseurl</span> <span class="err">}</span> <span class="err">}"</span><span class="nt">&gt;</span>
+  	<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"canonical"</span> <span class="na">href=</span><span class="s">"{ { page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url } }"</span><span class="nt">&gt;</span>
+  	<span class="c">&lt;!-- Caminho do Feed do blog --&gt;</span>
+  	<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"alternate"</span> <span class="na">type=</span><span class="s">"application/rss+xml"</span> <span class="na">title=</span><span class="s">"{ { site.title } }"</span> <span class="na">href=</span><span class="s">"{ { "</span><span class="err">/</span><span class="na">feed</span><span class="err">.</span><span class="na">xml</span><span class="err">"</span> <span class="err">|</span> <span class="na">prepend:</span> <span class="na">site</span><span class="err">.</span><span class="na">baseurl</span> <span class="err">|</span> <span class="na">prepend:</span> <span class="na">site</span><span class="err">.</span><span class="na">url</span> <span class="err">}</span> <span class="err">}"</span><span class="nt">&gt;</span>
+  	<span class="c">&lt;!-- Caminho do favicon do blog, também pode ser alterado --&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">href=</span><span class="s">"/assets/img/favicon.ico"</span> <span class="na">type=</span><span class="s">"image/x-icon"</span><span class="nt">&gt;</span>
+	
+	<span class="c">&lt;!-- Social Meta Tags: Facebook | Twitter | Google+ / Já está configurado para o blog --&gt;</span>
+  	<span class="c">&lt;!-- Social: Facebook / Open Graph --&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"{ { page.title } }"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"article"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"{ { page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url } }"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"http://localhost:4000/assets/img/image-blog.png"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"{ { page.description | strip_html | strip_newlines | truncate: 160 } }"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"{ { site.title } }"</span><span class="nt">&gt;</span>
+
+  	<span class="c">&lt;!-- Social: Twitter --&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:card"</span> <span class="na">content=</span><span class="s">"summary_large_image"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:site"</span> <span class="na">content=</span><span class="s">"{ { site.author.twitter } }"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:title"</span> <span class="na">content=</span><span class="s">"{ { site.title } }"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"twitter:description"</span> <span class="na">content=</span><span class="s">"{ { site.description } }"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"twitter:image:src"</span> <span class="na">content=</span><span class="s">"{ { site.url } }{ { post.image } }"</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- Social: Google+ / Schema.org  --&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">itemprop=</span><span class="s">"name"</span> <span class="na">content=</span><span class="s">"{ { site.title } }"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">itemprop=</span><span class="s">"description"</span> <span class="na">content=</span><span class="s">"{ { site.description } }"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">itemprop=</span><span class="s">"image"</span> <span class="na">content=</span><span class="s">"{ { post.image | prepend: site.baseurl | prepend: site.url } }"</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/head&gt;</span></code></pre></figure>
+
+<p>Esse arquivo não precisa de muita explicação, já está bem comentado. Ele já está com as <strong>Social Meta Tags</strong> configuradas, muito importante para o compartilhamento dos posts.</p>
+
+<h4 id="headerhtml">header.html</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"header"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Botão do Menu mobile --&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"menu"</span> <span class="na">aria-label=</span><span class="s">"Clique para abrir o menu"</span> <span class="na">class=</span><span class="s">"bt-menu"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon-top icon-menu"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"#icon-menu"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</span>
+  <span class="c">&lt;!-- Menu --&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span> Nav Item 1 <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span> Nav Item 2 <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span> Nav Item 3 <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span> Nav Item 4 <span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+  
+  <span class="c">&lt;!-- Botão da Pesquisa --&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"search-container"</span> <span class="na">aria-label=</span><span class="s">"Pesquisar no Blog"</span> <span class="na">class=</span><span class="s">"bt-search"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon-top icon-search"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"#icon-search"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</span>
+  <span class="c">&lt;!-- Container da Pesquisa --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"search-container"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Barra de Pesquisa --&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"search-input"</span> <span class="na">placeholder=</span><span class="s">"Pesquisar posts no blog..."</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Botão de fechamento do container da pesquisa --&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">aria-label=</span><span class="s">"Fechar Barra de Pesquisa"</span> <span class="na">class=</span><span class="s">"bt-close"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon-top icon-close"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"#icon-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</span>
+    <span class="c">&lt;!-- Lista de resultados --&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"results-container"</span><span class="nt">&gt;&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- Título do Blog --&gt;</span>
+  <span class="nt">&lt;hgroup</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Título Principal --&gt;</span>
+    <span class="nt">&lt;h1&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span> { { site.title } } <span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;/h1&gt;</span>  
+    <span class="c">&lt;!-- Subtítulo --&gt;</span>
+    <span class="nt">&lt;h2&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span> { { site.subtitle } } <span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;/hgroup&gt;</span>
+  
+<span class="nt">&lt;/header&gt;</span></code></pre></figure>
+
+<p>Esse é o arquivo do nosso <strong>header</strong>, nele temos:</p>
+
+<ul>
+  <li><strong>Menu</strong>: ficará no topo à esquerda alinhado com o botão da pesquisa.</li>
+  <li><strong>Pesquisa</strong>: ficará fechado, abrirá quando clicarmos no botão. Quando aberto, irá sobrepor a página inteira. Utilizaremos o plugin <a href="https://github.com/christian-fei/Simple-Jekyll-Search" target="_blank">Simple Jekyll Searching</a> para fazer a pesquisa dos posts.</li>
+  <li><strong>Título</strong>: ficará abaixo do menu e centralizado, utilizaremos uma sombra para destacá-lo. Nele há 2 variáveis: o <code class="highlighter-rouge">{ { site.title } }</code> e o <code class="highlighter-rouge">{ { site.subtitle } }</code>, essas variáveis foram definidas no arquivo <code class="highlighter-rouge">_config.yml</code>.</li>
+</ul>
+
+<h4 id="footerhtml">footer.html</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"footer"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span> <span class="ni">&amp;copy;</span> 2016 { { site.title } } - { { site.subtitle } } | Todos os Direitos Reservados <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span> Tutorial por <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://devmateusmedeiros.com.br"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">title=</span><span class="s">"Ir para o meu blog"</span><span class="nt">&gt;</span> Mateus Medeiros <span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/footer&gt;</span></code></pre></figure>
+
+<p>Utilizamos as mesmas variáveis que no <code class="highlighter-rouge">header.html</code>. Esse arquivo pode ser editado como você desejar.</p>
+
+<h4 id="sharehtml">share.html</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"share"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;h3&gt;</span> Compartilhe <span class="nt">&lt;/h3&gt;</span>
+    <span class="c">&lt;!-- Botões de Compartilhamento --&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"share-buttons"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- Twitter --&gt;</span>
+		<span class="nt">&lt;a</span> <span class="na">aria-label=</span><span class="s">"Compartilhe no Twitter"</span> <span class="na">href=</span><span class="s">"https://twitter.com/intent/tweet?text=&amp;quot;{ { page.twitter_text } }&amp;quot;%20{ { site.url } }{ { page.url } }%20via%20&amp;#64;{ { site.twitter_username } }&amp;hashtags={ {tag}},{ {tag}},"</span>
+    	<span class="na">onclick=</span><span class="s">"window.open(this.href, 'twitter-share');return false;"</span> <span class="na">title=</span><span class="s">"Compartilhe no Twitter"</span><span class="nt">&gt;</span>
+        	<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-twitter"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"#icon-twitter"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    	<span class="nt">&lt;/a&gt;</span>
+        
+        <span class="c">&lt;!-- Facebook --&gt;</span>
+    	<span class="nt">&lt;a</span> <span class="na">aria-label=</span><span class="s">"Compartilhe no Facebook"</span> <span class="na">href=</span><span class="s">"https://www.facebook.com/sharer/sharer.php?u={ { site.url } }{ { page.url } }"</span>
+    	<span class="na">onclick=</span><span class="s">"window.open(this.href, 'facebook-share');return false;"</span> <span class="na">title=</span><span class="s">"Compartilhe no Facebook"</span><span class="nt">&gt;</span>
+        	<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-facebook"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"#icon-facebook"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    	<span class="nt">&lt;/a&gt;</span>
+        
+        <span class="c">&lt;!-- Google+ --&gt;</span>
+    	<span class="nt">&lt;a</span> <span class="na">aria-label=</span><span class="s">"Compartilhe no Google Plus"</span> <span class="na">href=</span><span class="s">"https://plus.google.com/share?url={ { site.url } }{ { page.url } }"</span>
+    	<span class="na">onclick=</span><span class="s">"window.open(this.href, 'google-plus-share');return false;"</span> <span class="na">title=</span><span class="s">"Compartilhe no Google+"</span><span class="nt">&gt;</span>
+        	<span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-google-plus"</span><span class="nt">&gt;&lt;use</span> <span class="na">xlink:href=</span><span class="s">"#icon-google-plus"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    	<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span></code></pre></figure>
+
+<p>Criamos os botões de compartilhamento, utilizamos SVG para os ícones das redes sociais. Configuraremos os ícones SVG no arquivo <code class="highlighter-rouge">svg.html</code>.</p>
+
+<h4 id="authorhtml">author.html</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"author"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"details"</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- Imagem do autor --&gt;</span>
+		<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{ { site.author.img } }"</span> <span class="na">alt=</span><span class="s">"{ { site.author.name } }"</span> <span class="na">class=</span><span class="s">"img-author"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;p&gt;&lt;b&gt;</span> Autor <span class="nt">&lt;/b&gt;&lt;/p&gt;</span>
+		<span class="c">&lt;!-- Nome do autor com link para o blog do autor --&gt;</span>
+		<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{ { site.author.blog } }"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">title=</span><span class="s">"Visite meu blog"</span><span class="nt">&gt;</span> { { site.author.name } } <span class="nt">&lt;/a&gt;</span>
+		<span class="nt">&lt;/h2&gt;</span>
+		<span class="c">&lt;!-- Descrição do autor --&gt;</span>
+		<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"description"</span><span class="nt">&gt;</span>{ { site.author.bio } }<span class="nt">&lt;/p&gt;</span>
+		<span class="c">&lt;!-- Email do autor --&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"email"</span> <span class="na">href=</span><span class="s">"mailto:{ { site.author.email } }"</span><span class="nt">&gt;</span>{  { site.author.email }  }<span class="nt">&lt;/a&gt;</span>
+        <span class="c">&lt;!-- Twitter do autor --&gt;</span>
+        <span class="nt">&lt;p&gt;</span> Twitter: <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://twitter.com/{ { site.author.twitter } }"</span><span class="nt">&gt;</span> @{  { site.author.twitter }  }<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+        <span class="c">&lt;!-- GitHub do autor --&gt;</span>
+        <span class="nt">&lt;p&gt;</span> GitHub: <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://github.com/{ { site.author.github } }"</span><span class="nt">&gt;</span> {  { site.author.github }  }<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span></code></pre></figure>
+
+<p>Esse já está bastante comentado, ele puxará os valores das variáveis do autor definidas no <code class="highlighter-rouge">_config.yml</code>.</p>
+
+<h4 id="commentshtml">comments.html</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Utilizaremos o Disqus(disqus.com) para o sistema de comentários --&gt;</span>
+<span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"comments"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Comentários<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"disqus_thread"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+
+<span class="c">&lt;!-- Aqui vai o script fornecido pelo Disqus --&gt;</span></code></pre></figure>
+
+<p>Utilizaremos o <strong>Disqus</strong> para os comentários, depois farei um post ensinando como implementar ele no seu blog.</p>
+
+<h4 id="svghtml">svg.html</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;svg</span> <span class="na">style=</span><span class="s">"position: absolute; width: 0; height: 0;"</span> <span class="na">width=</span><span class="s">"0"</span> <span class="na">height=</span><span class="s">"0"</span> <span class="na">version=</span><span class="s">"1.1"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;defs&gt;</span>
+<span class="c">&lt;!-- Ícone do Menu --&gt;</span>
+<span class="nt">&lt;symbol</span> <span class="na">id=</span><span class="s">"icon-menu"</span> <span class="na">viewBox=</span><span class="s">"0 0 1024 1024"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>menu<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;path</span> <span class="na">class=</span><span class="s">"path1"</span> <span class="na">d=</span><span class="s">"M64 192h896v192h-896zM64 448h896v192h-896zM64 704h896v192h-896z"</span><span class="nt">&gt;&lt;/path&gt;</span>
+<span class="nt">&lt;/symbol&gt;</span>
+<span class="c">&lt;!-- Ícone de Fechamento --&gt;</span>
+<span class="nt">&lt;symbol</span> <span class="na">id=</span><span class="s">"icon-close"</span> <span class="na">viewBox=</span><span class="s">"0 0 1024 1024"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>close<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;path</span> <span class="na">class=</span><span class="s">"path1"</span> <span class="na">d=</span><span class="s">"M1014.662 822.66c-0.004-0.004-0.008-0.008-0.012-0.010l-310.644-310.65 310.644-310.65c0.004-0.004 0.008-0.006 0.012-0.010 3.344-3.346 5.762-7.254 7.312-11.416 4.246-11.376 1.824-24.682-7.324-33.83l-146.746-146.746c-9.148-9.146-22.45-11.566-33.828-7.32-4.16 1.55-8.070 3.968-11.418 7.31 0 0.004-0.004 0.006-0.008 0.010l-310.648 310.652-310.648-310.65c-0.004-0.004-0.006-0.006-0.010-0.010-3.346-3.342-7.254-5.76-11.414-7.31-11.38-4.248-24.682-1.826-33.83 7.32l-146.748 146.748c-9.148 9.148-11.568 22.452-7.322 33.828 1.552 4.16 3.97 8.072 7.312 11.416 0.004 0.002 0.006 0.006 0.010 0.010l310.65 310.648-310.65 310.652c-0.002 0.004-0.006 0.006-0.008 0.010-3.342 3.346-5.76 7.254-7.314 11.414-4.248 11.376-1.826 24.682 7.322 33.83l146.748 146.746c9.15 9.148 22.452 11.568 33.83 7.322 4.16-1.552 8.070-3.97 11.416-7.312 0.002-0.004 0.006-0.006 0.010-0.010l310.648-310.65 310.648 310.65c0.004 0.002 0.008 0.006 0.012 0.008 3.348 3.344 7.254 5.762 11.414 7.314 11.378 4.246 24.684 1.826 33.828-7.322l146.746-146.748c9.148-9.148 11.57-22.454 7.324-33.83-1.552-4.16-3.97-8.068-7.314-11.414z"</span><span class="nt">&gt;&lt;/path&gt;</span>
+<span class="nt">&lt;/symbol&gt;</span>
+<span class="c">&lt;!-- Ícone do Email --&gt;</span>
+<span class="nt">&lt;symbol</span> <span class="na">id=</span><span class="s">"icon-email"</span> <span class="na">viewBox=</span><span class="s">"0 0 1024 1024"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>email<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;path</span> <span class="na">class=</span><span class="s">"path1"</span> <span class="na">d=</span><span class="s">"M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM256 256h512c9.138 0 18.004 1.962 26.144 5.662l-282.144 329.168-282.144-329.17c8.14-3.696 17.006-5.66 26.144-5.66zM192 704v-384c0-1.34 0.056-2.672 0.14-4l187.664 218.942-185.598 185.598c-1.444-5.336-2.206-10.886-2.206-16.54zM768 768h-512c-5.654 0-11.202-0.762-16.54-2.208l182.118-182.118 90.422 105.498 90.424-105.494 182.116 182.12c-5.34 1.44-10.886 2.202-16.54 2.202zM832 704c0 5.654-0.762 11.2-2.206 16.54l-185.6-185.598 187.666-218.942c0.084 1.328 0.14 2.66 0.14 4v384z"</span><span class="nt">&gt;&lt;/path&gt;</span>
+<span class="nt">&lt;/symbol&gt;</span>
+<span class="c">&lt;!-- Ícone do Facebook --&gt;</span>
+<span class="nt">&lt;symbol</span> <span class="na">id=</span><span class="s">"icon-facebook"</span> <span class="na">viewBox=</span><span class="s">"0 0 1024 1024"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>facebook<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;path</span> <span class="na">class=</span><span class="s">"path1"</span> <span class="na">d=</span><span class="s">"M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512v-384h-128v-128h128v-96c0-88.366 71.632-160 160-160h160v128h-160c-17.674 0-32 14.328-32 32v96h176l-32 128h-144v367.87c220.828-56.838 384-257.3 384-495.87 0-282.77-229.23-512-512-512z"</span><span class="nt">&gt;&lt;/path&gt;</span>
+<span class="nt">&lt;/symbol&gt;</span>
+<span class="c">&lt;!-- Ícone do Twitter --&gt;</span>
+<span class="nt">&lt;symbol</span> <span class="na">id=</span><span class="s">"icon-twitter"</span> <span class="na">viewBox=</span><span class="s">"0 0 1024 1024"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>twitter<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;path</span> <span class="na">class=</span><span class="s">"path1"</span> <span class="na">d=</span><span class="s">"M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM766.478 381.48c0.252 5.632 0.38 11.296 0.38 16.988 0 173.51-132.070 373.588-373.584 373.588-74.15 0-143.168-21.738-201.276-58.996 10.272 1.218 20.724 1.84 31.322 1.84 61.518 0 118.134-20.992 163.072-56.21-57.458-1.054-105.948-39.020-122.658-91.184 8.018 1.532 16.244 2.36 24.704 2.36 11.976 0 23.578-1.61 34.592-4.61-60.064-12.066-105.326-65.132-105.326-128.75 0-0.554 0-1.104 0.012-1.652 17.7 9.834 37.948 15.742 59.47 16.424-35.232-23.546-58.414-63.736-58.414-109.292 0-24.064 6.476-46.62 17.78-66.010 64.76 79.44 161.51 131.712 270.634 137.19-2.238-9.612-3.4-19.632-3.4-29.924 0-72.512 58.792-131.298 131.304-131.298 37.766 0 71.892 15.944 95.842 41.462 29.908-5.886 58.008-16.814 83.38-31.862-9.804 30.662-30.624 56.394-57.732 72.644 26.56-3.174 51.866-10.232 75.412-20.674-17.594 26.328-39.854 49.454-65.514 67.966z"</span><span class="nt">&gt;&lt;/path&gt;</span>
+<span class="nt">&lt;/symbol&gt;</span>
+<span class="c">&lt;!-- Ícone do Google+ --&gt;</span>
+<span class="nt">&lt;symbol</span> <span class="na">id=</span><span class="s">"icon-google-plus"</span> <span class="na">viewBox=</span><span class="s">"0 0 1024 1024"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;title&gt;</span>google-plus<span class="nt">&lt;/title&gt;</span>
+	<span class="nt">&lt;path</span> <span class="na">class=</span><span class="s">"path1"</span> <span class="na">d=</span><span class="s">"M437.006 818.162c0 75.068-46.39 134.392-177.758 139.176-76.984-43.786-141.49-106.952-186.908-182.866 23.69-58.496 97.692-103.046 182.316-102.114 24.022 0.252 46.41 4.114 66.744 10.7 55.908 38.866 101 63.152 112.324 107.448 2.114 8.964 3.282 18.206 3.282 27.656zM512 0c-147.94 0-281.196 62.77-374.666 163.098 36.934-20.452 80.538-32.638 126.902-32.638 67.068 0 256.438 0 256.438 0l-57.304 60.14h-67.31c47.496 27.212 72.752 83.248 72.752 145.012 0 56.692-31.416 102.38-75.78 137.058-43.28 33.802-51.492 47.966-51.492 76.734 0 24.542 51.722 61.098 75.5 78.936 82.818 62.112 99.578 101.184 99.578 178.87 0 78.726-68.936 157.104-185.866 183.742 56.348 21.338 117.426 33.048 181.248 33.048 282.77 0 512-229.23 512-512s-229.23-512-512-512zM768 384v128h-64v-128h-128v-64h128v-128h64v128h128v64h-128zM365.768 339.472c11.922 90.776-27.846 149.19-96.934 147.134-69.126-2.082-134.806-65.492-146.74-156.242-11.928-90.788 34.418-160.254 103.53-158.196 69.090 2.074 128.22 76.542 140.144 167.304zM220.886 642.068c-74.68 0-138.128 25.768-182.842 63.864-24.502-59.82-38.044-125.29-38.044-193.932 0-56.766 9.256-111.368 26.312-162.396 7.374 99.442 77.352 176.192 192.97 176.192 8.514 0 16.764-0.442 24.874-1.022-7.95 15.23-13.622 32.19-13.622 49.982 0 29.97 16.488 47.070 36.868 66.894-15.402 0-30.27 0.418-46.516 0.418z"</span><span class="nt">&gt;&lt;/path&gt;</span>
+<span class="nt">&lt;/symbol&gt;</span>
+<span class="c">&lt;!-- Ícone da Pesquisa --&gt;</span>
+<span class="nt">&lt;symbol</span> <span class="na">id=</span><span class="s">"icon-search"</span> <span class="na">viewBox=</span><span class="s">"0 0 1024 1024"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>search<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;path</span> <span class="na">class=</span><span class="s">"path1"</span> <span class="na">d=</span><span class="s">"M992.262 871.396l-242.552-206.294c-25.074-22.566-51.89-32.926-73.552-31.926 57.256-67.068 91.842-154.078 91.842-249.176 0-212.078-171.922-384-384-384-212.076 0-384 171.922-384 384s171.922 384 384 384c95.098 0 182.108-34.586 249.176-91.844-1 21.662 9.36 48.478 31.926 73.552l206.294 242.552c35.322 39.246 93.022 42.554 128.22 7.356s31.892-92.898-7.354-128.22zM384 640c-141.384 0-256-114.616-256-256s114.616-256 256-256 256 114.616 256 256-114.614 256-256 256z"</span><span class="nt">&gt;&lt;/path&gt;</span>
+<span class="nt">&lt;/symbol&gt;</span>
+<span class="nt">&lt;/defs&gt;</span>
+<span class="nt">&lt;/svg&gt;</span></code></pre></figure>
+
+<p>Criamos os nossos ícones SVG, iremos estilizá-los depois com o <strong>SASS</strong>.</p>
+
+<h4 id="tagshtml">tags.html</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tags"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Procura as tags já utilizadas e monta uma lista com os links de todas elas --&gt;</span>
+  <span class="c">&lt;!-- Não existe espaço entre {} e % --&gt;</span>
+  { % for tag in post.tags % }
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/tags/#"</span><span class="nt">&gt;&lt;/a&gt;</span>
+  { % endfor % }
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Criamos um laço for, que procurará todas as tags já utilizadas no blog e montará uma lista de posts de cada tag encontrada.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Essa foi a primeira parte do tutorial, já temos pronto a configuração do nosso blog e a nossa pasta <code class="highlighter-rouge">_includes</code>. Na próxima parte, configuraremos a pasta <code class="highlighter-rouge">_layouts</code> e o arquivo <code class="highlighter-rouge">index.html</code>, que é a página inicial do nosso blog.</p>
+
+<p>Qualquer dúvida, é só comentar ou me enviar um email: <a href="mailto:mateus.sousamedeiros@gmail.com">mateus.sousamedeiros@gmail.com</a></p>
+
+<p>Lembrando que todo o código utilizado aqui, está disponível no <a href="https://github.com/mateussmedeiros/tutorial-jekyll" target="_blank">GitHub</a>.</p>
+
+<p><strong>Até a próxima parte!</strong></p>
+:ET
