@@ -1,20 +1,55 @@
 <header class="header">
   <div class="container">
-    <div class="row">
+    <div class="row row-nav">
       <div class="col-6 col-lg-4">
-        <img src="assets/images/logo.png" alt="Mateus Medeiros - Desenvolvedor Front End">
+        <a href="/" title="Ir para página inicial">
+          <img src="assets/images/logo.png" alt="Mateus Medeiros - Desenvolvedor Front End" class="logo">
+        </a>
       </div>
-      <div class="col-6 d-lg-none">
-        <svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg>
+      <div class="col-6 d-lg-none btn-menu">
+        <svg class="icon icon-menu" id="btn-menu"><use xlink:href="#icon-menu"></use></svg>
       </div>
       <nav class="col-lg-8">
-        <ul class="menu">
-          <li class="menu-item"><a href="/sobre" class="menu-link">Sobre</a></li>
-          <li class="menu-item"><a href="/portfolio" class="menu-link">Portfólio</a></li>
-          <li class="menu-item"><a href="/blog" class="menu-link">Blog</a></li>
-          <li class="menu-item"><a href="/contato" class="menu-link">Contato</a></li>
+        <ul class="menu" id="menu">
+          <li class="menu-item">
+            <a href="/sobre" title="Saiba mais sobre Mateus Medeiros" class="menu-link">Sobre</a>
+          </li>
+          <li class="menu-item">
+            <a href="/portfolio" title="Conheça os projetos desenvolvidos por Mateus Medeiros" class="menu-link">Portfólio</a>
+          </li>
+          <li class="menu-item">
+            <a href="/blog" title="Veja os últimos posts de Mateus Medeiros" class="menu-link">Blog</a>
+          </li>
+          <li class="menu-item">
+            <a href="/contato" title="Entre em contato com Mateus Medeiros" class="menu-link">Contato</a>
+          </li>
         </ul>
       </nav>
+    </div>
+    <div class="row row-title">
+      <div class="col-12">
+        <h1 class="title">Mateus Medeiros</h1>
+        <h2 class="subtitle">Desenvolvedor Front-End</h2>
+      </div>
+    </div>
+    <div class="row row-social">
+      <div class="col-12 social-links">
+        <a href="https://www.facebook.com/mateus.sousamedeiros" title="Siga-me no Facebook" target="_blank" class="item">
+          <svg class="icon icon-social"><use xlink:href="#icon-facebook"></use></svg>
+        </a>
+        <a href="https://twitter.com/mateussm_11" title="Siga-me no Twitter" target="_blank" class="item">
+          <svg class="icon icon-social"><use xlink:href="#icon-twitter"></use></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/mateussmedeiros/" title="Siga-me no LinkedIn" target="_blank" class="item">
+          <svg class="icon icon-social"><use xlink:href="#icon-linkedin"></use></svg>
+        </a>
+        <a href="https://github.com/mateussmedeiros/" title="Siga-me no GitHub" target="_blank" class="item">
+          <svg class="icon icon-social"><use xlink:href="#icon-github"></use></svg>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5513991563159&text=Ol%C3%A1!" target="_blank" title="Entre em contato comigo por WhatsApp" class="item">
+          <svg class="icon icon-social"><use xlink:href="#icon-whatsapp"></use></svg>
+        </a>
+      </div>
     </div>
   </div>
 </header>

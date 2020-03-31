@@ -16,7 +16,7 @@ sass.compiler = require('node-sass');
 const paths = {
   dev: {
     img: `assets/images/**/*`,
-    js:`assets/js/*.js`,
+    js:`assets/js/dev/*.js`,
     sass: `assets/sass/**/*.scss`,
   },
   dist: {
@@ -109,5 +109,5 @@ function watch() {
 gulp.task("default", watch);
 gulp.task("assets", vendorCss);
 gulp.task("image", minImg);
-gulp.task("js", gulp.series(vendorJs, minJs));
+gulp.task("js", minJs);
 //gulp.task("sass", compSass);
