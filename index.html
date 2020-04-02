@@ -41,7 +41,7 @@ layout: default
                     <p class="desc">nível <span class="level">Avançado</span></p>
                 </div>
             </div>
-
+            
             <div class="col-md-6 col-lg-3 item">
                 <div class="content">
                     <div class="image">
@@ -56,7 +56,7 @@ layout: default
                     <p class="desc">nível <span class="level">Avançado</span></p>
                 </div>
             </div>
-
+            
             <div class="col-md-6 col-lg-3 item">
                 <div class="content">
                     <div class="image">
@@ -71,7 +71,7 @@ layout: default
                     <p class="desc">nível <span class="level">Intermediário</span></p>
                 </div>
             </div>
-
+            
             <div class="col-md-6 col-lg-3 item">
                 <div class="content">
                     <div class="image">
@@ -87,7 +87,7 @@ layout: default
                 </div>
             </div>
         </div>
-
+        
         <div class="row skills-list">
             <div class="col-md-6 col-lg-3 item">
                 <div class="content">
@@ -103,7 +103,7 @@ layout: default
                     <p class="desc">nível <span class="level">Intermediário</span></p>
                 </div>
             </div>
-
+            
             <div class="col-md-6 col-lg-3 item">
                 <div class="content">
                     <div class="image">
@@ -118,7 +118,7 @@ layout: default
                     <p class="desc">nível <span class="level">Intermediário</span></p>
                 </div>
             </div>
-
+            
             <div class="col-md-6 col-lg-3 item">
                 <div class="content">
                     <div class="image">
@@ -133,7 +133,7 @@ layout: default
                     <p class="desc">nível <span class="level">Intermediário</span></p>
                 </div>
             </div>
-
+            
             <div class="col-md-6 col-lg-3 item">
                 <div class="content">
                     <div class="image">
@@ -149,7 +149,7 @@ layout: default
                 </div>
             </div>
         </div>
-
+        
         <div class="row skills-list">
             <div class="col-md-6 col-lg-3 item">
                 <div class="content">
@@ -165,7 +165,7 @@ layout: default
                     <p class="desc">nível <span class="level">Intermediário</span></p>
                 </div>
             </div>
-
+            
             <div class="col-md-6 col-lg-3 item">
                 <div class="content">
                     <div class="image">
@@ -180,7 +180,7 @@ layout: default
                     <p class="desc">nível <span class="level">Básico</span></p>
                 </div>
             </div>
-
+            
             <div class="col-md-6 col-lg-3 item">
                 <div class="content">
                     <div class="image">
@@ -195,7 +195,7 @@ layout: default
                     <p class="desc">nível <span class="level">Intermediário</span></p>
                 </div>
             </div>
-
+            
             <div class="col-md-6 col-lg-3 item">
                 <div class="content">
                     <div class="image">
@@ -221,7 +221,7 @@ layout: default
                 <h2 class="title-section">Portfólio</h2>
             </div>
         </div>
-
+        
         <div class="row portfolio-list">
             <div class="col-md-6 item">
                 <div class="content">
@@ -235,7 +235,7 @@ layout: default
                     <a href="#" title="Conferir o projeto" target="_blank" class="btn btn-blue">Conferir projeto</a>
                 </div>
             </div>
-
+            
             <div class="col-md-6 item">
                 <div class="content">
                     <div class="image">
@@ -249,7 +249,7 @@ layout: default
                 </div>
             </div>
         </div>
-
+        
         <div class="row justify-content-center">
             <a href="/portfolio" title="Conferir portfólio completo" class="btn btn-up btn-blue">Ver mais projetos</a>
         </div>
@@ -263,33 +263,19 @@ layout: default
                 <h2 class="title-section">Blog</h2>
             </div>
         </div>
-
+        
         <div class="row blog-list">
-            <div class="col-md-6 col-lg-4 item">
-                <div class="content">
-                    <h3 class="name">Meu novo post</h3>
-                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit est odio, non auctor justo placerat aliquam.</p>
-                    <a href="#" title="Leia o post na integra" target="_blank" class="btn btn-blue">Leia mais</a>
+            {% for post in site.posts limit:3 %}
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="content">
+                        <h3 class="name">{{ post.title }}</h3>
+                        <p class="desc">{{ post.description }}</p>
+                        <a href="{{ post.permalink | prepend: site.baseurl }}" title="Leia o post na integra" target="_blank" class="btn btn-blue">Leia mais</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 item">
-                <div class="content">
-                    <h3 class="name">Meu novo post</h3>
-                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit est odio, non auctor justo placerat aliquam.</p>
-                    <a href="#" title="Leia o post na integra" target="_blank" class="btn btn-blue">Leia mais</a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 item">
-                <div class="content">
-                    <h3 class="name">Meu novo post</h3>
-                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit est odio, non auctor justo placerat aliquam.</p>
-                    <a href="#" title="Leia o post na integra" target="_blank" class="btn btn-blue">Leia mais</a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
-
+        
         <div class="row justify-content-center">
             <a href="/blog" title="Vejas as últimas novidades do blog" class="btn btn-up btn-blue">Ver mais posts</a>
         </div>
@@ -309,7 +295,7 @@ layout: default
                     </div>
                     <span class="desc">mateus.sousamedeiros@gmail.com</span>
                 </a>
-
+                
                 <a href="https://api.whatsapp.com/send?phone=5513991563159&text=Ol%C3%A1!" target="_blank" title="Entre em contato comigo por WhatsApp" class="item">
                     <div class="image">
                         <svg class="icon"><use xlink:href="#icon-whatsapp"></use></svg>
