@@ -2,10 +2,18 @@ AOS.init();
 function controlMenu() {
   const btn = document.querySelector('#btn-menu');
   const menu = document.querySelector('#menu');
-  console.log('hello');
+  const rowNav = document.querySelector('.row-nav');
 
   btn.addEventListener('click', function() {
-    menu.classList.toggle('menu-visible');
+    if(menu.classList.contains('menu-visible')) {
+        menu.classList.remove('menu-visible');
+        rowNav.style.height = 'calc(var(--vh, 1vh) * 25)';
+    } else {
+        menu.classList.add('menu-visible');
+        rowNav.style.height = 'calc(var(--vh, 1vh) * 45)';
+    }
   }, false)
 }
 controlMenu();
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);

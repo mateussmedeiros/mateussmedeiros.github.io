@@ -14,9 +14,10 @@ section {
 
         .item {
             & {
-                margin: 0 15px 2.5rem 15px;
+                margin: 0 auto 2.5rem auto;
                 padding: 0;
                 height: 250px;
+                max-width: calc(100% - 30px);
 
                 @media (min-width: $bp-md) {
                     max-width: calc(50% - 1.5rem);
@@ -129,6 +130,7 @@ section {
         & {
             justify-content: space-between;
             margin-bottom: 1.5rem;
+            overflow: hidden;
         }
 
         .item {
