@@ -1,9 +1,9 @@
-<header class="header">
+<header class="header {% if page.id != 'home' %}header-page{% endif %}">
   <div class="container">
     <div class="row row-nav">
       <div class="col-6 col-lg-4">
         <a href="/" title="Ir para página inicial">
-          <img src="assets/images/logo.png" alt="Mateus Medeiros - Desenvolvedor Front End" class="logo">
+          <img src="/assets/images/logo.png" alt="Mateus Medeiros - Desenvolvedor Front End" class="logo">
         </a>
       </div>
       <div class="col-6 d-lg-none btn-menu">
@@ -51,11 +51,12 @@
         </a>
       </div>
     </div>
-
+    {% if page.id == 'home' %} 
     <div class="row row-scroll">
         <div class="col-12">
             <a href="#scroll" title="Deslizar página" class="scroll-btn"><svg class="scroll-icon"><use xlink:href="#icon-down"></use></svg></a> 
         </div>
     </div>
+    {% endif %}
   </div>
 </header>

@@ -6,10 +6,10 @@ function controlMenu() {
   btn.addEventListener('click', function() {
     if(menu.classList.contains('menu-visible')) {
         menu.classList.remove('menu-visible');
-        rowNav.style.height = 'calc(var(--vh, 1vh) * 25)';
+        rowNav.classList.add('h-100');
     } else {
         menu.classList.add('menu-visible');
-        rowNav.style.height = 'calc(var(--vh, 1vh) * 45)';
+        rowNav.classList.remove('h-100');
     }
   }, false)
 }
