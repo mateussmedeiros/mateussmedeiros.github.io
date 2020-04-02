@@ -1,0 +1,45 @@
+.title-section {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    color: $black;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 3.5rem;
+    
+    @media(min-width: $bp-lg) {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: $blue;
+
+        @media(min-width: $bp-lg) {
+            width: 80px;
+        }
+    }
+}
+
+.text {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+    margin-bottom: 1.25rem;
+    
+    strong {
+        font-weight: 500;
+    }
+
+    @media(min-width: $bp-lg) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}

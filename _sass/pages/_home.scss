@@ -1,0 +1,380 @@
+section {
+    padding: 4.5rem 0 3rem 0;
+}
+
+.section-grey {
+    background: $grey;
+}
+
+.skills {
+    .skills-list {
+        & {
+            justify-content: space-between;
+        }
+
+        .item {
+            & {
+                margin: 0 15px 2.5rem 15px;
+                padding: 0;
+                height: 250px;
+
+                @media (min-width: $bp-md) {
+                    max-width: calc(50% - 1.5rem);
+                    margin-right: 0;
+                    margin-left: 0;
+
+                    &:nth-of-type(2) {
+                        margin-right: 0 !important;
+                    }
+
+                    &:not(:last-of-type) {
+                        margin-right: 1.5rem;
+                    }
+                }
+
+                @media (min-width: $bp-lg) {
+                    max-width: calc(25% - 2.5rem);
+
+                    &:nth-of-type(2) {
+                        margin-right: 2.5rem !important;
+                    }
+
+                    &:not(:last-of-type) {
+                        margin-right: 2.5rem;
+                    }
+                }
+            }
+
+            &:hover {
+                .overlay {
+                    width: 100%;
+                    height: 100%;
+                    max-height: 100%;
+                    overflow: visible;
+                }
+            }
+
+            .content {
+                & {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    background: $white;
+                    box-shadow: 0px 3px 5px rgba($black, 0.25);
+                }
+
+                .icon {
+                    height: 64px;
+                    margin-bottom: 2rem;
+                }
+
+                .name {
+                    font-size: 1.75rem;
+                    font-weight: 500;
+                    line-height: 2rem;
+                    margin: 0;
+                }
+            }
+
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 0;
+                height: 0;
+                max-height: 0;
+                overflow: hidden;
+                background: linear-gradient(180deg, #246FA2 0%, #143952 100%);
+                color: $white;
+                transition: .5s ease-in-out;
+
+                .desc {
+                    margin-top: 2rem;
+                    margin-bottom: 0;
+                    font-size: 1.125rem;
+                    font-weight: 300;
+                    line-height: 1.3125rem;
+                    text-align: center;
+                    text-transform: lowercase;
+                }
+
+                .name,
+                .level {
+                    margin: 0;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    line-height: 1.75rem;
+                }
+
+                .level {
+                    margin-top: .35rem;
+                    display: block;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+.portfolio {
+    .portfolio-list {
+        & {
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .item {
+            & {
+                margin: 0 15px 2.5rem 15px;
+                padding: 0;
+                height: 300px;
+
+                @media (min-width: $bp-md) {
+                    max-width: calc(50% - 1.5rem);
+                    margin-right: 0;
+                    margin-left: 0;
+
+                    &:not(:last-of-type) {
+                        margin-right: 1.5rem;
+                    }
+                }
+
+                @media (min-width: $bp-lg) {
+                    height: 350px;
+
+                    &:not(:last-of-type) {
+                        margin-right: 2.5rem;
+                    }
+                }
+            }
+
+            &:hover {
+                .overlay {
+                    width: 100%;
+                    height: 100%;
+                    max-height: 100%;
+                    overflow: visible;
+
+                    .name,
+                    .desc,
+                    .btn {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .content {
+                & {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    background: $white;
+                    box-shadow: 0px 3px 5px rgba($black, 0.25);
+                }
+
+                .image {
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 2rem;
+                width: 0;
+                height: 0;
+                max-height: 0;
+                overflow: hidden;
+                background: linear-gradient(180deg, #246FA2 0%, #143952 100%);
+                color: $white;
+                transition: .5s ease-in-out;
+
+                .name {
+                    margin-bottom: 1rem;
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    line-height: 1.5rem;
+                    text-transform: uppercase;
+                    opacity: 0;
+                    transition: 1s ease-in-out;
+
+                    @media(min-width: $bp-lg) {
+                        font-size: 1.75rem;
+                        line-height: 2rem;
+                    }
+                }
+
+                .desc {
+                    margin-bottom: 2rem;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    line-height: 1.25rem;
+                    opacity: 0;
+                    transition: 1s ease-in-out;
+
+                    @media(min-width: $bp-lg) {
+                        font-size: 1.125rem;
+                        line-height: 1.3125rem;
+                    }
+                }
+
+                .btn {
+                    max-width: 150px;
+                    opacity: 0;
+                    transition: opacity 1s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+.blog {
+    .blog-list {
+        & {
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .item {
+            & {
+                margin: 0 15px 2.5rem 15px;
+                padding: 0;
+                height: 250px;
+
+                @media (min-width: $bp-md) {
+                    max-width: calc(50% - 1.5rem);
+                    margin-right: 0;
+                    margin-left: 0;
+
+                    &:nth-of-type(2) {
+                        margin-right: 0 !important;
+                    }
+
+                    &:not(:last-of-type) {
+                        margin-right: 1.5rem;
+                    }
+
+                    &:last-of-type {
+                        margin: 0 auto 2.5rem auto;
+                    }
+                }
+
+                @media (min-width: $bp-lg) {
+                    max-width: calc(33.333333% - 2.5rem);
+
+                    &:not(:last-of-type) {
+                        margin-right: 2.5rem;
+                    }
+
+                    &:last-of-type {
+                        margin: 0 0 2.5rem 0;
+                    }
+                }
+            } 
+
+            .content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 2rem;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, #246FA2 0%, #143952 100%);
+                color: $white;
+
+                .name {
+                    margin-bottom: 1rem;
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    line-height: 1.5rem;
+                    text-transform: uppercase;
+                    transition: 1s ease-in-out;
+                }
+
+                .desc {
+                    margin-bottom: 2rem;
+                    font-size: 0.875rem;
+                    font-weight: 300;
+                    line-height: 1rem;
+                    transition: 1s ease-in-out;
+                }
+
+                .btn {
+                    font-size: 0.875rem;
+                    line-height: 1rem;
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    .item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2.5rem;
+
+        &:hover {
+            text-decoration: none;
+
+            .icon {
+                fill: $blue;
+            }
+
+            .desc {
+                color: $blue;
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    .icon {
+        height: 32px;
+        width: 32px;
+        margin-right: .5rem;
+        transition: .3s;
+
+        @media(min-width: $bp-md) {
+            height: 45px;
+            width: 45px;
+            margin-right: 1rem;
+        }
+    }
+
+    .desc {
+        font-size: .95rem;
+        color: $black;
+        transition: .3s;
+
+        @media(min-width: $bp-md) {
+            font-size: 1.5rem;
+        }
+    }
+}

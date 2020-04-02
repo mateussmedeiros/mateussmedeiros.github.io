@@ -1,107 +1,111 @@
 .header {
-  & {
-    padding: 3rem 0;
-  }
-
-  .row-nav {
-    margin-bottom: 3.5rem;
-    align-items: center;
-    justify-content: space-between;
-
-    @media(min-width: $bp-lg) {
-      margin-bottom: 6.5rem;
-    }
-
-    .logo {
-      height: 75px;
-      max-width: 100%;
-    }
-
-    .btn-menu {
-      & {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-      }
-
-      .icon-menu {
-        height: 32px;
-        width: 32px;
-      }
-    }
-  }
-
-  .row-title {
     & {
-      margin-bottom: 2.5rem;
-
-      @media(min-width: $bp-lg) {
-        margin-bottom: 4.5rem;
-      }
-    }
-
-    .title {
-      margin-bottom: 0;
-      font-size: 3rem;
-      font-weight: 500;
-      text-align: center;
-      text-transform: uppercase;
-
-      @media(min-width: $bp-md) {
-        font-size: 4rem;
-        text-align: left;
-      }
-    }
-
-    .subtitle {
-      font-size: 1.875rem;
-      font-weight: 300;
-      color: $blue;
-      text-align: center;
-
-      @media(min-width: $bp-md) {
-        font-size: 2.25rem;
-        text-align: left;
-      }
-    }
-  }
-
-  .row-social {
-    & {
-      margin-bottom: 5rem;
-    }
-
-    .social-links {
-      & {
-        display: flex;
-        justify-content: space-between;
-
+        padding-top: 3rem;
+        
         @media(min-width: $bp-md) {
-          justify-content: flex-start;
+            padding: 3rem 0;
         }
-      }
-
-      .item {
-        &:not(:last-child) {
-          @media(min-width: $bp-md) {
-            margin-right: 35px;
-          }
-        }
-
-        &:hover {
-          text-decoration: none;
-
-          .icon {
-            fill: $blue;
-          }
-        }
-
-        .icon {
-          height: 32px;
-          width: 32px;
-          transition: .2s;
-        }
-      }
     }
-  }
+    
+    .row-nav {
+        margin-bottom: 3.5rem;
+        align-items: center;
+        justify-content: space-between;
+        
+        @media(min-width: $bp-lg) {
+            margin-bottom: 6.5rem;
+        }
+        
+        .logo {
+            height: 75px;
+            max-width: 100%;
+        }
+        
+        .btn-menu {
+            & {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+            
+            .icon-menu {
+                height: 32px;
+                width: 32px;
+            }
+        }
+    }
+    
+    .row-title {
+        & {
+            margin-bottom: 2.5rem;
+            
+            @media(min-width: $bp-lg) {
+                margin-bottom: 4.5rem;
+            }
+        }
+        
+        .title {
+            margin-bottom: 0;
+            font-size: 3rem;
+            font-weight: 500;
+            text-align: center;
+            text-transform: uppercase;
+            
+            @media(min-width: $bp-md) {
+                font-size: 4rem;
+                text-align: left;
+            }
+        }
+        
+        .subtitle {
+            font-size: 1.875rem;
+            font-weight: 300;
+            color: $blue;
+            text-align: center;
+            
+            @media(min-width: $bp-md) {
+                font-size: 2.25rem;
+                text-align: left;
+            }
+        }
+    }
+    
+    .row-social {
+        & {
+            margin-bottom: 5rem;
+        }
+        
+        .social-links {
+            & {
+                display: flex;
+                justify-content: space-between;
+                
+                @media(min-width: $bp-md) {
+                    justify-content: flex-start;
+                }
+            }
+            
+            .item {
+                &:not(:last-child) {
+                    @media(min-width: $bp-md) {
+                        margin-right: 35px;
+                    }
+                }
+                
+                &:hover {
+                    text-decoration: none;
+                    
+                    .icon {
+                        fill: $blue;
+                    }
+                }
+                
+                .icon {
+                    height: 32px;
+                    width: 32px;
+                    transition: .2s;
+                }
+            }
+        }
+    }
 }
