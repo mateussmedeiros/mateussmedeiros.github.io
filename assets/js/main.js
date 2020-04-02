@@ -11,6 +11,7 @@ $('a[href^="#"]').on('click', function(event) {
         }, 1000);
     }
 
+    return false;
 });
 function controlMenu() {
   const btn = document.querySelector('#btn-menu');
