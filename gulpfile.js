@@ -33,12 +33,14 @@ const assets = {
   css: [
     'node_modules/bootstrap/dist/css/bootstrap-reboot.min.css',
     'node_modules/bootstrap/dist/css/bootstrap-grid.min.css',
-    'node_modules/slick-carousel/slick/slick-theme.css'
+    'node_modules/slick-carousel/slick/slick-theme.css',
+    'node_modules/aos/dist/aos.css'
   ],
   js: [
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
-    'node_modules/slick-carousel/slick/slick.min.js'
+    'node_modules/slick-carousel/slick/slick.min.js',
+    'node_modules/aos/dist/aos.js'
   ],
 }
 
@@ -107,7 +109,7 @@ function watch() {
 ---- TASKS ----
 -------------*/
 gulp.task("default", watch);
-gulp.task("assets", vendorCss);
+gulp.task("assets", gulp.series(vendorCss, vendorJs));
 gulp.task("image", minImg);
 gulp.task("js", minJs);
 //gulp.task("sass", compSass);

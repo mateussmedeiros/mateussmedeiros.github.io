@@ -1,3 +1,4 @@
+AOS.init();
 function controlMenu() {
   const btn = document.querySelector('#btn-menu');
   const menu = document.querySelector('#menu');
