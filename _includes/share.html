@@ -1,0 +1,26 @@
+<section class="share">
+	<div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="title-section"> Espalhe a palavra! </h2>
+            </div>
+        </div>
+
+        <div class="row share-buttons">
+            <a class="link" aria-label="Compartilhe no Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+            onclick="window.open(this.href, 'facebook-share');return false;" title="Compartilhe no Facebook">
+                <svg class="share-icon"><use xlink:href="#icon-facebook"></use></svg>
+            </a>
+
+            <a class="link" aria-label="Compartilhe no Twitter" href="https://twitter.com/intent/tweet?text=&quot;{{ page.twitter_text }}&quot;%20{{ site.url }}{{ page.url }}%20via%20&#64;{{ site.twitter_username }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}"
+            onclick="window.open(this.href, 'twitter-share');return false;" title="Compartilhe no Twitter">
+                <svg class="share-icon"><use xlink:href="#icon-twitter"></use></svg>
+            </a>
+    
+            <a class="link" aria-label="Compartilhe no Google Plus" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
+            onclick="window.open(this.href, 'google-plus-share');return false;" title="Compartilhe no Google+">
+                <svg class="share-icon"><use xlink:href="#icon-google-plus"></use></svg>
+            </a>
+        </div>
+    </div>
+</section>
