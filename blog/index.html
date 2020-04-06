@@ -1,0 +1,54 @@
+---
+layout: default
+title: Blog
+---
+
+<section class="blog section-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" data-aos="fade-right">
+                <h2 class="title-section">Blog</h2>
+            </div>
+        </div>
+        
+        <div class="row blog-list blog-interna">
+            {% for post in paginator.posts %}
+            <div class="col-md-6 col-lg-4 item" data-aos="fade-up">
+                <div class="content">
+                    <h3 class="name">{{ post.title }}</h3>
+                    <p class="desc">{{ post.description }}</p>
+                    <a href="{{ post.permalink | prepend: site.baseurl }}" title="Leia o post na integra" target="_blank" class="btn btn-blue">Leia mais</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="row justify-content-center">
+            {% if paginator.total_pages > 1 %}
+            <div class="pagination" data-aos="fade-up">
+                {% if paginator.previous_page %}
+                    <a class="btn btn-up btn-blue" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><svg class="icon"><use xlink:href="#icon-prev-page"></use></svg></a>
+                {% else %}
+                    <span class="btn btn-up btn-blue btn-disabled"><svg class="icon"><use xlink:href="#icon-prev-page"></use></svg></span>
+                {% endif %}
+                
+                {% for page in (1..paginator.total_pages) %}
+                {% if page == paginator.page %}
+                    <span class="btn btn-up btn-blue btn-selected">{{ page }}</span>
+                {% elsif page == 1 %}
+                    <a class="btn btn-up btn-blue" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+                {% else %}
+                    <a class="btn btn-up btn-blue" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                {% endif %}
+                {% endfor %}
+                
+                {% if paginator.next_page %}
+                <a class="btn btn-up btn-blue" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><svg class="icon"><use xlink:href="#icon-next-page"></use></svg></a>
+                {% else %}
+                <span class="btn btn-up btn-blue btn-disabled"><svg class="icon"><use xlink:href="#icon-next-page"></use></svg></span>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
