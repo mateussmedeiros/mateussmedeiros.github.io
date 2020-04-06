@@ -1,0 +1,65 @@
+---
+layout: default
+title: Contato
+description: Entre em contato com o desenvolvedor Front-End Mateus Medeiros
+permalink: /contato/
+---
+
+<section class="contact section-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" data-aos="fade-right">
+                <h2 class="title-section">Contato</h2>
+            </div>
+            <div class="col-12 row form-row">
+                <div class="col-lg-7">
+                    <h3 class="subtitle"> Quer falar comigo? Envie uma mensagem!</h3>
+                    <p class="text">Preencha o formulário abaixo: </p>
+
+                    <form action="https://formspree.io/mateus.sousamedeiros@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Nome:</label>
+                            <input type="text" name="name" id="name" placeholder="Digite seu nome" class="form-item">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="_replyto">E-mail:</label>
+                            <input type="email" id="_replyto" name="_replyto" placeholder="Digite seu e-mail" class="form-item">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="_subject">Assunto:</label>
+                            <select class="form-item" name="_subject" id="_subject">
+                                <option class="form-option">Mensagem</option>
+                                <option class="form-option">Dúvida</option>
+                                <option class="form-option">Serviço</option>
+                                <option class="form-option">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="msg">Mensagem:</label>
+                            <textarea name="msg" id="msg" rows="5" placeholder="Digite sua mensagem" class="form-item"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-up btn-blue">Enviar</button>
+                        </div>
+                        <input type="hidden" name="_next" value="/confirmacao-email" />
+                    </form>
+                </div>
+                <div class="col-lg-5">
+                    <a href="https://api.whatsapp.com/send?phone=5513991563159&text=Ol%C3%A1!" target="_blank" title="Entre em contato comigo por WhatsApp" class="item" data-aos="fade-down-right">
+                        <div class="image">
+                            <svg class="icon"><use xlink:href="#icon-whatsapp"></use></svg>
+                        </div>
+                        <span class="desc">(13) 99156-2159</span>
+                    </a>
+                    
+                    <a href="mailto:mateus.sousamedeiros@gmail.com" target="_blank" title="Entre em contato comigo por e-mail" class="item" data-aos="fade-down-right">
+                        <div class="image">
+                            <svg class="icon"><use xlink:href="#icon-mail"></use></svg>
+                        </div>
+                        <span class="desc">mateus.sousamedeiros@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
