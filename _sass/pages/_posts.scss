@@ -24,7 +24,7 @@
         li {
             font-size: 1.25rem;
         }
-        
+
         a {
             color: $blue;
             transition: 0.3s;
@@ -73,9 +73,62 @@
     }
 }
 
-.comments {
-    .title-section {
-        font-size: 2rem;
+.author {
+    .img-profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .image {
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            overflow: hidden;
+        
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 2rem;
+
+        @media(min-width: $bp-md) {
+            align-items: flex-start;
+            margin-top: 0;
+        }
+
+        .title {
+            margin-bottom: .5rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .name {
+            margin-bottom: 0.35rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            
+            .link {
+                text-decoration: none;
+            }
+        }
+
+        .desc {
+            font-size: 1.25rem;
+            text-align: center;
+
+            @media(min-width: $bp-md) {
+                text-align: left;
+            }
+        }
     }
 }
 
@@ -86,6 +139,11 @@
 
     .share-buttons {
         margin: 1rem 0 2rem;
+        justify-content: center;
+
+        @media(min-width: $bp-md) {
+            justify-content: flex-start;
+        }
 
         .link {
             &:not(:last-of-type) {
@@ -100,9 +158,20 @@
         }
     
         .share-icon {
-            height: 64px;
-            width: 128px;
+            height: 40px;
+            width: 60px;
             transition: .3s;
+
+            @media(min-width: $bp-md) {
+                height: 64px;
+                width: 128px;
+            }
         }
+    }
+}
+
+.comments {
+    .title-section {
+        font-size: 2rem;
     }
 }
