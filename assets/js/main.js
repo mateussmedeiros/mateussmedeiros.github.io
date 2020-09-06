@@ -13,6 +13,10 @@ $('a[href^="#"]').on('click', function(event) {
 
     return false;
 });
+$(document).ready(function() {
+    $('#cookieConsent').cookieConsent();
+});
+
 function controlMenu() {
   const btn = document.querySelector('#btn-menu');
   const menu = document.querySelector('#menu');

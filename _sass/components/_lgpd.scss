@@ -1,0 +1,32 @@
+#cookieConsent{ 
+    display:none;
+    position:fixed;
+    z-index: 9999;
+    bottom:1rem;
+    left: 1rem;
+    width:100%;
+    padding: 2rem;
+    max-width: 24rem;
+    background: $black;
+    color: $white;
+    border-radius: 5px;
+    
+    a {
+        color: $blue-light;
+    }
+
+    .btn {
+        display: block;
+        margin: 1rem auto 0;
+        border: 0;
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+
+    @media(max-width: 767px) {
+        max-width: calc(100% - 2rem);
+    }
+}
