@@ -56,6 +56,13 @@ function compSass() {
     .pipe(autoprefixer({ cascade: false }))
     .pipe(gulp.dest(paths.dist.css));
 }*/
+function lpSass() {
+    return gulp
+      .src('assets/sass/**/*.scss')
+      .pipe(sass({ outputStyle: 'compressed' }).on("error", sass.logError))
+      .pipe(autoprefixer({ cascade: false }))
+      .pipe(gulp.dest(paths.dist.css));
+  }
 
 // Importar CSS dos assets
 function vendorCss() {
@@ -91,6 +98,18 @@ function minJs() {
     .pipe(gulp.dest(paths.dist.js));
 }
 
+function minLpJs() {
+    return gulp
+      .src('assets/js/dev/lp.js')
+      .pipe(concat('lp.js'))
+      .pipe(minify({
+        ext: {
+          min: '.min.js'
+        },
+      }))
+      .pipe(gulp.dest(paths.dist.js));
+  }
+
 // Minificar imagens
 function minImg() {
   return gulp
@@ -106,6 +125,11 @@ function watch() {
   gulp.watch(paths.dev.js, minJs);
 }
 
+function lp() {
+    gulp.watch('assets/sass/**/*.scss', lpSass);
+    gulp.watch('assets/js/dev/lp.js', minLpJs);
+  }
+
 /*-------------
 ---- TASKS ----
 -------------*/
@@ -113,4 +137,5 @@ gulp.task("default", watch);
 gulp.task("assets", gulp.series(vendorCss, vendorJs));
 gulp.task("image", minImg);
 gulp.task("js", gulp.series(minJs, vendorJs));
+gulp.task("lp", lp);
 //gulp.task("sass", compSass);
