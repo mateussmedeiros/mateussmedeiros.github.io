@@ -402,6 +402,9 @@ $yellow: #FFB657;
 
     /* CONTATO */
     section.contato {
+        background: $gray;
+        padding: 5rem 0 0;
+
         .title-section {
             text-align: center;
             width: 75%;
@@ -415,65 +418,7 @@ $yellow: #FFB657;
         .desc {
             font-size: 1.875rem;
             text-align: center;
-            margin-bottom: 3.5rem;
-        }
-
-        .form {
-            width: 75%;
-            margin: 0 auto;
-
-            .form-row {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                .form-item {
-                    width: 100%;
-                    margin-bottom: 1.5rem;
-                    
-                    &.form-col {
-                        width: 48%;
-                    }
-
-                    .form-control {
-                        width: 100%;
-                        min-height: 70px;
-                        padding: 0.875rem 1rem;
-                        background: $white;
-                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                        border: 1px solid rgba($black, .35);
-                        font-size: 1.05rem;
-                        font-weight: 400;
-                        color: $black;
-
-                        &:focus {
-                            outline-color: $purple;
-                        }
-
-                        &::placeholder {
-                            color: $black;
-                        }
-                    }
-
-                    label {
-                        font-size: 1.05rem;
-
-                        .link {
-                            color: $purple;
-                        }
-                    }
-
-                    select {
-                        appearance: none;
-                        background: url('../img/lp/select.svg') no-repeat 97.5% 50% !important;
-                    }
-                }
-            }
-
-            .btn {
-                padding: 1.25rem 2.75rem;
-                border: none;
-            }
+            margin-bottom: 2rem;
         }
     }
 
@@ -917,11 +862,7 @@ $yellow: #FFB657;
 
             .desc {
                 font-size: 1.5rem;
-                margin-bottom: 2.5rem;
-            }
-
-            .form {
-                width: 90%;
+                margin-bottom: .5rem;
             }
         }
 
@@ -1164,37 +1105,7 @@ $yellow: #FFB657;
 
             .desc {
                 font-size: 1.45rem;
-                margin-bottom: 1.75rem;
-            }
-
-            .form {
-                width: 100%;
-
-                .form-row {
-                    flex-wrap: wrap;
-    
-                    .form-item {
-                        display: flex;
-
-                        &.form-col {
-                            width: 100%;
-                        }
-
-                        input[type="checkbox"] {
-                            position: relative;
-                            top: 3px;
-                        }
-
-                        label {
-                            font-size: 0.875rem;
-                            margin-left: 0.25rem;
-                        }
-                    }
-                }
-
-                .btn {
-                    margin: 1.5rem auto;
-                }
+                margin-bottom: .875rem;
             }
         }
 
