@@ -32,6 +32,22 @@
         }
     }
 
+    .form-check {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+
+        input {
+            position: relative;
+            top: 3px;
+        }
+
+        label {
+            margin-left: 0.35rem;
+            margin-bottom: 0;
+        }
+    }
+
     .btn {
         border: 0;
     }
