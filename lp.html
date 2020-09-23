@@ -323,7 +323,8 @@ permalink: /venda-mais/
             </div>
 
             <div class="col-12">
-                <form class="form" action="https://formspree.io/myynrwpn" method="POST">
+                <form class="form" action="https://getsimpleform.com/messages?form_api_token=b1a86e21dcfe2d7b68afb5bee1fb07b6" method="POST">
+                    <input type="hidden" name="redirect_to" value="http://127.0.0.1:4000/obrigado-lp" />
                     <div class="form-row">
                         <div class="form-item">
                             <input type="text" name="nome" class="form-control" placeholder="Nome" required>
@@ -332,7 +333,7 @@ permalink: /venda-mais/
 
                     <div class="form-row">
                         <div class="form-item form-col">
-                            <input type="text" name="telefone" id="tel" class="form-control" placeholder="Celular" required>
+                            <input type="tel" name="telefone" id="tel" class="form-control" placeholder="Celular" required>
                         </div>
                         <div class="form-item form-col">
                             <input type="email" name="email" class="form-control" placeholder="E-mail" required>
@@ -362,9 +363,6 @@ permalink: /venda-mais/
                         </div>
                     </div>
     
-                    <input type="hidden" name="_subject" value="contato_LP" />  
-                    <input type="hidden" name="_next" value="/obrigado-lp" />  
-
                     <button class="btn btn-center btn-purple" type="submit">Enviar</button>
                 </form>
             </div>
