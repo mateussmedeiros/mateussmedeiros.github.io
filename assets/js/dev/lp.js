@@ -24,10 +24,12 @@ $(document).ready(function() {
     });
 
 
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
         $('a.whatsapp-link').each(function(i,e){
-            e.href = e.href.replace("web.whatsapp", "api.whatsapp");
+            e.href = e.href.replace("api.whatsapp", "web.whatsapp");
         });
+
+        console.log('web')
 	}
 
     $('#cookieConsent').cookieConsent();
